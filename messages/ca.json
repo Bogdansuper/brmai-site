@@ -1,0 +1,60 @@
+{
+    "BRMHomePage": {
+      "heroTitle": "Automatitza el teu negoci i augmenta els beneficis amb BRM AI Business Automation!",
+      "heroSubtitle": "Cansat de la rutina i buscant maneres efectives de créixer? A BRM AI Business Automation, oferim tant solucions específiques per a les teves tasques com un conjunt complet de serveis per a la transformació digital del teu negoci. 🤖✨",
+      "servicesTitle": "Els nostres Serveis Integrals Inclouen:",
+      "valueProposition": "BRM AI Business Automation – el teu soci fiable en el món de les tecnologies digitals i la intel·ligència artificial! 🚀",
+      "ctaTitle": "Preparat per portar el teu negoci al següent nivell? 📈",
+      "ctaSubtitle": "Contacta'ns per discutir com podem ajudar el teu negoci a créixer i prosperar.",
+      "contactTitle": "👇 Contacta'ns avui mateix! 👇"
+    },
+    "Services": {
+      "websiteCreation_title": "Creació d'un Lloc Web de Vendes",
+      "websiteCreation_desc": "La teva principal eina online per atraure clients.",
+      "seoOptimization_title": "Optimització SEO",
+      "seoOptimization_desc": "Portarem el teu lloc al CIM dels resultats de cerca."
+    },
+    "Clients": {
+      "trustedBy": "Confien en nosaltres"
+    },
+    "Header": {
+      "logoText": "BRM AI",
+      "servicesLink": "Serveis",
+      "contactLink": "Contacte",
+      "connectButton": "Connectar"
+    },
+    "Footer": {
+      "copyright": "&copy; {year} BRM AI Business Automation. Tots els drets reservats.",
+      "hashtags": "#IA #AutomatitzacióDeNegocis #MàrquetingDigital #SEO #CRM #CreixementEmpresarial #Tecnologia #InteligènciaArtificial #BRMAI"
+    },
+    "Shared": {
+      "contactUs": "Contacta'ns",
+      "discussProject": "Discutir Projecte",
+      "ourServices": "Els nostres Serveis",
+      "phone": "Telèfon",
+      "linkedIn": "LinkedIn"
+    },
+    "Services": {
+      "websiteCreation_title": "Creació d'un Lloc Web de Vendes",
+      "websiteCreation_desc": "La teva principal eina online per atraure clients.",
+      "seoOptimization_title": "Optimització SEO",
+      "seoOptimization_desc": "Portarem el teu lloc al CIM dels resultats de cerca.",
+      "digitalMarketing_title": "Màrqueting Digital",
+      "digitalMarketing_desc": "Promoció integral per augmentar les vendes.",
+      "googleAds_title": "Google Ads",
+      "googleAds_desc": "Publicitat efectiva per atraure leads qualificats.",
+      "googleBusiness_title": "Perfil d'Empresa a Google",
+      "googleBusiness_desc": "Farem que el teu negoci sigui visible a Google Maps.",
+      "aiAutomation_title": "Automatització amb IA",
+      "aiAutomation_subService1": "🗣️ Agents d'IA Intel·ligents: Comunicació amb clients 24/7 a missatgeria i al lloc web.",
+      "aiAutomation_subService2": "📞 Gerent de Vendes d'IA per Veu: Consulta els clients per veu directament des del teu lloc web, utilitzant la teva base de dades!",
+      "leadAutomation_title": "Automatització de Leads i Sol·licituds",
+      "leadAutomation_desc": "Cap sol·licitud es perdrà!",
+      "continuousImprovement_title": "Millora Contínua",
+      "continuousImprovement_desc": "Anàlisi i implementació de solucions efectives basades en dades.",
+      "customCrm_title": "Sistema CRM Personalitzat",
+      "customCrm_desc": "Desenvolupament d'un CRM adaptat als processos únics del teu negoci.",
+      "detailsButton": "Detalls",
+      "hideButton": "Amagar"
+    }
+  }

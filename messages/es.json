@@ -1,0 +1,60 @@
+{
+    "BRMHomePage": {
+      "heroTitle": "¡Automatiza tu negocio y aumenta tus ganancias con BRM AI Business Automation!",
+      "heroSubtitle": "¿Cansado de la rutina y buscando formas efectivas de crecer? En BRM AI Business Automation, ofrecemos tanto soluciones específicas para tus tareas como un conjunto completo de servicios para la transformación digital de tu negocio. 🤖✨",
+      "servicesTitle": "Nuestros Servicios Integrales Incluyen:",
+      "valueProposition": "BRM AI Business Automation – ¡tu socio confiable en el mundo de las tecnologías digitales y la inteligencia artificial! 🚀",
+      "ctaTitle": "¿Listo para llevar tu negocio al siguiente nivel? 📈",
+      "ctaSubtitle": "Contáctanos para discutir cómo podemos ayudar a tu negocio a crecer y prosperar.",
+      "contactTitle": "👇 ¡Contáctanos hoy mismo! 👇"
+    },
+    "Services": {
+      "websiteCreation_title": "Creación de un Sitio Web de Ventas",
+      "websiteCreation_desc": "Tu principal herramienta online para atraer clientes.",
+      "seoOptimization_title": "Optimización SEO",
+      "seoOptimization_desc": "Llevaremos tu sitio a la CIMA de los resultados de búsqueda."
+    },
+    "Clients": {
+      "trustedBy": "Confían en nosotros"
+    },
+    "Header": {
+      "logoText": "BRM AI",
+      "servicesLink": "Servicios",
+      "contactLink": "Contacto",
+      "connectButton": "Conectar"
+    },
+    "Footer": {
+      "copyright": "&copy; {year} BRM AI Business Automation. Todos los derechos reservados.",
+      "hashtags": "#IA #AutomatizaciónDeNegocios #MarketingDigital #SEO #CRM #CrecimientoEmpresarial #Tecnología #InteligenciaArtificial #BRMAI"
+    },
+    "Shared": {
+      "contactUs": "Contáctanos",
+      "discussProject": "Discutir Proyecto",
+      "ourServices": "Nuestros Servicios",
+      "phone": "Teléfono",
+      "linkedIn": "LinkedIn"
+    },
+    "Services": {
+      "websiteCreation_title": "Creación de un Sitio Web de Ventas",
+      "websiteCreation_desc": "Tu principal herramienta online para atraer clientes.",
+      "seoOptimization_title": "Optimización SEO",
+      "seoOptimization_desc": "Llevaremos tu sitio a la CIMA de los resultados de búsqueda.",
+      "digitalMarketing_title": "Marketing Digital",
+      "digitalMarketing_desc": "Promoción integral para aumentar las ventas.",
+      "googleAds_title": "Google Ads",
+      "googleAds_desc": "Publicidad efectiva para atraer leads calificados.",
+      "googleBusiness_title": "Perfil de Empresa en Google",
+      "googleBusiness_desc": "Haremos que tu negocio sea visible en Google Maps.",
+      "aiAutomation_title": "Automatización con IA",
+      "aiAutomation_subService1": "🗣️ Agentes de IA Inteligentes: Comunicación con clientes 24/7 en mensajería y en el sitio web.",
+      "aiAutomation_subService2": "📞 Gerente de Ventas de IA por Voz: ¡Consulta a los clientes por voz directamente desde tu sitio web, utilizando tu base de datos!",
+      "leadAutomation_title": "Automatización de Leads y Solicitudes",
+      "leadAutomation_desc": "¡Ninguna solicitud se perderá!",
+      "continuousImprovement_title": "Mejora Continua",
+      "continuousImprovement_desc": "Análisis e implementación de soluciones efectivas basadas en datos.",
+      "customCrm_title": "Sistema CRM Personalizado",
+      "customCrm_desc": "Desarrollo de un CRM adaptado a los procesos únicos de tu negocio.",
+      "detailsButton": "Detalles",
+      "hideButton": "Ocultar"
+    }
+  }

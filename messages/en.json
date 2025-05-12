@@ -1,0 +1,54 @@
+{
+"BRMHomePage": {
+    "heroTitle": "Automate Your Business and Increase Profits with BRM AI Business Automation!",
+    "heroSubtitle": "Tired of routine and looking for effective ways to grow? At BRM AI Business Automation, we offer both targeted solutions for your tasks and a full range of services for digital business transformation! 🤖✨",
+    "servicesTitle": "Our Comprehensive Services Include:",
+    "valueProposition": "BRM AI Business Automation – your reliable partner in the world of digital technologies and artificial intelligence! 🚀",
+    "ctaTitle": "Ready to take your business to the next level? 📈",
+    "ctaSubtitle": "Contact us to discuss how we can help your business grow and thrive.",
+    "contactTitle": "👇 Contact Us Today! 👇"
+  },
+  "Services": {
+    "websiteCreation_title": "Creating a Selling Website",
+    "websiteCreation_desc": "Your main online tool for attracting clients.",
+    "seoOptimization_title": "SEO Optimization",
+    "seoOptimization_desc": "We'll get your site to the TOP of search results.",
+    "digitalMarketing_title": "Digital Marketing",
+    "digitalMarketing_desc": "Comprehensive promotion to increase sales.",
+    "googleAds_title": "Google Ads",
+    "googleAds_desc": "Effective advertising to attract hot leads.",
+    "googleBusiness_title": "Google Business Profile",
+    "googleBusiness_desc": "We'll make your business visible on Google Maps.",
+    "aiAutomation_title": "AI Automation",
+    "aiAutomation_subService1": "🗣️ Smart AI Agents: 24/7 communication with clients in messengers and on the website.",
+    "aiAutomation_subService2": "📞 Voice AI Sales Manager: Consults clients by voice directly from your website, using your database!",
+    "leadAutomation_title": "Lead and Request Automation",
+    "leadAutomation_desc": "No inquiry will be lost!",
+    "continuousImprovement_title": "Continuous Improvement",
+    "continuousImprovement_desc": "Analysis and implementation of effective data-driven solutions.",
+    "customCrm_title": "Custom CRM System",
+    "customCrm_desc": "Development of a CRM tailored to your unique business processes.",
+    "detailsButton": "Details",
+    "hideButton": "Hide"
+  },
+  "Clients": {
+    "trustedBy": "Trusted by"
+  },
+  "Header": {
+    "logoText": "BRM AI",
+    "servicesLink": "Services",
+    "contactLink": "Contact",
+    "connectButton": "Connect"
+  },
+  "Footer": {
+    "copyright": "&copy; {year} BRM AI Business Automation. All rights reserved.",
+    "hashtags": "#AI #BusinessAutomation #DigitalMarketing #SEO #CRM #BusinessGrowth #Technology #ArtificialIntelligence #BRMAI"
+  },
+  "Shared": {
+    "contactUs": "Contact Us",
+    "discussProject": "Discuss Project",
+    "ourServices": "Our Services",
+    "phone": "Phone",
+    "linkedIn": "LinkedIn"
+  }
+}
