@@ -23,14 +23,15 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ // Make the function async
   children,
-  params // Accept params as a whole object
+  params: paramsPromise // Переименуем для ясности, это промис
 }: Readonly<{
   children: React.ReactNode;
-  params: {locale: string};
+  params: Promise<{locale: string}>; // Явно типизируем params как Promise
 }>) {
-  const locale = params.locale; // Extract locale from the params object
+  const params = await paramsPromise; // Дожидаемся разрешения промиса
+  const locale = params.locale;   // Теперь извлекаем locale из разрешенного объекта
   // Fetch messages for the current locale on the server
-  const messages = await getMessages({ locale }); // Pass locale explicitly
+  const messages = await getMessages({ locale });
   const now = new Date(); // For consistent time across server and client if needed
 
   return (
