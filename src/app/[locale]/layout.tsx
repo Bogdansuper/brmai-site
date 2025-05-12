@@ -32,14 +32,14 @@ export default async function RootLayout({ // Make the function async
   const locale = params.locale;   // Теперь извлекаем locale из разрешенного объекта
   // Fetch messages for the current locale on the server
   const messages = await getMessages({ locale });
-  const now = new Date(); // For consistent time across server and client if needed
+  // const now = new Date(); // Removed for hydration consistency check
 
   return (
     <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <IntlClientProviderSetup locale={locale} messages={messages} now={now}>
+        <IntlClientProviderSetup locale={locale} messages={messages}> {/* Removed now prop */}
           {children}
         </IntlClientProviderSetup>
       </body>
