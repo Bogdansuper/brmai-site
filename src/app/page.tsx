@@ -1,3 +1,4 @@
+// @ts-expect-error: known issue with next/navigation in client components
 import {redirect} from 'next/navigation';
 import {defaultLocale} from '../i18n.ts';
 

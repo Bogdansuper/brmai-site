@@ -317,7 +317,7 @@ export default function BRMHomePage() {
           {tFooter('hashtags')}
         </p>
         <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-          <a href="/privacy-policy" className="hover:underline">
+          <a href="en/privacy-policy" className="hover:underline">
             Privacy Policy
           </a>
         </p>

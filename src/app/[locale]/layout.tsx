@@ -1,20 +1,20 @@
 // /Users/bogdan/brm-ai-site/src/app/[locale]/layout.tsx
 // No "use client" here, this will be an Async Server Component
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google"; // Commented out
 import "../globals.css";
 import {getMessages} from 'next-intl/server';
 import IntlClientProviderSetup from "./IntlClientProviderSetup.tsx";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({ // Commented out
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({ // Commented out
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 // Metadata is correctly defined here and will be applied by Next.js
 export const metadata: Metadata = {

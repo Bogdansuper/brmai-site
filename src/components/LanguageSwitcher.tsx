@@ -13,31 +13,20 @@ export default function LanguageSwitcher() {
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const newLocale = event.target.value;
     
-    // pathname is the current full path from URL, e.g. /en/about or /about
     let newPath = pathname;
 
-    // Check if the current pathname starts with the current locale prefix (e.g., /en/foo)
-    // Or if the pathname IS the current locale root (e.g., /en)
     if (pathname.startsWith(`/${currentLocale}/`)) {
-      // Path has current locale prefix and segments after, e.g. /en/about -> replace /en with /es -> /es/about
       newPath = `/${newLocale}${pathname.substring(currentLocale.length + 1)}`;
     } else if (pathname === `/${currentLocale}`) {
-      // Path IS the current locale root, e.g. /en -> replace with /es
       newPath = `/${newLocale}`;
     } else {
-      // Path does not have current locale prefix.
-      // This means it's either the site root "/" (for defaultLocale) or a path like "/about" (for defaultLocale).
       if (pathname === "/") {
-        newPath = `/${newLocale}`; // If at site root "/", new path is /es
+        newPath = `/${newLocale}`;
       } else {
-        newPath = `/${newLocale}${pathname}`; // If at "/about", new path is /es/about
+        newPath = `/${newLocale}${pathname}`;
       }
     }
     
-    // If, after construction, the new path for the default locale is just /<defaultLocale> (e.g. /en),
-    // and localePrefix is 'as-needed', we should navigate to "/".
-    // The middleware will typically handle redirecting /en to / if localePrefix is 'as-needed'.
-    // So, if newPath becomes exactly /<defaultLocale>, we can simplify it to "/".
     if (newLocale === defaultLocale && newPath === `/${defaultLocale}`) {
         newPath = "/";
     }
@@ -45,8 +34,6 @@ export default function LanguageSwitcher() {
     router.replace(newPath, { scroll: false });
   };
 
-  // Определяем, какой язык отображать в URL
-  // 'as-needed' означает, что для defaultLocale префикс не добавляется
   const getLocaleDisplayName = (locale: string) => {
     switch (locale) {
       case "en": return "English";
