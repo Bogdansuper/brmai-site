@@ -24,12 +24,11 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ 
   children,
-  params: paramsPromise 
+  params
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{locale: string}>; 
+  params: {locale: string}; 
 }>) {
-  const params = await paramsPromise; 
   const locale = params.locale;   
   const messages = await getMessages({ locale });
 
