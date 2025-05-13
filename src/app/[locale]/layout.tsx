@@ -22,14 +22,15 @@ export const metadata: Metadata = {
   description: "AI-powered business automation solutions.", 
 };
 
-export default async function RootLayout({ 
+export default async function RootLayout({
   children,
-  params
+  params: paramsPromise
 }: Readonly<{
   children: React.ReactNode;
-  params: {locale: string}; 
+  params: Promise<{locale: string}>;
 }>) {
-  const locale = params.locale;   
+  const params = await paramsPromise;
+  const locale = params.locale;
   const messages = await getMessages({ locale });
 
   // This layout should not render <html> or <body> tags.

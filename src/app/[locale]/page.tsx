@@ -42,7 +42,6 @@ export default function BRMHomePage() {
   const tHeader = useTranslations('Header');
   const tFooter = useTranslations('Footer');
   const tShared = useTranslations('Shared');
-  const tPrivacyPolicy = useTranslations('PrivacyPolicy');
 
   const services: Service[] = [
     {
@@ -319,7 +318,7 @@ export default function BRMHomePage() {
         </p>
         <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
           <a href="en/privacy-policy" className="hover:underline">
-            {tPrivacyPolicy('title')}
+            Privacy Policy
           </a>
         </p>
         </div>

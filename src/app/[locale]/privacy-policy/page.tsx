@@ -9,11 +9,12 @@ type PrivacySection = {
 
 // Consolidated Props type for both page component and generateMetadata
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>; // params is a Promise
 };
 
-export async function generateMetadata({params}: Props) { // Use consolidated Props
-  const locale = params.locale; // Access locale directly
+export async function generateMetadata({params: paramsPromise}: Props) { // Use consolidated Props
+  const params = await paramsPromise; // Await the promise
+  const locale = params.locale;
   setRequestLocale(locale);
   const t = await getTranslations({locale, namespace: 'PrivacyPolicy'});
   return {
@@ -21,8 +22,9 @@ export async function generateMetadata({params}: Props) { // Use consolidated Pr
   };
 }
 
-export default async function PrivacyPolicyPage({params }: Props) { // Use consolidated Props
-  const locale = params.locale; // Access locale directly
+export default async function PrivacyPolicyPage({params: paramsPromise }: Props) { // Use consolidated Props
+  const params = await paramsPromise; // Await the promise
+  const locale = params.locale;
   
   // Enable static rendering
   setRequestLocale(locale);
