@@ -7,7 +7,18 @@ type PrivacySection = {
   // Add more paragraphs if your structure supports it, e.g., paragraph2?: string;
 };
 
-export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
+// Type for page component props, params should be a Promise here
+type PrivacyPolicyPageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+// Type for generateMetadata props, params is a direct object here
+type GenerateMetadataProps = {
+  params: { locale: string };
+};
+
+export async function generateMetadata({params}: GenerateMetadataProps) { // Used GenerateMetadataProps
+  const locale = params.locale; // Access locale directly
   setRequestLocale(locale);
   const t = await getTranslations({locale, namespace: 'PrivacyPolicy'});
   return {
@@ -15,7 +26,10 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   };
 }
 
-export default async function PrivacyPolicyPage({params: {locale}}: {params: {locale: string}}) {
+export default async function PrivacyPolicyPage({params: paramsPromise }: PrivacyPolicyPageProps) { // Used PrivacyPolicyPageProps and aliased params
+  const params = await paramsPromise; // Await the promise
+  const locale = params.locale; // Then access locale
+  
   // Enable static rendering
   setRequestLocale(locale);
 
