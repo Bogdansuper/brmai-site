@@ -1,11 +1,11 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin('./i18n.ts'); // Указываем путь к нашему i18n.ts
+const withNextIntl = createNextIntlPlugin('./src/i18n.ts'); // Указываем путь к нашему src/i18n.ts
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withNextIntl({ // Оборачиваем конфигурацию здесь
+const nextConfig = {
   // Твоя существующая конфигурация Next.js здесь, если есть
   // Например: reactStrictMode: true,
-});
+};
 
-export default withNextIntl(nextConfig);
+export default withNextIntl(nextConfig); // Оборачиваем конфигурацию здесь

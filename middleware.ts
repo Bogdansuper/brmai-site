@@ -1,5 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
-import {locales, defaultLocale} from './i18n';
+import {locales, defaultLocale} from './src/i18n.ts';
 
 export default createMiddleware({
   // Список всех поддерживаемых локалей
@@ -7,9 +7,9 @@ export default createMiddleware({
 
   // Используется, если никакая локаль не совпадает
   defaultLocale: defaultLocale,
-  localePrefix: 'as-needed' // 'as-needed', 'always', 'never'
+  localePrefix: 'always' // Changed from 'as-needed' to 'always'
 });
 
 export const config = {
-  matcher: ['/', '/((?!api|_next/static|_next/image|favicon.ico|images|assets).*)']
+  matcher: '/(.*)' // Extremely broad matcher for debugging
 };

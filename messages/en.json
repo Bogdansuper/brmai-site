@@ -50,5 +50,33 @@
     "ourServices": "Our Services",
     "phone": "Phone",
     "linkedIn": "LinkedIn"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "introduction": {
+      "heading": "Introduction",
+      "paragraph1": "Welcome to BRM AI. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us."
+    },
+    "informationWeCollect": {
+      "heading": "Information We Collect",
+      "paragraph1": "We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the Site or otherwise when you contact us."
+    },
+    "howWeUseInformation": {
+      "heading": "How We Use Your Information",
+      "paragraph1": "We use personal information collected via our Site for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations."
+    },
+    "dataSharing": {
+      "heading": "Will Your Information Be Shared With Anyone?",
+      "paragraph1": "We only share information with your consent, to comply with laws, to provide you with services, to protect your rights, or to fulfill business obligations."
+    },
+    "yourRights": {
+      "heading": "What Are Your Privacy Rights?",
+      "paragraph1": "In some regions, such as the European Economic Area (EEA) and UK, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time."
+    },
+    "contactUs": {
+      "heading": "Contact Us",
+      "paragraph1": "If you have questions or comments about this policy, you may email us at privacy@brm.ai or by post to: [Your Company Address]."
+    },
+    "lastUpdated": "Last updated: {date}"
   }
 }

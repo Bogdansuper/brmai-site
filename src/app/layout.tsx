@@ -20,12 +20,12 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode; // Убери лишний пробел если есть
 }>) {
   return (
     // Здесь можно указать язык по умолчанию для страниц, не покрытых [locale]
     // Например, если поисковый робот зайдет на / до редиректа
-    <html lang="ru"> 
+    <html lang="en"> 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

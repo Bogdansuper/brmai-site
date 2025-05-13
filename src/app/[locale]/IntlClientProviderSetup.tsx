@@ -1,11 +1,11 @@
 "use client";
 
-import { NextIntlClientProvider, AbstractMessages } from 'next-intl';
+import { NextIntlClientProvider, AbstractIntlMessages } from 'next-intl';
 import { ReactNode } from 'react';
 
 type Props = {
   locale: string;
-  messages: AbstractMessages;
+  messages: AbstractIntlMessages;
   children: ReactNode;
   // now?: Date; // Removed
 };

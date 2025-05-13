@@ -1,6 +1,7 @@
 "use client"; // <--- Делаем компонент клиентским
 import { useState } from "react"; // <--- Импортируем useState
 import {useTranslations} from 'next-intl';
+// import { Link } from "../../navigation.ts"; // Commented out problematic import
 import {
   Globe,
   TrendingUp,
@@ -17,6 +18,8 @@ import {
   ChevronUp,   // <--- Иконка для кнопки "свернуть"
   type LucideIcon, // Import type for icon components
 } from "lucide-react";
+import LanguageSwitcher from "../../components/LanguageSwitcher.tsx"; // Импортируем наш компонент
+
 
 interface Service {
   title: string;
@@ -39,6 +42,7 @@ export default function BRMHomePage() {
   const tHeader = useTranslations('Header');
   const tFooter = useTranslations('Footer');
   const tShared = useTranslations('Shared');
+  const tPrivacyPolicy = useTranslations('PrivacyPolicy');
 
   const services: Service[] = [
     {
@@ -122,33 +126,30 @@ export default function BRMHomePage() {
       {/* Header/Nav - Inspired by Vercel */}
       <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-black/80 backdrop-blur-md">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          {/* Logo on the left */}
           <div className="flex items-center">
-            {/* Замени на свой логотип SVG или текстовый логотип */}
             <a href="/" className="text-xl font-bold">
               {tHeader('logoText')}
             </a>
           </div>
+          
+          {/* Middle navigation */}
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600 dark:text-gray-400">
             <a href="#services" className="hover:text-gray-900 dark:hover:text-white transition-colors">{tHeader('servicesLink')}</a>
             {/* Добавь другие ссылки по необходимости */}
-            {/* <a href="/about" className="hover:text-gray-900 dark:hover:text-white transition-colors">О нас</a> */}
-            {/* <a href="/pricing" className="hover:text-gray-900 dark:hover:text-white transition-colors">Цены</a> */}
           </nav>
+          
+          {/* LanguageSwitcher and Contact button on the right */}
           <div className="flex items-center space-x-3">
+            <LanguageSwitcher />
             <a
               href="#contact"
-              className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800/80 hover:bg-gray-200 dark:hover:bg-gray-700/80 rounded-md transition-colors" // Убедись, что стили кнопок не конфликтуют
+              className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800/80 hover:bg-gray-200 dark:hover:bg-gray-700/80 rounded-md transition-colors"
             >
               {tHeader('contactLink')}
             </a>
-            <a
-              href="tel:+34637523323" // Или ссылка на страницу с формой
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium bg-gray-900 text-white hover:bg-gray-700 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200 rounded-md transition-colors"
-            >
-              Связаться
-            </a>
           </div>
-          </div>
+        </div>
       </header>
 
       {/* Hero Section */}
@@ -315,6 +316,11 @@ export default function BRMHomePage() {
         </p>
         <p className="mt-2 text-xs text-gray-500 dark:text-gray-500">
           {tFooter('hashtags')}
+        </p>
+        <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <a href="en/privacy-policy" className="hover:underline">
+            {tPrivacyPolicy('title')}
+          </a>
         </p>
         </div>
       </footer>
