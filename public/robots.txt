@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mybrmai.com
+
+# Sitemaps
+Sitemap: https://mybrmai.com/sitemap.xml
