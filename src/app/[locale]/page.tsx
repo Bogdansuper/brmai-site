@@ -2,14 +2,16 @@
 import { getTranslations } from 'next-intl/server';
 import BRMHomePageClient from "@/components/BRMHomePageClient";
 
-// Define a specific type for the props expected by generateMetadata
+// Make GenerateMetadataProps also flexible for params for diagnosis
 interface GenerateMetadataProps {
-  params: { locale: string };
+  params: any; // Typed as any for diagnosis
+  searchParams?: any; // Add searchParams as any for consistency with PageProps diagnosis
 }
 
 export async function generateMetadata(props: GenerateMetadataProps) {
-  const awaitedParams = await props.params; // Explicitly await props.params
-  const locale = awaitedParams.locale;      // Then destructure locale
+  // We now need to be careful when accessing props.params.locale
+  // Assuming it resolves to { locale: string } despite the 'any' typing for now
+  const locale = props.params.locale; 
 
   const t = await getTranslations({ locale, namespace: 'BRMHomePage' });
   const baseUrl = "https://mybrmai.com"; // Define your base URL
@@ -67,18 +69,17 @@ export async function generateMetadata(props: GenerateMetadataProps) {
   };
 }
 
-// Minimal and explicit props for the Page component in a dynamic segment
+// PageComponentProps already has params and searchParams as any
 interface PageComponentProps {
-  params: { locale: string };
-  // searchParams?: { [key: string]: string | string[] | undefined }; // If you ever use searchParams
+  params: any; 
+  searchParams?: any; 
 }
 
 export default async function Page(props: PageComponentProps) {
-  const awaitedParams = await props.params; // Explicitly await props.params
-  const locale = awaitedParams.locale;      // Then destructure locale
-
-  // 'locale' is available here if you needed to pass it to BRMHomePageClient
-  // For example: <BRMHomePageClient locale={locale} />
-  // But BRMHomePageClient uses useLocale(), so it's not strictly needed here.
   return <BRMHomePageClient />;
 }
+
+// Option 2 (Alternative to Option 1): Let Next.js/TypeScript infer props as much as possible
+// export default async function Page(props: any) { // Simplest, but less type-safe
+//   return <BRMHomePageClient />;
+// }
