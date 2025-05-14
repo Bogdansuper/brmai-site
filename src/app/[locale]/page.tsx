@@ -2,7 +2,15 @@
 import { getTranslations } from 'next-intl/server';
 import BRMHomePageClient from "@/components/BRMHomePageClient";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+// Define a specific type for the props expected by generateMetadata
+interface GenerateMetadataProps {
+  params: { locale: string };
+}
+
+export async function generateMetadata(props: GenerateMetadataProps) {
+  const awaitedParams = await props.params; // Explicitly await props.params
+  const locale = awaitedParams.locale;      // Then destructure locale
+
   const t = await getTranslations({ locale, namespace: 'BRMHomePage' });
   const baseUrl = "https://mybrmai.com"; // Define your base URL
   // Assuming your page path for the locale is simply /locale or / for defaultLocale
@@ -59,6 +67,18 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function Page() {
+// Minimal and explicit props for the Page component in a dynamic segment
+interface PageComponentProps {
+  params: { locale: string };
+  // searchParams?: { [key: string]: string | string[] | undefined }; // If you ever use searchParams
+}
+
+export default async function Page(props: PageComponentProps) {
+  const awaitedParams = await props.params; // Explicitly await props.params
+  const locale = awaitedParams.locale;      // Then destructure locale
+
+  // 'locale' is available here if you needed to pass it to BRMHomePageClient
+  // For example: <BRMHomePageClient locale={locale} />
+  // But BRMHomePageClient uses useLocale(), so it's not strictly needed here.
   return <BRMHomePageClient />;
 }
