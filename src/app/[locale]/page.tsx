@@ -1,22 +1,17 @@
 // src/app/[locale]/page.tsx
 import { getTranslations } from 'next-intl/server';
-import BRMHomePageClient from "@/components/BRMHomePageClient";
+// Import the new server component instead of the client component directly
+import BRMHomePageServer from "./BRMHomePageServer"; // Adjusted path assuming it's in the same [locale] folder
 
-// Make GenerateMetadataProps also flexible for params for diagnosis
-interface GenerateMetadataProps {
-  params: any; // Typed as any for diagnosis
-  searchParams?: any; // Add searchParams as any for consistency with PageProps diagnosis
+interface PageProps {
+  params: { locale: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export async function generateMetadata(props: GenerateMetadataProps) {
-  // We now need to be careful when accessing props.params.locale
-  // Assuming it resolves to { locale: string } despite the 'any' typing for now
-  const locale = props.params.locale; 
-
+export async function generateMetadata(props: PageProps) {
+  const locale = props.params.locale;
   const t = await getTranslations({ locale, namespace: 'BRMHomePage' });
-  const baseUrl = "https://mybrmai.com"; // Define your base URL
-  // Assuming your page path for the locale is simply /locale or / for defaultLocale
-  // Adjust if you have more segments like /locale/something
+  const baseUrl = "https://mybrmai.com";
   const canonicalPath = locale === "en" ? "/" : `/${locale}`;
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
 
@@ -41,17 +36,17 @@ export async function generateMetadata(props: GenerateMetadataProps) {
         'es': `${baseUrl}/es`,
         'ca': `${baseUrl}/ca`,
         'ru': `${baseUrl}/ru`,
-        'x-default': `${baseUrl}/` // Default version, usually English
+        'x-default': `${baseUrl}/`
       },
     },
     openGraph: {
       title: t('seoTitle'),
       description: t('seoDescription'),
-      url: "https://mybrmai.com",
+      url: canonicalUrl, // Use the locale-specific canonical URL
       siteName: "BRM AI",
       images: [
         {
-          url: "https://mybrmai.com/og-image.jpg",
+          url: "https://mybrmai.com/og-image.jpg", // Ensure this image exists
           width: 1200,
           height: 630,
           alt: t('seoTitle')
@@ -64,19 +59,14 @@ export async function generateMetadata(props: GenerateMetadataProps) {
       card: "summary_large_image",
       title: t('seoTitle'),
       description: t('seoDescription'),
-      images: ["https://mybrmai.com/og-image.jpg"]
+      images: ["https://mybrmai.com/og-image.jpg"] // Ensure this image exists
     }
   };
 }
 
-// PageComponentProps already has params and searchParams as any
-interface PageComponentProps {
-  params: any; 
-  searchParams?: any; 
-}
-
-export default async function Page(props: PageComponentProps) {
-  return <BRMHomePageClient />;
+export default async function Page(props: PageProps) {
+  // const locale = props.params.locale; // locale can be accessed here if needed
+  return <BRMHomePageServer />;
 }
 
 // Option 2 (Alternative to Option 1): Let Next.js/TypeScript infer props as much as possible

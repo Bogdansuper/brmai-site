@@ -51,7 +51,17 @@
     "discussProject": "Discuss Project",
     "ourServices": "Our Services",
     "phone": "Phone",
-    "linkedIn": "LinkedIn"
+    "linkedIn": "LinkedIn",
+    "whatsApp": "WhatsApp",
+    "consultationFormTitle": "Request a Free Consultation",
+    "consultationFormSubtitle": "Fill out the form and we will contact you shortly.",
+    "formNameLabel": "Your Name",
+    "formNamePlaceholder": "e.g., John Doe",
+    "formEmailLabel": "Your Email",
+    "formEmailPlaceholder": "you@example.com",
+    "formMessageLabel": "Your Inquiry",
+    "formMessagePlaceholder": "Tell us about your project or question...",
+    "formSubmitButton": "Send Request"
   },
   "PrivacyPolicy": {
     "title": "Privacy Policy",
