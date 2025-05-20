@@ -2,11 +2,24 @@
 import { getTranslations } from 'next-intl/server';
 // Import the new server component instead of the client component directly
 import BRMHomePageServer from "./BRMHomePageServer"; // Adjusted path assuming it's in the same [locale] folder
+import type { Metadata, ResolvingMetadata } from 'next'; // Импортируем типы Next.js
+
+// Тип для объекта params после разрешения Promise
+type ResolvedPageParams = { locale: string };
+
+// Предполагаемый тип пропсов, который может ожидать Vercel
+type PotentiallyExpectedProps = {
+  params: Promise<ResolvedPageParams>; // params - это Promise
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+};
 
 export async function generateMetadata(
-  { params }: { params: { locale: string } } // Explicitly type params here and destructure
-) {
-  const locale = params.locale;
+  props: PotentiallyExpectedProps, // Используем новый тип
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const resolvedParams = await props.params; // Ожидаем разрешения params
+  const locale = resolvedParams.locale;
+
   const t = await getTranslations({ locale, namespace: 'BRMHomePage' });
   const baseUrl = "https://mybrmai.com";
   const canonicalPath = locale === "en" ? "/" : `/${locale}`;
@@ -39,11 +52,11 @@ export async function generateMetadata(
     openGraph: {
       title: t('seoTitle'),
       description: t('seoDescription'),
-      url: canonicalUrl, // Use the locale-specific canonical URL
+      url: canonicalUrl,
       siteName: "BRM AI",
       images: [
         {
-          url: "https://mybrmai.com/og-image.jpg", // Ensure this image exists
+          url: "https://mybrmai.com/og-image.jpg",
           width: 1200,
           height: 630,
           alt: t('seoTitle')
@@ -56,15 +69,20 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: t('seoTitle'),
       description: t('seoDescription'),
-      images: ["https://mybrmai.com/og-image.jpg"] // Ensure this image exists
+      images: ["https://mybrmai.com/og-image.jpg"]
     }
   };
 }
 
 export default async function Page(
-  { params }: { params: { locale: string } } // Explicitly type params here and destructure
+  props: PotentiallyExpectedProps // Используем новый тип
 ) {
-  // const locale = params.locale; // locale can be accessed here if needed
+  // Если вам нужен locale здесь, вы можете его получить:
+  // const resolvedParams = await props.params;
+  // const locale = resolvedParams.locale;
+  
+  // BRMHomePageServer, вероятно, получает locale из контекста next-intl,
+  // поэтому явная передача locale может не потребоваться.
   return <BRMHomePageServer />;
 }
 
