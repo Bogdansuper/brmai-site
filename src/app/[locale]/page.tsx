@@ -3,13 +3,10 @@ import { getTranslations } from 'next-intl/server';
 // Import the new server component instead of the client component directly
 import BRMHomePageServer from "./BRMHomePageServer"; // Adjusted path assuming it's in the same [locale] folder
 
-interface PageProps {
-  params: { locale: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
-export async function generateMetadata(props: PageProps) {
-  const locale = props.params.locale;
+export async function generateMetadata(
+  { params }: { params: { locale: string } } // Explicitly type params here and destructure
+) {
+  const locale = params.locale;
   const t = await getTranslations({ locale, namespace: 'BRMHomePage' });
   const baseUrl = "https://mybrmai.com";
   const canonicalPath = locale === "en" ? "/" : `/${locale}`;
@@ -64,8 +61,10 @@ export async function generateMetadata(props: PageProps) {
   };
 }
 
-export default async function Page(props: PageProps) {
-  // const locale = props.params.locale; // locale can be accessed here if needed
+export default async function Page(
+  { params }: { params: { locale: string } } // Explicitly type params here and destructure
+) {
+  // const locale = params.locale; // locale can be accessed here if needed
   return <BRMHomePageServer />;
 }
 
