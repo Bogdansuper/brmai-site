@@ -1,5 +1,7 @@
 {
     "BRMHomePage": {
+      "seoTitle": "Automatización de Negocios con IA y Automatización de Procesos de Negocio con IA | BRM AI",
+      "seoDescription": "Desbloquea el poder de la automatización de negocios con IA y la gestión de procesos de negocio. BRM AI te ayuda a automatizar procesos de negocio con inteligencia artificial para mayor eficiencia, crecimiento y rentabilidad.",
       "heroTitle": "¡Automatiza tu negocio y aumenta tus ganancias con BRM AI Business Automation!",
       "heroSubtitle": "¿Cansado de la rutina y buscando formas efectivas de crecer? En BRM AI Business Automation, ofrecemos tanto soluciones específicas para tus tareas como un conjunto completo de servicios para la transformación digital de tu negocio. 🤖✨",
       "servicesTitle": "Nuestros Servicios Integrales Incluyen:",
@@ -7,32 +9,6 @@
       "ctaTitle": "¿Listo para llevar tu negocio al siguiente nivel? 📈",
       "ctaSubtitle": "Contáctanos para discutir cómo podemos ayudar a tu negocio a crecer y prosperar.",
       "contactTitle": "👇 ¡Contáctanos hoy mismo! 👇"
-    },
-    "Services": {
-      "websiteCreation_title": "Creación de un Sitio Web de Ventas",
-      "websiteCreation_desc": "Tu principal herramienta online para atraer clientes.",
-      "seoOptimization_title": "Optimización SEO",
-      "seoOptimization_desc": "Llevaremos tu sitio a la CIMA de los resultados de búsqueda."
-    },
-    "Clients": {
-      "trustedBy": "Confían en nosotros"
-    },
-    "Header": {
-      "logoText": "BRM AI",
-      "servicesLink": "Servicios",
-      "contactLink": "Contacto",
-      "connectButton": "Conectar"
-    },
-    "Footer": {
-      "copyright": "&copy; {year} BRM AI Business Automation. Todos los derechos reservados.",
-      "hashtags": "#IA #AutomatizaciónDeNegocios #MarketingDigital #SEO #CRM #CrecimientoEmpresarial #Tecnología #InteligenciaArtificial #BRMAI"
-    },
-    "Shared": {
-      "contactUs": "Contáctanos",
-      "discussProject": "Discutir Proyecto",
-      "ourServices": "Nuestros Servicios",
-      "phone": "Teléfono",
-      "linkedIn": "LinkedIn"
     },
     "Services": {
       "websiteCreation_title": "Creación de un Sitio Web de Ventas",
@@ -56,5 +32,35 @@
       "customCrm_desc": "Desarrollo de un CRM adaptado a los procesos únicos de tu negocio.",
       "detailsButton": "Detalles",
       "hideButton": "Ocultar"
+    },
+    "Clients": {
+      "trustedBy": "Confían en nosotros"
+    },
+    "Header": {
+      "logoText": "BRM AI",
+      "servicesLink": "Servicios",
+      "contactLink": "Contacto",
+      "connectButton": "Conectar"
+    },
+    "Footer": {
+      "copyright": "&copy; {year} BRM AI Business Automation. Todos los derechos reservados.",
+      "hashtags": "#IA #AutomatizaciónDeNegocios #MarketingDigital #SEO #CRM #CrecimientoEmpresarial #Tecnología #InteligenciaArtificial #BRMAI"
+    },
+    "Shared": {
+      "contactUs": "Contáctanos",
+      "discussProject": "Discutir Proyecto",
+      "ourServices": "Nuestros Servicios",
+      "phone": "Teléfono",
+      "linkedIn": "LinkedIn",
+      "whatsApp": "WhatsApp",
+      "consultationFormTitle": "Solicita una Consulta Gratuita",
+      "consultationFormSubtitle": "Completa el formulario y nos pondremos en contacto contigo en breve.",
+      "formNameLabel": "Tu Nombre",
+      "formNamePlaceholder": "ej., Juan Pérez",
+      "formEmailLabel": "Tu Email",
+      "formEmailPlaceholder": "tu@ejemplo.com",
+      "formMessageLabel": "Tu Consulta",
+      "formMessagePlaceholder": "Cuéntanos sobre tu proyecto o pregunta...",
+      "formSubmitButton": "Enviar Solicitud"
     }
   }
