@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useMemo, Suspense } from "react";
 import {useTranslations} from 'next-intl';
 import {
   Globe,
@@ -18,6 +18,187 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher.tsx";
+import RabbitAnimation from './RabbitAnimation';
+
+import { Canvas, useFrame, useLoader, extend } from '@react-three/fiber'; // R3F imports for direct test
+import * as THREE from 'three'; // Three.js import for direct test
+
+// Noise function for vertex displacement
+function noise3D(x: number, y: number, z: number): number {
+  const p = new THREE.Vector3(x, y, z);
+  const n = Math.sin(p.x * 1.5) * Math.cos(p.y * 1.5) * Math.sin(p.z * 1.5);
+  return n;
+}
+
+// Particle system using rabbit-sdf texture
+const ParticleField = () => {
+  const particlesRef = useRef<THREE.Points>(null!);
+  const rabbitTexture = useLoader(THREE.TextureLoader, '/textures/rabbit-sdf.webp');
+  
+  const particleCount = 500;
+  const positions = useMemo(() => {
+    const pos = new Float32Array(particleCount * 3);
+    for (let i = 0; i < particleCount; i++) {
+      pos[i * 3] = (Math.random() - 0.5) * 20;
+      pos[i * 3 + 1] = (Math.random() - 0.5) * 20;
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 20;
+    }
+    return pos;
+  }, []);
+  
+  const sizes = useMemo(() => {
+    const s = new Float32Array(particleCount);
+    for (let i = 0; i < particleCount; i++) {
+      s[i] = Math.random() * 0.5 + 0.1;
+    }
+    return s;
+  }, []);
+  
+  useFrame((state) => {
+    if (particlesRef.current) {
+      particlesRef.current.rotation.y = state.clock.getElapsedTime() * 0.05;
+      particlesRef.current.rotation.x = state.clock.getElapsedTime() * 0.03;
+    }
+  });
+  
+  return (
+    <points ref={particlesRef}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          count={particleCount}
+          array={positions}
+          itemSize={3}
+        />
+        <bufferAttribute
+          attach="attributes-size"
+          count={particleCount}
+          array={sizes}
+          itemSize={1}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        size={0.1}
+        sizeAttenuation={true}
+        transparent={true}
+        alphaTest={0.001}
+        opacity={0.4}
+        map={rabbitTexture}
+        blending={THREE.AdditiveBlending}
+        depthWrite={false}
+      />
+    </points>
+  );
+};
+
+// Complex animated blob with noise-based vertex displacement
+const ComplexBlob = ({ position = [0, 0, 0], scale = 1, speed = 1 }: {
+  position?: [number, number, number];
+  scale?: number;
+  speed?: number;
+}) => {
+  const meshRef = useRef<THREE.Mesh>(null!);
+  const matcapTexture = useLoader(THREE.TextureLoader, '/textures/matcap-9.jpg');
+  
+  // Store original positions
+  const originalPositions = useRef<Float32Array | null>(null);
+  
+  useFrame((state) => {
+    if (meshRef.current && meshRef.current.geometry) {
+      const time = state.clock.getElapsedTime() * speed;
+      
+      // Rotation
+      meshRef.current.rotation.x = Math.sin(time * 0.3) * 0.3;
+      meshRef.current.rotation.y = time * 0.2;
+      
+      // Get geometry positions
+      const positions = meshRef.current.geometry.attributes.position;
+      
+      // Store original positions on first frame
+      if (!originalPositions.current) {
+        originalPositions.current = new Float32Array(positions.array);
+      }
+      
+      // Apply complex noise-based displacement
+      for (let i = 0; i < positions.count; i++) {
+        const x = originalPositions.current[i * 3];
+        const y = originalPositions.current[i * 3 + 1];
+        const z = originalPositions.current[i * 3 + 2];
+        
+        // Multiple octaves of noise for more complex displacement
+        const noise1 = noise3D(x * 2 + time, y * 2, z * 2) * 0.1;
+        const noise2 = noise3D(x * 4, y * 4 + time * 0.5, z * 4) * 0.05;
+        const noise3 = noise3D(x * 8 + time * 0.3, y * 8, z * 8) * 0.025;
+        
+        const totalNoise = noise1 + noise2 + noise3;
+        
+        // Breathing effect
+        const breathing = Math.sin(time * 0.5) * 0.05;
+        
+        // Apply displacement along normals
+        const length = Math.sqrt(x * x + y * y + z * z);
+        const factor = 1 + totalNoise + breathing;
+        
+        positions.setXYZ(
+          i,
+          x * factor,
+          y * factor,
+          z * factor
+        );
+      }
+      
+      positions.needsUpdate = true;
+      meshRef.current.geometry.computeVertexNormals();
+    }
+  });
+  
+  return (
+    <mesh ref={meshRef} position={position} scale={scale}>
+      <icosahedronGeometry args={[1, 8]} />
+      <meshMatcapMaterial matcap={matcapTexture} />
+    </mesh>
+  );
+};
+
+// Main animated scene with all elements
+const AnimatedBlob = () => {
+  const matcapTexture = useLoader(THREE.TextureLoader, '/textures/matcap-9.jpg');
+  
+  return (
+    <>
+      {/* Removed post-processing effects for now */}
+      
+      {/* Main central blob with complex displacement */}
+      <ComplexBlob position={[0, 0, 0]} scale={2} speed={1} />
+      
+      {/* Multiple floating elements */}
+      <ComplexBlob position={[-3, 2, -2]} scale={0.8} speed={1.2} />
+      <ComplexBlob position={[3, -2, -1]} scale={1} speed={0.8} />
+      <ComplexBlob position={[2, 3, -3]} scale={0.6} speed={1.5} />
+      <ComplexBlob position={[-4, -1, -2]} scale={0.7} speed={0.9} />
+      
+      {/* Additional geometric shapes */}
+      <mesh position={[5, 0, -4]} scale={[1.5, 1.5, 1.5]}>
+        <octahedronGeometry args={[1, 2]} />
+        <meshMatcapMaterial matcap={matcapTexture} opacity={0.8} transparent />
+      </mesh>
+      
+      <mesh position={[-5, 1, -5]} scale={[2, 2, 2]}>
+        <tetrahedronGeometry args={[1, 0]} />
+        <meshMatcapMaterial matcap={matcapTexture} opacity={0.6} transparent />
+      </mesh>
+      
+      {/* Large background sphere */}
+      <mesh position={[0, 0, -8]} scale={[6, 6, 6]}>
+        <sphereGeometry args={[1, 32, 32]} />
+        <meshMatcapMaterial matcap={matcapTexture} opacity={0.2} transparent />
+      </mesh>
+      
+      {/* Particle field */}
+      <ParticleField />
+    </>
+  );
+};
 
 interface Service {
   title: string;
@@ -34,6 +215,8 @@ interface Client {
 }
 
 export default function BRMHomePageClient() {
+  console.log('[TEST] BRMHomePageClient rendering');
+
   const t = useTranslations('BRMHomePage');
   const tServices = useTranslations('Services');
   const tClients = useTranslations('Clients');
@@ -152,10 +335,26 @@ export default function BRMHomePageClient() {
       </header>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-28 lg:py-36 text-center bg-white dark:bg-gray-950">
+        <div style={{ position: 'absolute', inset: 0, zIndex: 0, background: 'linear-gradient(to bottom, #1e1b4b, #312e81)', height: '100%' }}>
+          <Canvas camera={{ position: [0, 0, 3], fov: 60 }}>
+            <fog attach="fog" color="#1e1b4b" near={1} far={10} />
+            <ambientLight intensity={0.5} />
+            <pointLight position={[10, 10, 10]} intensity={1} color="#e0e7ff" />
+            <pointLight position={[-10, -10, -10]} intensity={0.5} color="#c7d2fe" />
+            <Suspense fallback={null}>
+              <AnimatedBlob />
+            </Suspense>
+          </Canvas>
+        </div>
+        
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <RabbitAnimation />
+        </div>
+
         <div className="absolute inset-0 -z-10 hidden dark:block">
           <div className="absolute inset-0 bg-gradient-radial from-blue-600/10 via-transparent to-transparent blur-3xl opacity-30"></div>
         </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-8 text-gray-900 dark:text-white">
            {t('heroTitle')}
           </h1>
