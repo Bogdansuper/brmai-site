@@ -1,35 +1,88 @@
 {
     "BRMHomePage": {
-      "seoTitle": "Automatización de Negocios con IA y Automatización de Procesos de Negocio con IA | BRM AI",
-      "seoDescription": "Desbloquea el poder de la automatización de negocios con IA y la gestión de procesos de negocio. BRM AI te ayuda a automatizar procesos de negocio con inteligencia artificial para mayor eficiencia, crecimiento y rentabilidad.",
-      "heroTitle": "¡Automatiza tu negocio y aumenta tus ganancias con BRM AI Business Automation!",
-      "heroSubtitle": "¿Cansado de la rutina y buscando formas efectivas de crecer? En BRM AI Business Automation, ofrecemos tanto soluciones específicas para tus tareas como un conjunto completo de servicios para la transformación digital de tu negocio. 🤖✨",
+      "seoTitle": "Automatización de Procesos de Negocio con IA | Software de Automatización | BRM AI",
+      "seoDescription": "Descubre el poder de la automatización de procesos de negocio con inteligencia artificial. BRM AI te ayuda a automatizar procesos empresariales para mayor eficiencia y crecimiento.",
+      "heroTitle": "Automatización de Procesos de Negocio con IA: Aumenta tus Ganancias con BRM AI",
+      "heroSubtitle": "Aprovecha la IA para la automatización empresarial y optimiza tus procesos de negocio. BRM AI ofrece soluciones de IA dirigidas y transformación digital completa usando inteligencia artificial.",
       "servicesTitle": "Nuestros Servicios Integrales Incluyen:",
-      "valueProposition": "BRM AI Business Automation – ¡tu socio confiable en el mundo de las tecnologías digitales y la inteligencia artificial! 🚀",
+      "servicesDescription": "Nuestro conjunto integral de servicios de automatización empresarial está diseñado para abordar cada aspecto de tu viaje de transformación digital. Desde automatización de procesos impulsada por IA hasta desarrollo de software personalizado, proporcionamos soluciones integrales que generan resultados empresariales medibles.",
+      "valueProposition": "BRM AI Automatización Empresarial – ¡tu socio confiable en el mundo de las tecnologías digitales y la inteligencia artificial! 🚀",
       "ctaTitle": "¿Listo para llevar tu negocio al siguiente nivel? 📈",
       "ctaSubtitle": "Contáctanos para discutir cómo podemos ayudar a tu negocio a crecer y prosperar.",
-      "contactTitle": "👇 ¡Contáctanos hoy mismo! 👇"
+      "contactTitle": "👇 ¡Contáctanos Hoy! 👇",
+      "getStarted": "COMENZAR →",
+      "viewServices": "VER SERVICIOS",
+      "learnMore": "Saber Más →"
+    },
+    "AboutUs": {
+      "title": "ACERCA DE BRM AI",
+      "paragraph1": "BRM AI es un proveedor líder de soluciones de automatización de procesos de negocio impulsadas por inteligencia artificial. Fundada en Barcelona, nos especializamos en ayudar a las empresas a transformar sus operaciones a través de la automatización inteligente, reduciendo costos mientras aumentamos la eficiencia y escalabilidad.",
+      "paragraph2": "Nuestro equipo combina experiencia profunda en IA, desarrollo de software y optimización de procesos empresariales para ofrecer soluciones personalizadas que impulsan resultados reales. Entendemos que cada negocio es único, por lo que adoptamos un enfoque personalizado para cada compromiso con el cliente.",
+      "missionTitle": "NUESTRA MISIÓN",
+      "missionText": "Democratizar el acceso a la automatización empresarial impulsada por IA, permitiendo que empresas de todos los tamaños compitan más efectivamente en la economía digital. Creemos que la automatización inteligente debe ser accesible, asequible y alineada con tus objetivos empresariales.",
+      "approachTitle": "NUESTRO ENFOQUE",
+      "approach1": "Toma de decisiones basada en datos",
+      "approach2": "Metodología de mejora continua",
+      "approach3": "Comunicación transparente",
+      "approach4": "Implementaciones enfocadas en el ROI"
+    },
+    "WhyChooseUs": {
+      "title": "POR QUÉ ELEGIR BRM AI PARA LA AUTOMATIZACIÓN DE PROCESOS DE NEGOCIO",
+      "provenResultsTitle": "RESULTADOS PROBADOS",
+      "provenResultsText": "Nuestras soluciones de automatización empresarial han ayudado a los clientes a reducir los costos operativos hasta en un 60% mientras mejoran la eficiencia del proceso en 3x.",
+      "aiExpertiseTitle": "EXPERIENCIA EN IA",
+      "aiExpertiseText": "Aprovecha tecnologías de inteligencia artificial y aprendizaje automático de vanguardia para automatizar procesos empresariales complejos con precisión.",
+      "customSolutionsTitle": "SOLUCIONES PERSONALIZADAS",
+      "customSolutionsText": "Cada solución de automatización de procesos de negocio que desarrollamos está adaptada a tus necesidades específicas, asegurando una integración perfecta con los sistemas existentes."
+    },
+    "FAQ": {
+      "title": "PREGUNTAS FRECUENTES",
+      "question1": "¿Qué es la automatización de procesos de negocio?",
+      "answer1": "La automatización de procesos de negocio (BPA) utiliza tecnología para ejecutar tareas o procesos recurrentes en un negocio donde el esfuerzo manual puede ser reemplazado. Lo logra utilizando IA y software para optimizar y agilizar los procesos empresariales, reduciendo costos y aumentando la eficiencia.",
+      "question2": "¿Cómo puede la IA mejorar mis procesos de negocio?",
+      "answer2": "La IA puede analizar grandes cantidades de datos para identificar patrones e ineficiencias, automatizar procesos de toma de decisiones, predecir tendencias futuras y manejar tareas complejas que consumirían mucho tiempo para los humanos. Esto conduce a operaciones más rápidas, menos errores y mejor asignación de recursos.",
+      "question3": "¿Qué tipos de negocios pueden beneficiarse de la automatización?",
+      "answer3": "Cualquier negocio con procesos repetitivos puede beneficiarse de la automatización. Esto incluye manufactura, retail, salud, finanzas, logística e industrias de servicios. Ya seas una pequeña startup o una gran empresa, la automatización de procesos de negocio puede ayudar a optimizar tus operaciones.",
+      "question4": "¿Cuánto tiempo toma implementar la automatización empresarial?",
+      "answer4": "El tiempo de implementación varía según la complejidad de tus procesos y el alcance de la automatización. Las automatizaciones simples pueden implementarse en semanas, mientras que los proyectos integrales de automatización de procesos de negocio pueden tomar varios meses. Proporcionamos cronogramas detallados durante la fase de consulta.",
+      "question5": "¿Cuál es el ROI de la automatización de procesos de negocio?",
+      "answer5": "La mayoría de las empresas ven ROI dentro de 6-12 meses. Los beneficios incluyen costos laborales reducidos (30-70%), menos errores (hasta 90% de reducción), tiempos de procesamiento más rápidos (50-80% de mejora) y mayor satisfacción del cliente. El ROI exacto depende de tus procesos específicos y el alcance de implementación."
+    },
+    "Contact": {
+      "directContactTitle": "Contacto Directo",
+      "sendMessageTitle": "Enviar Mensaje",
+      "namePlaceholder": "NOMBRE",
+      "emailPlaceholder": "CORREO",
+      "messagePlaceholder": "MENSAJE",
+      "sendButton": "Enviar →"
+    },
+    "Navigation": {
+      "aboutUs": "NOSOTROS",
+      "faq": "FAQ",
+      "blog": "BLOG",
+      "login": "INICIAR SESIÓN",
+      "signUp": "REGISTRARSE"
     },
     "Services": {
-      "websiteCreation_title": "Creación de un Sitio Web de Ventas",
-      "websiteCreation_desc": "Tu principal herramienta online para atraer clientes.",
+      "websiteCreation_title": "Creación de Sitio Web de Ventas",
+      "websiteCreation_desc": "Tu herramienta principal en línea para atraer clientes.",
       "seoOptimization_title": "Optimización SEO",
-      "seoOptimization_desc": "Llevaremos tu sitio a la CIMA de los resultados de búsqueda.",
+      "seoOptimization_desc": "Llevaremos tu sitio al TOP de los resultados de búsqueda.",
       "digitalMarketing_title": "Marketing Digital",
-      "digitalMarketing_desc": "Promoción integral para aumentar las ventas.",
+      "digitalMarketing_desc": "Promoción integral para aumentar las vendes.",
       "googleAds_title": "Google Ads",
-      "googleAds_desc": "Publicidad efectiva para atraer leads calificados.",
-      "googleBusiness_title": "Perfil de Empresa en Google",
-      "googleBusiness_desc": "Haremos que tu negocio sea visible en Google Maps.",
+      "googleAds_desc": "Publicidad efectiva para atraer clientes potenciales.",
+      "googleBusiness_title": "Google Business Profile",
+      "googleBusiness_desc": "Haremos visible tu negocio en Google Maps.",
       "aiAutomation_title": "Automatización con IA",
-      "aiAutomation_subService1": "🗣️ Agentes de IA Inteligentes: Comunicación con clientes 24/7 en mensajería y en el sitio web.",
-      "aiAutomation_subService2": "📞 Gerente de Ventas de IA por Voz: ¡Consulta a los clientes por voz directamente desde tu sitio web, utilizando tu base de datos!",
+      "aiAutomation_subService1": "🗣️ Agentes IA Inteligentes: comunicación 24/7 con clientes en mensajeros y en el sitio web.",
+      "aiAutomation_subService2": "📞 Gerente de Ventas IA por Voz: Consulta a clientes por voz directamente desde tu sitio web, ¡usando tu base de datos!",
       "leadAutomation_title": "Automatización de Leads y Solicitudes",
-      "leadAutomation_desc": "¡Ninguna solicitud se perderá!",
+      "leadAutomation_desc": "¡Ninguna consulta se perdrá!",
       "continuousImprovement_title": "Mejora Continua",
       "continuousImprovement_desc": "Análisis e implementación de soluciones efectivas basadas en datos.",
       "customCrm_title": "Sistema CRM Personalizado",
-      "customCrm_desc": "Desarrollo de un CRM adaptado a los procesos únicos de tu negocio.",
+      "customCrm_desc": "Desarrollo de un CRM adaptado a tus procesos de negocio únicos.",
       "detailsButton": "Detalles",
       "hideButton": "Ocultar"
     },
@@ -43,8 +96,8 @@
       "connectButton": "Conectar"
     },
     "Footer": {
-      "copyright": "&copy; {year} BRM AI Business Automation. Todos los derechos reservados.",
-      "hashtags": "#IA #AutomatizaciónDeNegocios #MarketingDigital #SEO #CRM #CrecimientoEmpresarial #Tecnología #InteligenciaArtificial #BRMAI"
+      "copyright": "&copy; {year} BRM AI Automatización de Procesos de Negocio. Todos los derechos reservados.",
+      "hashtags": "#IA #AutomatizaciónEmpresarial #MarketingDigital #SEO #CRM #CrecimientoEmpresarial #Tecnología #InteligenciaArtificial #BRMAI"
     },
     "Shared": {
       "contactUs": "Contáctanos",
@@ -54,7 +107,7 @@
       "linkedIn": "LinkedIn",
       "whatsApp": "WhatsApp",
       "consultationFormTitle": "Solicita una Consulta Gratuita",
-      "consultationFormSubtitle": "Completa el formulario y nos pondremos en contacto contigo en breve.",
+      "consultationFormSubtitle": "Completa el formulario y te contactaremos pronto.",
       "formNameLabel": "Tu Nombre",
       "formNamePlaceholder": "ej., Juan Pérez",
       "formEmailLabel": "Tu Email",
@@ -62,5 +115,46 @@
       "formMessageLabel": "Tu Consulta",
       "formMessagePlaceholder": "Cuéntanos sobre tu proyecto o pregunta...",
       "formSubmitButton": "Enviar Solicitud"
+    },
+    "NotFound": {
+      "title": "Página No Encontrada",
+      "description": "Lo sentimos, la página que buscas no se pudo encontrar.",
+      "home": "INICIO",
+      "services": "SERVICIOS",
+      "contact": "CONTÁCTANOS"
+    },
+    "Blog": {
+      "seoTitle": "Blog de Automatización de Procesos de Negocio | Insights de Automatización con IA | BRM AI",
+      "seoDescription": "Insights expertos sobre automatización de procesos de negocio, estrategias de implementación de IA y software de automatización. Aprende cómo transformar tu negocio con automatización inteligente.",
+      "title": "Blog",
+      "readMore": "Leer Más"
+    },
+    "PrivacyPolicy": {
+      "title": "Política de Privacidad",
+      "introduction": {
+        "heading": "Introducción",
+        "paragraph1": "Bienvenido a BRM AI. Estamos comprometidos a proteger tu información personal y tu derecho a la privacidad. Si tienes alguna pregunta o inquietud sobre nuestra política, o nuestras prácticas con respecto a tu información personal, por favor contáctanos."
+      },
+      "informationWeCollect": {
+        "heading": "Información que Recopilamos",
+        "paragraph1": "Recopilamos información personal que nos proporcionas voluntariamente cuando expresas interés en obtener información sobre nosotros o nuestros productos y servicios, cuando participes en actividades en el Sitio o cuando nos contactas."
+      },
+      "howWeUseInformation": {
+        "heading": "Cómo Usamos Tu Información",
+        "paragraph1": "Usamos la información personal recopilada a través de nuestro Sitio para una variedad de propósitos comerciales descritos a continuación. Procesamos tu información personal para estos propósitos confiando en nuestros intereses comerciales legítimos, para celebrar o ejecutar un contrato contigo, con tu consentimiento, y/o para cumplir con nuestras obligaciones legales."
+      },
+      "dataSharing": {
+        "heading": "¿Se Compartirá Tu Información con Alguien?",
+        "paragraph1": "Solo compartimos información con tu consentimiento, para cumplir con las leyes, para proporcionarte servicios, para proteger tus derechos o para cumplir con las obligaciones comerciales."
+      },
+      "yourRights": {
+        "heading": "¿Cuáles Son Tus Derechos de Privacidad?",
+        "paragraph1": "En algunas regiones, como el Espacio Económico Europeo (EEE) y el Reino Unido, tienes derechos que te permiten un mayor acceso y control sobre tu información personal. Puedes revisar, cambiar o terminar tu cuenta en cualquier momento."
+      },
+      "contactUs": {
+        "heading": "Contáctanos",
+        "paragraph1": "Si tienes preguntas o comentarios sobre esta política, puedes enviarnos un correo electrónico a privacy@brm.ai o por correo a: [Dirección de tu Empresa]."
+      },
+      "lastUpdated": "Última actualización: {date}"
     }
   }

@@ -1,20 +1,73 @@
 {
     "BRMHomePage": {
-      "seoTitle": "Automatització Empresarial amb IA i Automatització de Processos de Negoci amb IA | BRM AI",
-      "seoDescription": "Allibera el poder de l'automatització empresarial amb IA i la gestió de processos de negoci. BRM AI t'ajuda a automatitzar processos de negoci amb intel·ligència artificial per a una major eficiència, creixement i rendibilitat.",
-      "heroTitle": "Automatitza el teu negoci i augmenta els beneficis amb BRM AI Business Automation!",
-      "heroSubtitle": "Cansat de la rutina i buscant maneres efectives de créixer? A BRM AI Business Automation, oferim tant solucions específiques per a les teves tasques com un conjunt complet de serveis per a la transformació digital del teu negoci. 🤖✨",
-      "servicesTitle": "Els nostres Serveis Integrals Inclouen:",
-      "valueProposition": "BRM AI Business Automation – el teu soci fiable en el món de les tecnologies digitals i la intel·ligència artificial! 🚀",
-      "ctaTitle": "Preparat per portar el teu negoci al següent nivell? 📈",
+      "seoTitle": "Automatització de Processos de Negoci amb IA | Programari d'Automatització | BRM AI",
+      "seoDescription": "Descobreix el poder de l'automatització de processos de negoci amb intel·ligència artificial. BRM AI t'ajuda a automatitzar processos empresarials per a major eficiència i creixement.",
+      "heroTitle": "Automatització de Processos de Negoci amb IA: Augmenta els teus Guanys amb BRM AI",
+      "heroSubtitle": "Aprofita la IA per a l'automatització empresarial i optimitza els teus processos de negoci. BRM AI ofereix solucions d'IA dirigides i transformació digital completa usant intel·ligència artificial.",
+      "servicesTitle": "Els Nostres Serveis Integrals Inclouen:",
+      "servicesDescription": "El nostre conjunt integral de serveis d'automatització empresarial està dissenyat per abordar cada aspecte del teu viatge de transformació digital. Des d'automatització de processos impulsada per IA fins a desenvolupament de programari personalitzat, proporcionem solucions integrals que generen resultats empresarials mesurables.",
+      "valueProposition": "BRM AI Automatització Empresarial – el teu soci de confiança en el món de les tecnologies digitals i la intel·ligència artificial! 🚀",
+      "ctaTitle": "Estàs preparat per portar el teu negoci al següent nivell? 📈",
       "ctaSubtitle": "Contacta'ns per discutir com podem ajudar el teu negoci a créixer i prosperar.",
-      "contactTitle": "👇 Contacta'ns avui mateix! 👇"
+      "contactTitle": "👇 Contacta'ns Avui! 👇",
+      "getStarted": "COMENÇAR →",
+      "viewServices": "VEURE SERVEIS",
+      "learnMore": "Saber Més →"
+    },
+    "AboutUs": {
+      "title": "SOBRE BRM AI",
+      "paragraph1": "BRM AI és un proveïdor líder de solucions d'automatització de processos de negoci impulsades per intel·ligència artificial. Fundada a Barcelona, ens especialitzem en ajudar les empreses a transformar les seves operacions a través de l'automatització intel·ligent, reduint costos mentre augmentem l'eficiència i escalabilitat.",
+      "paragraph2": "El nostre equip combina experiència profunda en IA, desenvolupament de programari i optimització de processos empresarials per oferir solucions personalitzades que impulsen resultats reals. Entenem que cada negoci és únic, per això adoptem un enfocament personalitzat per a cada compromís amb el client.",
+      "missionTitle": "LA NOSTRA MISSIÓ",
+      "missionText": "Democratitzar l'accés a l'automatització empresarial impulsada per IA, permetent que empreses de totes les mides competeixin més efectivament en l'economia digital. Creiem que l'automatització intel·ligent ha de ser accessible, assequible i alineada amb els teus objectius empresarials.",
+      "approachTitle": "EL NOSTRE ENFOCAMENT",
+      "approach1": "Presa de decisions basada en dades",
+      "approach2": "Metodologia de millora contínua",
+      "approach3": "Comunicació transparent",
+      "approach4": "Implementacions enfocades en el ROI"
+    },
+    "WhyChooseUs": {
+      "title": "PER QUÈ TRIAR BRM AI PER A L'AUTOMATITZACIÓ DE PROCESSOS DE NEGOCI",
+      "provenResultsTitle": "RESULTATS PROVATS",
+      "provenResultsText": "Les nostres solucions d'automatització empresarial han ajudat els clients a reduir els costos operatius fins a un 60% mentre milloren l'eficiència del procés en 3x.",
+      "aiExpertiseTitle": "EXPERIÈNCIA EN IA",
+      "aiExpertiseText": "Aprofita tecnologies d'intel·ligència artificial i aprenentatge automàtic d'avantguarda per automatitzar processos empresarials complexos amb precisió.",
+      "customSolutionsTitle": "SOLUCIONS PERSONALITZADES",
+      "customSolutionsText": "Cada solució d'automatització de processos de negoci que desenvolupem està adaptada a les teves necessitats específiques, assegurant una integració perfecta amb els sistemes existents."
+    },
+    "FAQ": {
+      "title": "PREGUNTES FREQÜENTS",
+      "question1": "Què és l'automatització de processos de negoci?",
+      "answer1": "L'automatització de processos de negoci (BPA) utilitza tecnologia per executar tasques o processos recurrents en un negoci on l'esforç manual pot ser reemplaçat. Ho aconsegueix utilitzant IA i programari per optimitzar i agilitzar els processos empresarials, reduint costos i augmentant l'eficiència.",
+      "question2": "Com pot la IA millorar els meus processos de negoci?",
+      "answer2": "La IA pot analitzar grans quantitats de dades per identificar patrons i ineficiències, automatitzar processos de presa de decisions, predir tendències futures i gestionar tasques complexes que consumirien molt temps per als humans. Això condueix a operacions més ràpides, menys errors i millor assignació de recursos.",
+      "question3": "Quins tipus de negocis poden beneficiar-se de l'automatització?",
+      "answer3": "Qualsevol negoci amb processos repetitius pot beneficiar-se de l'automatització. Això inclou manufactura, retail, salut, finances, logística i indústries de serveis. Ja siguis una petita startup o una gran empresa, l'automatització de processos de negoci pot ajudar a optimitzar les teves operacions.",
+      "question4": "Quant temps triga a implementar-se l'automatització empresarial?",
+      "answer4": "El temps d'implementació varia segons la complexitat dels teus processos i l'abast de l'automatització. Les automatitzacions simples poden implementar-se en setmanes, mentre que els projectes integrals d'automatització de processos de negoci poden trigar diversos mesos. Proporcionem cronogrames detallats durant la fase de consulta.",
+      "question5": "Quin és el ROI de l'automatització de processos de negoci?",
+      "answer5": "La majoria de les empreses veuen ROI dins de 6-12 mesos. Els beneficis inclouen costos laborals reduïts (30-70%), menys errors (fins a 90% de reducció), temps de processament més ràpids (50-80% de millora) i major satisfacció del client. El ROI exacte depèn dels teus processos específics i l'abast d'implementació."
+    },
+    "Contact": {
+      "directContactTitle": "Contacte Directe",
+      "sendMessageTitle": "Enviar Missatge",
+      "namePlaceholder": "NOM",
+      "emailPlaceholder": "CORREU",
+      "messagePlaceholder": "MISSATGE",
+      "sendButton": "Enviar →"
+    },
+    "Navigation": {
+      "aboutUs": "NOSALTRES",
+      "faq": "FAQ",
+      "blog": "BLOG",
+      "login": "INICIAR SESSIÓ",
+      "signUp": "REGISTRAR-SE"
     },
     "Services": {
-      "websiteCreation_title": "Creació d'un Lloc Web de Vendes",
-      "websiteCreation_desc": "La teva principal eina online per atraure clients.",
+      "websiteCreation_title": "Creació de Lloc Web de Vendes",
+      "websiteCreation_desc": "La teva eina principal en línia per atraure clients.",
       "seoOptimization_title": "Optimització SEO",
-      "seoOptimization_desc": "Portarem el teu lloc al CIM dels resultats de cerca.",
+      "seoOptimization_desc": "Portarem el teu lloc al TOP dels resultats de cerca.",
       "digitalMarketing_title": "Màrqueting Digital",
       "digitalMarketing_desc": "Promoció integral per augmentar les vendes.",
       "googleAds_title": "Google Ads",
@@ -43,8 +96,8 @@
       "connectButton": "Connectar"
     },
     "Footer": {
-      "copyright": "&copy; {year} BRM AI Business Automation. Tots els drets reservats.",
-      "hashtags": "#IA #AutomatitzacióDeNegocis #MàrquetingDigital #SEO #CRM #CreixementEmpresarial #Tecnologia #InteligènciaArtificial #BRMAI"
+      "copyright": "&copy; {year} BRM AI Automatització de Processos de Negoci. Tots els drets reservats.",
+      "hashtags": "#IA #AutomatitzacióEmpresarial #MàrquetingDigital #SEO #CRM #CreixementEmpresarial #Tecnologia #InteligènciaArtificial #BRMAI"
     },
     "Shared": {
       "contactUs": "Contacta'ns",
@@ -62,5 +115,46 @@
       "formMessageLabel": "La Teva Consulta",
       "formMessagePlaceholder": "Explica'ns el teu projecte o pregunta...",
       "formSubmitButton": "Enviar Sol·licitud"
+    },
+    "NotFound": {
+      "title": "Pàgina No Trobada",
+      "description": "Ho sentim, la pàgina que cerques no s'ha pogut trobar.",
+      "home": "INICI",
+      "services": "SERVEIS",
+      "contact": "CONTACTA'NS"
+    },
+    "Blog": {
+      "seoTitle": "Blog d'Automatització de Processos de Negoci | Insights d'Automatització amb IA | BRM AI",
+      "seoDescription": "Insights experts sobre automatització de processos de negoci, estratègies d'implementació d'IA i programari d'automatització. Aprèn com transformar el teu negoci amb automatització intel·ligent.",
+      "title": "Blog",
+      "readMore": "Llegir Més"
+    },
+    "PrivacyPolicy": {
+      "title": "Política de Privacitat",
+      "introduction": {
+        "heading": "Introducció",
+        "paragraph1": "Benvingut a BRM AI. Estem compromesos a protegir la teva informació personal i el teu dret a la privacitat. Si tens alguna pregunta o inquietud sobre la nostra política, o les nostres pràctiques respecte a la teva informació personal, si us plau contacta'ns."
+      },
+      "informationWeCollect": {
+        "heading": "Informació que Recopilem",
+        "paragraph1": "Recopilem informació personal que ens proporciones voluntàriament quan expresses interès en obtenir informació sobre nosaltres o els nostres productes i serveis, quan participes en activitats al Lloc o quan ens contactes."
+      },
+      "howWeUseInformation": {
+        "heading": "Com Utilitzem la Teva Informació",
+        "paragraph1": "Utilitzem la informació personal recopilada a través del nostre Lloc per a una varietat de propòsits comercials descrits a continuació. Processem la teva informació personal per a aquests propòsits confiant en els nostres interessos comercials legítims, per celebrar o executar un contracte amb tu, amb el teu consentiment, i/o per complir amb les nostres obligacions legals."
+      },
+      "dataSharing": {
+        "heading": "Es Compartirà la Teva Informació amb Algú?",
+        "paragraph1": "Només compartim informació amb el teu consentiment, per complir amb les lleis, per proporcionar-te serveis, per protegir els teus drets o per complir amb les obligacions comercials."
+      },
+      "yourRights": {
+        "heading": "Quins Són els Teus Drets de Privacitat?",
+        "paragraph1": "En algunes regions, com l'Espai Econòmic Europeu (EEE) i el Regne Unit, tens drets que et permeten un major accés i control sobre la teva informació personal. Pots revisar, canviar o terminar el teu compte en qualsevol moment."
+      },
+      "contactUs": {
+        "heading": "Contacta'ns",
+        "paragraph1": "Si tens preguntes o comentaris sobre aquesta política, pots enviar-nos un correu electrònic a privacy@brm.ai o per correu a: [Adreça de la teva Empresa]."
+      },
+      "lastUpdated": "Última actualització: {date}"
     }
   }

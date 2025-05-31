@@ -49,10 +49,10 @@ export default function LanguageSwitcher() {
     <select
       value={currentLocale}
       onChange={handleChange}
-      className="bg-transparent text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none p-1 rounded border border-gray-300 dark:border-gray-700"
+      className="bg-black/50 backdrop-blur text-sm text-gray-300 hover:text-white focus:outline-none p-2 rounded border border-gray-700 hover:border-gray-500 min-w-[120px] transition-colors cursor-pointer"
     >
       {locales.map((loc: string) => (
-        <option key={loc} value={loc} className="text-gray-900 dark:text-black">
+        <option key={loc} value={loc} className="bg-black text-gray-200">
           {getLocaleDisplayName(loc)}
         </option>
       ))}

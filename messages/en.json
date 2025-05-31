@@ -5,10 +5,63 @@
     "heroTitle": "AI Business Process Automation: Increase Profits with BRM AI",
     "heroSubtitle": "Leverage AI for business automation and streamline your business processes. BRM AI offers targeted AI solutions and full-stack digital transformation using artificial intelligence.",
     "servicesTitle": "Our Comprehensive Services Include:",
+    "servicesDescription": "Our comprehensive suite of business automation services is designed to address every aspect of your digital transformation journey. From AI-powered process automation to custom software development, we provide end-to-end solutions that drive measurable business outcomes.",
     "valueProposition": "BRM AI Business Automation – your reliable partner in the world of digital technologies and artificial intelligence! 🚀",
     "ctaTitle": "Ready to take your business to the next level? 📈",
     "ctaSubtitle": "Contact us to discuss how we can help your business grow and thrive.",
-    "contactTitle": "👇 Contact Us Today! 👇"
+    "contactTitle": "👇 Contact Us Today! 👇",
+    "getStarted": "GET STARTED →",
+    "viewServices": "VIEW SERVICES",
+    "learnMore": "Learn More →"
+  },
+  "AboutUs": {
+    "title": "ABOUT BRM AI",
+    "paragraph1": "BRM AI is a leading provider of business process automation solutions powered by artificial intelligence. Founded in Barcelona, we specialize in helping businesses transform their operations through intelligent automation, reducing costs while increasing efficiency and scalability.",
+    "paragraph2": "Our team combines deep expertise in AI, software development, and business process optimization to deliver tailored solutions that drive real results. We understand that every business is unique, which is why we take a personalized approach to each client engagement.",
+    "missionTitle": "OUR MISSION",
+    "missionText": "To democratize access to AI-powered business automation, enabling companies of all sizes to compete more effectively in the digital economy. We believe that intelligent automation should be accessible, affordable, and aligned with your business goals.",
+    "approachTitle": "OUR APPROACH",
+    "approach1": "Data-driven decision making",
+    "approach2": "Continuous improvement methodology",
+    "approach3": "Transparent communication",
+    "approach4": "ROI-focused implementations"
+  },
+  "WhyChooseUs": {
+    "title": "WHY CHOOSE BRM AI FOR BUSINESS PROCESS AUTOMATION",
+    "provenResultsTitle": "PROVEN RESULTS",
+    "provenResultsText": "Our business automation solutions have helped clients reduce operational costs by up to 60% while improving process efficiency by 3x.",
+    "aiExpertiseTitle": "AI EXPERTISE",
+    "aiExpertiseText": "Leverage cutting-edge artificial intelligence and machine learning technologies to automate complex business processes with precision.",
+    "customSolutionsTitle": "CUSTOM SOLUTIONS",
+    "customSolutionsText": "Every business process automation solution we develop is tailored to your specific needs, ensuring seamless integration with existing systems."
+  },
+  "FAQ": {
+    "title": "FREQUENTLY ASKED QUESTIONS",
+    "question1": "What is business process automation?",
+    "answer1": "Business process automation (BPA) uses technology to execute recurring tasks or processes in a business where manual effort can be replaced. It accomplishes this by using AI and software to streamline and optimize business processes, reducing costs and increasing efficiency.",
+    "question2": "How can AI improve my business processes?",
+    "answer2": "AI can analyze large amounts of data to identify patterns and inefficiencies, automate decision-making processes, predict future trends, and handle complex tasks that would be time-consuming for humans. This leads to faster operations, reduced errors, and better resource allocation.",
+    "question3": "What types of businesses can benefit from automation?",
+    "answer3": "Any business with repetitive processes can benefit from automation. This includes manufacturing, retail, healthcare, finance, logistics, and service industries. Whether you're a small startup or a large enterprise, business process automation can help streamline your operations.",
+    "question4": "How long does it take to implement business automation?",
+    "answer4": "Implementation time varies depending on the complexity of your processes and the scope of automation. Simple automations can be deployed in weeks, while comprehensive business process automation projects may take several months. We provide detailed timelines during the consultation phase.",
+    "question5": "What is the ROI of business process automation?",
+    "answer5": "Most businesses see ROI within 6-12 months. Benefits include reduced labor costs (30-70%), fewer errors (up to 90% reduction), faster processing times (50-80% improvement), and improved customer satisfaction. The exact ROI depends on your specific processes and implementation scope."
+  },
+  "Contact": {
+    "directContactTitle": "Direct Contact",
+    "sendMessageTitle": "Send Message",
+    "namePlaceholder": "NAME",
+    "emailPlaceholder": "EMAIL",
+    "messagePlaceholder": "MESSAGE",
+    "sendButton": "Send →"
+  },
+  "Navigation": {
+    "aboutUs": "ABOUT US",
+    "faq": "FAQ",
+    "blog": "BLOG",
+    "login": "LOGIN",
+    "signUp": "SIGN UP"
   },
   "Services": {
     "websiteCreation_title": "Creating a Selling Website",
@@ -62,6 +115,19 @@
     "formMessageLabel": "Your Inquiry",
     "formMessagePlaceholder": "Tell us about your project or question...",
     "formSubmitButton": "Send Request"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for could not be found.",
+    "home": "HOME",
+    "services": "SERVICES",
+    "contact": "CONTACT US"
+  },
+  "Blog": {
+    "seoTitle": "Business Process Automation Blog | AI Automation Insights | BRM AI",
+    "seoDescription": "Expert insights on business process automation, AI implementation strategies, and automation software. Learn how to transform your business with intelligent automation.",
+    "title": "Blog",
+    "readMore": "Read More"
   },
   "PrivacyPolicy": {
     "title": "Privacy Policy",
