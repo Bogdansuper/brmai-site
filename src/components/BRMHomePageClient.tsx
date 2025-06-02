@@ -1,5 +1,6 @@
 "use client";
-import { useState, useRef, useMemo, Suspense, useEffect } from "react";
+import React from 'react';
+import { useState, useRef, useEffect } from "react";
 import {useTranslations} from 'next-intl';
 import {
   Globe,
@@ -15,92 +16,7 @@ import {
 } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher.tsx";
 import Link from "next/link";
-
-import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber';
-import * as THREE from 'three';
-
-// Mercury liquid effect - exactly like Vercel Ship
-const MercuryLiquidEffect = () => {
-  const { viewport, mouse } = useThree();
-  const meshRef = useRef<THREE.Mesh>(null!);
-  const matcapTexture = useLoader(THREE.TextureLoader, '/textures/matcap-9.jpg');
-  
-  // Create smooth plane
-  const geometry = useMemo(() => {
-    return new THREE.PlaneGeometry(viewport.width * 1.2, viewport.height * 1.2, 128, 128);
-  }, [viewport]);
-  
-  // Store mouse trail for smooth liquid flow
-  const mouseTrail = useRef<Array<{x: number, y: number, strength: number}>>([]);
-  
-  useFrame((state) => {
-    if (!meshRef.current) return;
-    
-    const time = state.clock.elapsedTime;
-    const geo = meshRef.current.geometry as THREE.PlaneGeometry;
-    const positions = geo.attributes.position;
-    
-    // Add current mouse position to trail
-    const mouseX = mouse.x * viewport.width / 2;
-    const mouseY = mouse.y * viewport.height / 2;
-    
-    mouseTrail.current.push({ x: mouseX, y: mouseY, strength: 1 });
-    
-    // Keep trail limited and fade old positions
-    if (mouseTrail.current.length > 30) {
-      mouseTrail.current.shift();
-    }
-    mouseTrail.current.forEach(point => {
-      point.strength *= 0.95;
-    });
-    
-    // Create smooth liquid deformation
-    for (let i = 0; i < positions.count; i++) {
-      const x = positions.getX(i);
-      const y = positions.getY(i);
-      let z = 0;
-      
-      // Apply influence from mouse trail
-      mouseTrail.current.forEach((point, index) => {
-        const dist = Math.sqrt((x - point.x) ** 2 + (y - point.y) ** 2);
-        
-        if (dist < 4) {
-          const influence = (1 - dist / 4) * point.strength;
-          // Smooth wave - уменьшаем интенсивность
-          z += Math.sin(dist * 2 - time * 3) * influence * 0.05; // было 0.15
-          // Height displacement - уменьшаем интенсивность
-          z += influence * 0.03 * (1 - index / mouseTrail.current.length); // было 0.1
-        }
-      });
-      
-      // Very subtle ambient waves - делаем еще тоньше
-      z += Math.sin(x * 0.3 + time * 0.5) * 0.005; // было 0.02
-      z += Math.cos(y * 0.3 + time * 0.3) * 0.005; // было 0.02
-      
-      positions.setZ(i, z);
-    }
-    
-    positions.needsUpdate = true;
-    geo.computeVertexNormals();
-  });
-  
-  return (
-    <mesh ref={meshRef} rotation={[-0.1, 0, 0]} position={[0, 0, -0.5]}>
-      <primitive object={geometry} />
-      <meshMatcapMaterial 
-        matcap={matcapTexture}
-        side={THREE.DoubleSide}
-        opacity={0.2} // уменьшаем прозрачность с 0.9 до 0.2
-        transparent
-      />
-    </mesh>
-  );
-};
-
-// Main animated scene - only mercury effect
-const AnimatedBlob = () => {
-  return <MercuryLiquidEffect />;
-};
+import MercuryLiquidEffect from './MercuryLiquidEffect';
 
 interface Service {
   title: string;
@@ -284,6 +200,7 @@ export default function BRMHomePageClient() {
   const toggleServiceExpansion = (index: number) => {
     setExpandedServices(prev => ({ ...prev, [index]: !prev[index] }));
   };
+
   return (
     <div className="min-h-screen bg-black text-white font-mono">
       {/* Fixed Navigation Header */}
@@ -346,20 +263,16 @@ export default function BRMHomePageClient() {
       </header>
 
       {/* Hero Section with Canvas - Full Screen */}
-      <section className="relative h-screen w-full overflow-hidden">
-        {/* Canvas Background */}
-        <div className="absolute inset-0">
-          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-            <Suspense fallback={null}>
-              <AnimatedBlob />
-            </Suspense>
-          </Canvas>
+      <section className="relative h-screen w-full overflow-hidden bg-black">
+        {/* Canvas Background - Mercury liquid effect - contained within hero */}
+        <div className="absolute inset-0 z-0" style={{ height: '100vh', overflow: 'hidden' }}>
+          <MercuryLiquidEffect />
         </div>
 
-        {/* Content Overlay */}
-        <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
+        {/* Content Overlay - ensure it's above canvas but below header */}
+        <div className="relative z-20 h-full flex flex-col justify-center px-8 md:px-12 lg:px-24 pointer-events-none">
           {/* Main Content - Shifted down and left like Vercel */}
-          <div className="max-w-5xl mt-24">
+          <div className="max-w-5xl mt-24 pointer-events-auto">
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-normal mb-8 tracking-tight leading-none">
               {t('heroTitle')}
             </h1>
@@ -386,7 +299,7 @@ export default function BRMHomePageClient() {
         </div>
         
         {/* Bottom Section - Language Switcher */}
-        <div className="absolute bottom-8 left-8 md:left-12 lg:left-24 z-10">
+        <div className="absolute bottom-8 left-8 md:left-12 lg:left-24 z-20 pointer-events-auto">
           <LanguageSwitcher />
         </div>
       </section>

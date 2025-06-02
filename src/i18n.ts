@@ -7,29 +7,46 @@ export const defaultLocale = 'en';
 export default getRequestConfig(async ({locale}) => {
   console.log('[i18n.ts] getRequestConfig called. Received locale:', locale);
 
-  // Validate that the incoming `locale` parameter is valid
-  if (!locale || !locales.includes(locale)) {
-    console.error('[i18n.ts] Invalid or missing locale received:', locale, '- Calling notFound().');
-    notFound();
-    // TypeScript needs to know this path doesn't proceed to a normal return.
-    // Throwing an error or returning a Promise that never resolves are options,
-    // but since notFound() already throws, this should be fine for runtime.
-    // For strict typing, an explicit throw might be needed if notFound() doesn't satisfy the linter.
+  // If locale is undefined, use the default locale
+  const resolvedLocale = locale || defaultLocale;
+  
+  // Validate that the resolved locale is valid
+  if (!locales.includes(resolvedLocale)) {
+    console.error('[i18n.ts] Invalid locale received:', locale, '- Using default locale:', defaultLocale);
+    // Use default locale instead of calling notFound() immediately
+    const fallbackLocale = defaultLocale;
+    try {
+      const messages = (await import(`../messages/${fallbackLocale}.json`)).default;
+      return {
+        locale: fallbackLocale,
+        messages: messages,
+      };
+    } catch (error) {
+      console.error(`[i18n.ts] Error loading default locale messages:`, error);
+      notFound();
+    }
   }
 
   try {
-    console.log(`[i18n.ts] Attempting to load messages for locale: ${locale}`);
-    const messages = (await import(`../messages/${locale}.json`)).default;
-    console.log(`[i18n.ts] Successfully loaded messages for ${locale}.`);
+    console.log(`[i18n.ts] Attempting to load messages for locale: ${resolvedLocale}`);
+    const messages = (await import(`../messages/${resolvedLocale}.json`)).default;
+    console.log(`[i18n.ts] Successfully loaded messages for ${resolvedLocale}.`);
     return {
-      locale: locale, // Явно возвращаем locale
+      locale: resolvedLocale,
       messages: messages,
     };
   } catch (error) {
-    console.error(`[i18n.ts] Error loading messages for locale ${locale}:`, error);
-    // Optionally, re-throw or call notFound() if message loading is critical
-    // For now, let's call notFound() to maintain previous behavior on error
-    notFound();
-    // Similar to above, ensure type consistency if notFound() isn't enough for the linter.
+    console.error(`[i18n.ts] Error loading messages for locale ${resolvedLocale}:`, error);
+    // Try to fall back to default locale
+    try {
+      const messages = (await import(`../messages/${defaultLocale}.json`)).default;
+      return {
+        locale: defaultLocale,
+        messages: messages,
+      };
+    } catch (fallbackError) {
+      console.error(`[i18n.ts] Error loading default locale messages:`, fallbackError);
+      notFound();
+    }
   }
 });

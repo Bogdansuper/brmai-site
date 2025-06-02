@@ -12,7 +12,7 @@ interface PageParams {
 
 // This is the props type Next.js will pass to the Page component for this route
 interface Props {
-  params: PageParams;
+  params: Promise<PageParams>;
   // searchParams?: { [key: string]: string | string[] | undefined }; // Include if you use searchParams
 }
 
@@ -21,7 +21,7 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const locale = params.locale;
+  const { locale } = await params;
   console.log(`[page.tsx] generateMetadata for locale: ${locale}`); 
   const baseUrl = "https://mybrmai.com";
   const t = await getTranslations({ locale, namespace: 'BRMHomePage' });
@@ -135,7 +135,8 @@ export async function generateMetadata(
 }
 
 export default async function Page({ params }: Props) {
-  console.log(`[page.tsx] Rendering Page for locale: ${params.locale} using BRMHomePageServerWrapper`);
+  const { locale } = await params;
+  console.log(`[page.tsx] Rendering Page for locale: ${locale} using BRMHomePageServerWrapper`);
   
   // Schema.org structured data
   const schemaOrgData = {
@@ -184,8 +185,8 @@ export default async function Page({ params }: Props) {
       },
       {
         "@type": "WebPage",
-        "@id": `https://mybrmai.com${params.locale === 'en' ? '' : '/' + params.locale}/#webpage`,
-        "url": `https://mybrmai.com${params.locale === 'en' ? '' : '/' + params.locale}`,
+        "@id": `https://mybrmai.com${locale === 'en' ? '' : '/' + locale}/#webpage`,
+        "url": `https://mybrmai.com${locale === 'en' ? '' : '/' + locale}`,
         "name": "Business Process Automation with AI | BRM AI",
         "isPartOf": {
           "@id": "https://mybrmai.com/#website"
@@ -248,7 +249,7 @@ export default async function Page({ params }: Props) {
           __html: JSON.stringify(schemaOrgData),
         }}
       />
-      <BRMHomePageServerWrapper locale={params.locale} />
+      <BRMHomePageServerWrapper locale={locale} />
     </>
   );
 }
