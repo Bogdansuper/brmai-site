@@ -55,7 +55,8 @@ const blogPosts = [
   }
 ];
 
-export default async function BlogPage({ params }: Props) {
+export default async function BlogPage(props: Props) {
+  const { params } = props;
   const t = await getTranslations({ locale: params.locale, namespace: 'Blog' });
   
   return (
