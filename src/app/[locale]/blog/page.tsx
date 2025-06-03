@@ -15,13 +15,63 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t('seoTitle'),
     description: t('seoDescription'),
+    authors: [{ name: 'BRM AI', url: 'https://mybrmai.com' }],
+    creator: 'BRM AI',
+    publisher: 'BRM AI',
+    
+    keywords: [
+      'business process automation blog',
+      'ai automation insights',
+      'business automation guides',
+      'process automation articles',
+      'ai business automation tips',
+      'automation case studies'
+    ],
+    
     alternates: {
       canonical: canonicalUrl,
+      languages: {
+        'en': `${baseUrl}/en/blog`,
+        'uk': `${baseUrl}/uk/blog`,
+        'es': `${baseUrl}/es/blog`,
+        'ca': `${baseUrl}/ca/blog`,
+        'ru': `${baseUrl}/ru/blog`,
+        'x-default': `${baseUrl}/en/blog`
+      },
     },
+    
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    
     openGraph: {
       title: t('seoTitle'),
       description: t('seoDescription'),
       url: canonicalUrl,
+      type: 'website',
+      siteName: 'BRM AI - Business Process Automation',
+    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      title: t('seoTitle'),
+      description: t('seoDescription'),
+      site: '@BRMAI_tech',
+      creator: '@BRMAI_tech',
+    },
+    
+    other: {
+      'revisit-after': '3 days',
+      'rating': 'general',
+      'distribution': 'global',
     },
   };
 }
@@ -80,6 +130,15 @@ export default async function BlogPage({ params }: Props) {
       {/* Blog Content */}
       <main className="pt-32 pb-24 px-8 md:px-12">
         <div className="max-w-6xl mx-auto">
+          {/* Breadcrumbs */}
+          <nav className="mb-8 text-sm text-gray-500">
+            <Link href={`/${resolvedParams.locale}`} className="hover:text-white">
+              {tShared('home')}
+            </Link>
+            <span className="mx-2">→</span>
+            <span>{t('title')}</span>
+          </nav>
+
           <h1 className="text-4xl md:text-6xl font-normal mb-8 uppercase tracking-wider">
             {t('title')}
           </h1>
@@ -118,6 +177,27 @@ export default async function BlogPage({ params }: Props) {
               </article>
             ))}
           </div>
+
+          {/* Internal Links Section */}
+          <section className="mt-16 p-8 border border-gray-800">
+            <h2 className="text-2xl mb-6 uppercase tracking-wider">Explore Our Services</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link 
+                href={`/${resolvedParams.locale}/services/ai-business-automation`}
+                className="block p-4 border border-gray-700 hover:border-gray-500 transition-colors"
+              >
+                <h3 className="text-lg mb-2 font-medium">AI Business Automation</h3>
+                <p className="text-gray-400 text-sm">Discover our comprehensive automation solutions</p>
+              </Link>
+              <Link 
+                href={`/${resolvedParams.locale}/privacy-policy`}
+                className="block p-4 border border-gray-700 hover:border-gray-500 transition-colors"
+              >
+                <h3 className="text-lg mb-2 font-medium">Privacy Policy</h3>
+                <p className="text-gray-400 text-sm">Learn about our data protection practices</p>
+              </Link>
+            </div>
+          </section>
 
           {/* SEO Content Section */}
           <section className="mt-24 border-t border-gray-900 pt-16">

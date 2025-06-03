@@ -1,13 +1,19 @@
-"use client";
+'use client';
 
 import dynamic from 'next/dynamic';
 import React from 'react';
 
 // Dynamically import the client component with SSR disabled
 const BRMHomePageClient = dynamic(() => import('@/components/BRMHomePageClient'), {
-  ssr: false,
-  // You can add a loading component here if needed
-  // loading: () => <p>Loading...</p>,
+  ssr: false, // Disable server-side rendering for this component
+  loading: () => <div style={{ 
+    minHeight: '100vh', 
+    display: 'flex', 
+    alignItems: 'center', 
+    justifyContent: 'center',
+    background: 'black',
+    color: 'white'
+  }}>Loading...</div>
 });
 
 // This is a client component that wraps the dynamically imported client component

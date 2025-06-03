@@ -1,7 +1,6 @@
 import {redirect} from 'next/navigation';
-import {defaultLocale} from '../i18n.ts';
 
-// Этот компонент просто перенаправляет на дефолтную локаль
+// Этот компонент просто перенаправляет на английскую версию
 export default function RootPage() {
-  redirect(`/${defaultLocale}`);
+  redirect('/en');
 }

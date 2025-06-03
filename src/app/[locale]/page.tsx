@@ -25,8 +25,7 @@ export async function generateMetadata(
   console.log(`[page.tsx] generateMetadata for locale: ${locale}`); 
   const baseUrl = "https://mybrmai.com";
   const t = await getTranslations({ locale, namespace: 'BRMHomePage' });
-  const canonicalPath = locale === "en" ? "/" : `/${locale}`;
-  const canonicalUrl = `${baseUrl}${canonicalPath}`;
+  const canonicalUrl = `${baseUrl}/${locale}`;
 
   // Get translated keywords based on locale
   const getLocalizedKeywords = () => {
@@ -82,17 +81,34 @@ export async function generateMetadata(
     title: t('seoTitle'),
     description: t('seoDescription'),
     keywords: getLocalizedKeywords(),
+    authors: [{ name: 'BRM AI', url: 'https://mybrmai.com' }],
+    creator: 'BRM AI',
+    publisher: 'BRM AI',
+    
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${baseUrl}/`,
+        'en': `${baseUrl}/en`,
         'uk': `${baseUrl}/uk`,
         'es': `${baseUrl}/es`,
         'ca': `${baseUrl}/ca`,
         'ru': `${baseUrl}/ru`,
-        'x-default': `${baseUrl}/`
+        'x-default': `${baseUrl}/en`
       },
     },
+    
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    
     openGraph: { 
       title: t('seoTitle'),
       description: t('seoDescription'),
@@ -109,6 +125,7 @@ export async function generateMetadata(
       locale: locale,
       type: 'website',
     },
+    
     twitter: {
       card: "summary_large_image",
       title: t('seoTitle'),
@@ -117,19 +134,15 @@ export async function generateMetadata(
       creator: '@BRMAI_tech',
       images: [`${baseUrl}/twitter-image.png`],
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
+    
     verification: {
       google: 'your-google-verification-code', // Add your actual verification code
+    },
+    
+    other: {
+      'revisit-after': '7 days',
+      'rating': 'general',
+      'distribution': 'global',
     },
   };
 }
@@ -181,12 +194,20 @@ export default async function Page({ params }: Props) {
         "publisher": {
           "@id": "https://mybrmai.com/#organization"
         },
-        "inLanguage": ["en", "es", "ca", "uk", "ru"]
+        "inLanguage": ["en", "es", "ca", "uk", "ru"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://mybrmai.com/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "WebPage",
-        "@id": `https://mybrmai.com${locale === 'en' ? '' : '/' + locale}/#webpage`,
-        "url": `https://mybrmai.com${locale === 'en' ? '' : '/' + locale}`,
+        "@id": `https://mybrmai.com/${locale}/#webpage`,
+        "url": `https://mybrmai.com/${locale}`,
         "name": "Business Process Automation with AI | BRM AI",
         "isPartOf": {
           "@id": "https://mybrmai.com/#website"
@@ -194,7 +215,18 @@ export default async function Page({ params }: Props) {
         "about": {
           "@id": "https://mybrmai.com/#organization"
         },
-        "description": "Discover how BRM AI's business process automation software powered by artificial intelligence can transform your business operations"
+        "description": "Discover how BRM AI's business process automation software powered by artificial intelligence can transform your business operations",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": `https://mybrmai.com/${locale}`
+            }
+          ]
+        }
       },
       {
         "@type": "Service",

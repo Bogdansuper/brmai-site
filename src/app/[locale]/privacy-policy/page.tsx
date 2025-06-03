@@ -16,11 +16,93 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-  const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'PrivacyPolicy' });
+  const baseUrl = "https://mybrmai.com";
+  const canonicalUrl = `${baseUrl}/${resolvedParams.locale}/privacy-policy`;
+  
+  const getLocalizedContent = () => {
+    switch(resolvedParams.locale) {
+      case 'es':
+        return {
+          title: 'Política de Privacidad | BRM AI',
+          description: 'Política de privacidad y protección de datos de BRM AI. Conoce cómo protegemos tu información personal y datos.',
+        };
+      case 'ca':
+        return {
+          title: 'Política de Privacitat | BRM AI',
+          description: 'Política de privacitat i protecció de dades de BRM AI. Descobreix com protegim la teva informació personal i dades.',
+        };
+      case 'uk':
+        return {
+          title: 'Політика Конфіденційності | BRM AI',
+          description: 'Політика конфіденційності та захисту даних BRM AI. Дізнайтесь, як ми захищаємо вашу особисту інформацію та дані.',
+        };
+      case 'ru':
+        return {
+          title: 'Политика Конфиденциальности | BRM AI',
+          description: 'Политика конфиденциальности и защиты данных BRM AI. Узнайте, как мы защищаем вашу личную информацию и данные.',
+        };
+      default:
+        return {
+          title: 'Privacy Policy | BRM AI',
+          description: 'Privacy policy and data protection information for BRM AI. Learn how we protect your personal information and data.',
+        };
+    }
+  };
+
+  const content = getLocalizedContent();
   
   return {
-    title: `${t('title')} | BRM AI`,
-    description: t('introduction.paragraph1'),
+    title: content.title,
+    description: content.description,
+    authors: [{ name: 'BRM AI', url: 'https://mybrmai.com' }],
+    creator: 'BRM AI',
+    publisher: 'BRM AI',
+    
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en': `${baseUrl}/en/privacy-policy`,
+        'uk': `${baseUrl}/uk/privacy-policy`,
+        'es': `${baseUrl}/es/privacy-policy`,
+        'ca': `${baseUrl}/ca/privacy-policy`,
+        'ru': `${baseUrl}/ru/privacy-policy`,
+        'x-default': `${baseUrl}/en/privacy-policy`
+      },
+    },
+    
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    
+    openGraph: {
+      title: content.title,
+      description: content.description,
+      url: canonicalUrl,
+      type: 'website',
+      siteName: 'BRM AI - Business Process Automation',
+    },
+    
+    twitter: {
+      card: 'summary',
+      title: content.title,
+      description: content.description,
+      site: '@BRMAI_tech',
+      creator: '@BRMAI_tech',
+    },
+    
+    other: {
+      'revisit-after': '30 days',
+      'rating': 'general',
+      'distribution': 'global',
+    },
   };
 }
 
