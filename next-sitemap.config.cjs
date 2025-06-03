@@ -7,7 +7,6 @@ module.exports = {
   changefreq: 'weekly',
   priority: 0.7,
   sitemapSize: 5000,
-  convertAlternateRefsToAbsolute: false,
   
   robotsTxtOptions: {
     policies: [
@@ -28,57 +27,57 @@ module.exports = {
     
     const paths = [];
     
-    // Helper function to generate alternateRefs with absolute hrefs
-    const generateAlternateRefs = (pathWithoutLocale) => { // e.g., '', '/blog', '/blog/slug'
-      const refs = supportedLocales.map(altLocale => ({
-        href: `${config.siteUrl}/${altLocale}${pathWithoutLocale}`, // Absolute href
-        hreflang: altLocale,
-      }));
+    // Helper function to generate hreflang alternates
+    const generateAlternateRefs = (pathWithoutLocale) => {
+      const refs = [];
+      supportedLocales.forEach(locale => {
+        refs.push({
+          href: `https://mybrmai.com/${locale}${pathWithoutLocale}`,
+          hreflang: locale,
+        });
+      });
       refs.push({
-        href: `${config.siteUrl}/en${pathWithoutLocale}`, // x-default to English, absolute href
+        href: `https://mybrmai.com/en${pathWithoutLocale}`,
         hreflang: 'x-default',
       });
       return refs;
     };
-
+    
+    // Add all locale-based pages
     supportedLocales.forEach(locale => {
-      const commonPathData = {
-        lastmod: new Date().toISOString(),
-      };
-
       // Homepage
       paths.push({
         loc: `/${locale}`,
+        lastmod: new Date().toISOString(),
         changefreq: 'weekly',
         priority: 1.0,
-        ...commonPathData,
         alternateRefs: generateAlternateRefs(''),
       });
       
       // Blog main page
       paths.push({
         loc: `/${locale}/blog`,
-        changefreq: 'weekly', 
+        lastmod: new Date().toISOString(),
+        changefreq: 'weekly',
         priority: 0.8,
-        ...commonPathData,
         alternateRefs: generateAlternateRefs('/blog'),
       });
 
       // AI business automation service page
       paths.push({
         loc: `/${locale}/services/ai-business-automation`,
+        lastmod: new Date().toISOString(),
         changefreq: 'monthly',
         priority: 0.9,
-        ...commonPathData,
         alternateRefs: generateAlternateRefs('/services/ai-business-automation'),
       });
 
       // Privacy policy
       paths.push({
         loc: `/${locale}/privacy-policy`,
+        lastmod: new Date().toISOString(),
         changefreq: 'yearly',
         priority: 0.3,
-        ...commonPathData,
         alternateRefs: generateAlternateRefs('/privacy-policy'),
       });
 
@@ -86,9 +85,9 @@ module.exports = {
       blogSlugs.forEach(slug => {
         paths.push({
           loc: `/${locale}/blog/${slug}`,
+          lastmod: new Date().toISOString(),
           changefreq: 'monthly',
           priority: 0.6,
-          ...commonPathData,
           alternateRefs: generateAlternateRefs(`/blog/${slug}`),
         });
       });

@@ -7,9 +7,106 @@ const nextConfig = {
   reactStrictMode: true, // It's good practice to explicitly set this
   transpilePackages: ['three', '@react-three/fiber', '@react-three/drei'],
   
+  // 301 Redirects for SEO
+  async redirects() {
+    return [
+      // Redirect old blog URLs without locale
+      {
+        source: '/blog/:path*',
+        destination: '/en/blog/:path*',
+        permanent: true,
+      },
+      // Redirect old services URLs without locale
+      {
+        source: '/services/:path*',
+        destination: '/en/services/:path*',
+        permanent: true,
+      },
+      // Redirect old privacy policy without locale
+      {
+        source: '/privacy-policy',
+        destination: '/en/privacy-policy',
+        permanent: true,
+      },
+      // Redirect common variations
+      {
+        source: '/index.html',
+        destination: '/en',
+        permanent: true,
+      },
+      {
+        source: '/index.php',
+        destination: '/en',
+        permanent: true,
+      },
+      {
+        source: '/home',
+        destination: '/en',
+        permanent: true,
+      },
+      // Redirect old automation related URLs
+      {
+        source: '/automation',
+        destination: '/en/services/ai-business-automation',
+        permanent: true,
+      },
+      {
+        source: '/ai-automation',
+        destination: '/en/services/ai-business-automation',
+        permanent: true,
+      },
+      {
+        source: '/business-automation',
+        destination: '/en/services/ai-business-automation',
+        permanent: true,
+      },
+    ];
+  },
+
   // Security Headers
   async headers() {
     return [
+      // Headers for sitemap files
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/sitemap-:number.xml',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate',
+          },
+        ],
+      },
+      // General security headers
       {
         source: '/(.*)',
         headers: [

@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap --config next-sitemap.config.cjs"
+    "postbuild": "node scripts/generate-sitemap.cjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.92.7",
