@@ -6,10 +6,10 @@
       "heroSubtitle": "Aprofita la IA per a l'automatització empresarial i optimitza els teus processos de negoci. BRM AI ofereix solucions d'IA dirigides i transformació digital completa usant intel·ligència artificial.",
       "servicesTitle": "Els Nostres Serveis Integrals Inclouen:",
       "servicesDescription": "El nostre conjunt integral de serveis d'automatització empresarial està dissenyat per abordar cada aspecte del teu viatge de transformació digital. Des d'automatització de processos impulsada per IA fins a desenvolupament de programari personalitzat, proporcionem solucions integrals que generen resultats empresarials mesurables.",
-      "valueProposition": "BRM AI Automatització Empresarial – el teu soci de confiança en el món de les tecnologies digitals i la intel·ligència artificial! 🚀",
-      "ctaTitle": "Estàs preparat per portar el teu negoci al següent nivell? 📈",
+      "valueProposition": "BRM AI Automatització d'Empreses: el teu soci fiable en el món de les tecnologies digitals i la intel·ligència artificial!",
+      "ctaTitle": "Preparat per dur el teu negoci al següent nivell?",
       "ctaSubtitle": "Contacta'ns per discutir com podem ajudar el teu negoci a créixer i prosperar.",
-      "contactTitle": "👇 Contacta'ns Avui! 👇",
+      "contactTitle": "Contacta'ns avui",
       "getStarted": "COMENÇAR →",
       "viewServices": "VEURE SERVEIS",
       "learnMore": "Saber Més →"
@@ -75,8 +75,8 @@
       "googleBusiness_title": "Perfil d'Empresa a Google",
       "googleBusiness_desc": "Farem que el teu negoci sigui visible a Google Maps.",
       "aiAutomation_title": "Automatització amb IA",
-      "aiAutomation_subService1": "🗣️ Agents d'IA Intel·ligents: Comunicació amb clients 24/7 a missatgeria i al lloc web.",
-      "aiAutomation_subService2": "📞 Gerent de Vendes d'IA per Veu: Consulta els clients per veu directament des del teu lloc web, utilitzant la teva base de dades!",
+      "aiAutomation_subService1": "Agents d'IA Intel·ligents: Comunicació amb clients 24/7 a missatgeria i al lloc web.",
+      "aiAutomation_subService2": "Gerent de Vendes d'IA per Veu: Consulta els clients per veu directament des del teu lloc web, utilitzant la teva base de dades!",
       "leadAutomation_title": "Automatització de Leads i Sol·licituds",
       "leadAutomation_desc": "Cap sol·licitud es perdrà!",
       "continuousImprovement_title": "Millora Contínua",
@@ -101,6 +101,9 @@
     },
     "Shared": {
       "contactUs": "Contacta'ns",
+      "contactUsButton": "CONTACTA'NS",
+      "home": "Inici",
+      "backToBlog": "Tornar al blog",
       "discussProject": "Discutir Projecte",
       "ourServices": "Els nostres Serveis",
       "phone": "Telèfon",
@@ -124,10 +127,25 @@
       "contact": "CONTACTA'NS"
     },
     "Blog": {
-      "seoTitle": "Blog d'Automatització de Processos de Negoci | Insights d'Automatització amb IA | BRM AI",
-      "seoDescription": "Insights experts sobre automatització de processos de negoci, estratègies d'implementació d'IA i programari d'automatització. Aprèn com transformar el teu negoci amb automatització intel·ligent.",
-      "title": "Blog",
-      "readMore": "Llegir Més"
+      "seoTitle": "Blog d'Automatització de Processos Empresarials | BRM AI",
+      "seoDescription": "Coneixements experts sobre automatització de processos empresarials, implementació d'IA i estratègies de transformació digital. Aprèn a optimitzar les operacions empresarials amb solucions d'IA.",
+      "title": "Blog d'Automatització Empresarial",
+      "subtitle": "Coneixements sobre automatització de processos empresarials, implementació d'IA i estratègies de transformació digital per ajudar el teu negoci a prosperar en l'economia moderna.",
+      "readMore": "Llegir més →",
+      "backToHome": "Tornar a l'inici",
+      "keyAreasTitle": "Àrees Clau per a l'Automatització Empresarial",
+      "whyAutomationMatters": "Per Què Importa l'Automatització de Processos Empresarials",
+      "automationDescription1": "En el panorama empresarial competitiu d'avui, l'automatització de processos empresarials s'ha tornat essencial per a les empreses que busquen mantenir el seu avantatge. En implementar solucions d'automatització empresarial, les organitzacions poden reduir costos operatius, minimitzar errors i alliberar valuosos recursos humans per a tasques més estratègiques.",
+      "automationDescription2": "El programari d'automatització de processos empresarials impulsat per intel·ligència artificial porta això al següent nivell. L'automatització empresarial amb IA no només gestiona tasques repetitives, sinó que també aprèn de patrons, pren decisions intel·ligents i millora contínuament els processos.",
+      "automationDescription3": "Tant si estàs explorant l'automatització de processos empresarials per primera vegada com si busques millorar les teves capacitats d'automatització existents, entendre les últimes tendències i millors pràctiques és crucial. El nostre blog proporciona coneixements, casos d'estudi i guies pràctiques.",
+      "automationAreas": [
+        "Automatització de servei al client i suport",
+        "Automatització de processos financers i facturació",
+        "Gestió de cadena de subministrament i inventaris",
+        "Automatització de RRHH i processos de reclutament",
+        "Automatització de màrqueting i generació de leads",
+        "Processament de documents i entrada de dades"
+      ]
     },
     "PrivacyPolicy": {
       "title": "Política de Privacitat",
@@ -156,5 +174,87 @@
         "paragraph1": "Si tens preguntes o comentaris sobre aquesta política, pots enviar-nos un correu electrònic a privacy@brm.ai o per correu a: [Adreça de la teva Empresa]."
       },
       "lastUpdated": "Última actualització: {date}"
+    },
+    "AIBusinessAutomation": {
+      "seoTitle": "Serveis d'Automatització Empresarial amb IA | Automatització de Processos amb IA | BRM AI",
+      "seoDescription": "Transforma el teu negoci amb automatització impulsada per IA. El nostre programari d'automatització de processos empresarials utilitza intel·ligència artificial per optimitzar operacions, reduir costos i augmentar l'eficiència.",
+      "heroTitle": "AUTOMATITZACIÓ EMPRESARIAL AMB IA",
+      "heroSubtitle": "Transforma els teus processos empresarials amb intel·ligència artificial. Redueix els costos operatius fins a un 70% mentre millores l'eficiència i precisió a través de l'automatització intel·ligent.",
+      "startJourney": "COMENÇAR LA TEVA AUTOMATITZACIÓ →",
+      "whatIsTitle": "QUÈ ÉS L'AUTOMATITZACIÓ EMPRESARIAL AMB IA?",
+      "whatIsDesc1": "L'automatització empresarial amb IA combina intel·ligència artificial amb automatització de processos empresarials per crear sistemes intel·ligents que no només executen tasques sinó que també aprenen, s'adapten i prenen decisions. A diferència de l'automatització tradicional, les solucions impulsades per IA poden gestionar dades i processos complexos i no estructurats que anteriorment requerien intel·ligència humana.",
+      "whatIsDesc2": "La nostra automatització de processos empresarials amb IA va més enllà de la simple automatització basada en regles. Implementem algoritmes d'aprenentatge automàtic, processament de llenguatge natural i visió per computadora per crear solucions d'automatització verdaderament intel·ligents que evolucionen amb el teu negoci.",
+      "intelligentDecisionTitle": "PRESA DE DECISIONS INTEL·LIGENT",
+      "intelligentDecisionDesc": "La IA analitza patrons i pren decisions complexes basades en dades històriques i entrades en temps real.",
+      "continuousLearningTitle": "APRENENTATGE CONTINU",
+      "continuousLearningDesc": "Els sistemes milloren amb el temps, adaptant-se a nous escenaris i optimitzant processos automàticament.",
+      "scalableSolutionsTitle": "SOLUCIONS ESCALABLES",
+      "scalableSolutionsDesc": "Gestiona càrregues de treball creixents sense augments proporcionals en recursos o costos.",
+      "keyFeaturesTitle": "CARACTERÍSTIQUES CLAU DE LA NOSTRA AUTOMATITZACIÓ AMB IA",
+      "naturalLanguageTitle": "PROCESSAMENT DE LLENGUATGE NATURAL",
+      "naturalLanguageDesc": "Processa i entén el llenguatge humà en documents, correus electrònics i converses. Automatitza el servei al client, anàlisi de documents i fluxos de treball de comunicació.",
+      "computerVisionTitle": "VISIÓ PER COMPUTADORA",
+      "computerVisionDesc": "Extreu informació d'imatges i vídeos. Automatitza el control de qualitat, processament de documents i tasques d'inspecció visual amb precisió sense precedents.",
+      "predictiveAnalyticsTitle": "ANALÍTICA PREDICTIVA",
+      "predictiveAnalyticsDesc": "Pronostica tendències i comportaments futurs. Optimitza inventaris, prediu necessitats de manteniment i pren decisions basades en dades automàticament.",
+      "intelligentWorkflowsTitle": "FLUXOS DE TREBALL INTEL·LIGENTS",
+      "intelligentWorkflowsDesc": "Crea fluxos de treball auto-optimitzants que s'adapten a condicions canviants. Enruta tasques intel·ligentment i gestiona excepcions sense intervenció humana.",
+      "seamlessIntegrationTitle": "INTEGRACIÓ PERFECTA",
+      "seamlessIntegrationDesc": "Connecta amb sistemes i bases de dades existents. La nostra automatització amb IA funciona amb la teva infraestructura actual, millorant en lloc de reemplaçar.",
+      "realTimeMonitoringTitle": "MONITORATGE EN TEMPS REAL",
+      "realTimeMonitoringDesc": "Rastreja el rendiment, identifica colls d'ampolla i rep recomanacions intel·ligents per a la millora contínua dels teus processos automatitzats.",
+      "useCasesTitle": "CASOS D'ÚS D'AUTOMATITZACIÓ EMPRESARIAL",
+      "useCasesDesc": "L'automatització empresarial amb IA transforma cada departament en la teva organització. Des de finances fins a servei al client, les nostres solucions proporcionen guanys d'eficiència en totes les funcions empresarials.",
+      "financeTitle": "FINANCES I COMPTABILITAT",
+      "financeList": [
+        "Processament automatitzat de factures i fluxos de treball d'aprovació",
+        "Categorització intel·ligent de despeses i informes",
+        "Detecció i prevenció de fraus en temps real",
+        "Reconciliació financera i auditoria automatitzada"
+      ],
+      "customerServiceTitle": "SERVEI AL CLIENT",
+      "customerServiceList": [
+        "Chatbots impulsats per IA per a suport al client 24/7",
+        "Enrutament intel·ligent i priorització de tiquets",
+        "Generació automàtica de respostes per a consultes comunes",
+        "Anàlisi de sentiments i seguiment de satisfacció del client"
+      ],
+      "humanResourcesTitle": "RECURSOS HUMANS",
+      "humanResourcesList": [
+        "Filtratge de currículums i coincidència de candidats",
+        "Processos automatitzats d'incorporació i capacitació",
+        "Programació intel·ligent i gestió de permisos",
+        "Anàlisi de rendiment i automatització de retroalimentació"
+      ],
+      "supplyChainTitle": "CADENA DE SUBMINISTRAMENT I LOGÍSTICA",
+      "supplyChainList": [
+        "Pronòstic de demanda i optimització d'inventaris",
+        "Processament automatitzat de comandes i compliment",
+        "Optimització de rutes i programació de lliuraments",
+        "Manteniment predictiu per a equips i vehicles"
+      ],
+      "roiTitle": "RETORN D'INVERSIÓ COMPROVAT",
+      "roiDesc": "Les nostres solucions d'automatització empresarial amb IA ofereixen resultats mesurables. La majoria dels clients veuen ROI positiu dins de 6 mesos i recuperació completa dins de 12-18 mesos d'implementació.",
+      "costReduction": "Reducció en costos operatius",
+      "fasterProcessing": "Finalització més ràpida de processos",
+      "accuracyImprovement": "Millora en precisió",
+      "productivityIncrease": "Augment de productivitat",
+      "ctaTitle": "PREPARAT PER AUTOMATITZAR EL TEU NEGOCI?",
+      "ctaDesc": "Discutim com l'automatització empresarial amb IA pot transformar les teves operacions. Obtén una consulta gratuïta i una fulla de ruta d'automatització personalitzada per al teu negoci.",
+      "getFreeConsultation": "OBTENIR CONSULTA GRATUÏTA →",
+      "learnMoreBlog": "APRENDRE MÉS AL NOSTRE BLOG",
+      "footerCopyright": "BRM AI - Automatització de Processos Empresarials",
+      "allServices": "TOTS ELS SERVEIS",
+      "getStarted": "COMENÇAR",
+      "home": "Inici"
+    },
+    "BlogPost": {
+      "contactUs": "CONTACTA'NS",
+      "home": "Inici",
+      "blog": "Blog",
+      "ctaTitle": "Preparat per Automatitzar els teus Processos Empresarials?",
+      "ctaDesc": "Els nostres experts estan llestos per ajudar-te a implementar solucions d'automatització d'avantguarda que transformaran les teves operacions empresarials i impulsaran el creixement.",
+      "getFreeConsultation": "Obtenir Consulta Gratuïta",
+      "viewServices": "Veure els Nostres Serveis"
     }
   }

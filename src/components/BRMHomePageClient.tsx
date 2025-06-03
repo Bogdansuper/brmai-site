@@ -313,16 +313,16 @@ export default function BRMHomePageClient() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                {tAbout('paragraph1')}
+                {tAbout('paragraph1')} Our team specializes in <Link href="/services/ai-business-automation" className="text-white hover:text-gray-300 underline">AI business automation</Link> solutions that transform traditional workflows into intelligent, self-managing systems.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                {tAbout('paragraph2')}
+                {tAbout('paragraph2')} Whether you need <Link href="#services" className="text-white hover:text-gray-300 underline">business process automation</Link> or comprehensive digital transformation, our expertise ensures successful implementation and measurable results.
               </p>
             </div>
             <div>
               <h3 className="text-xl mb-4 uppercase tracking-wide">{tAbout('missionTitle')}</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                {tAbout('missionText')}
+                {tAbout('missionText')} We believe that <Link href="/blog" className="text-white hover:text-gray-300 underline">staying informed about automation trends</Link> is crucial for business success in the digital age.
               </p>
               <h3 className="text-xl mb-4 uppercase tracking-wide">{tAbout('approachTitle')}</h3>
               <ul className="space-y-2 text-gray-400">
@@ -344,21 +344,21 @@ export default function BRMHomePageClient() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl mb-4">🚀</div>
+              <div className="text-6xl font-thin text-gray-500 mb-6">01</div>
               <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('provenResultsTitle')}</h3>
               <p className="text-gray-400">
                 {tWhyChoose('provenResultsText')}
               </p>
             </div>
             <div className="text-center">
-              <div className="text-4xl mb-4">🧠</div>
+              <div className="text-6xl font-thin text-gray-500 mb-6">02</div>
               <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('aiExpertiseTitle')}</h3>
               <p className="text-gray-400">
                 {tWhyChoose('aiExpertiseText')}
               </p>
             </div>
             <div className="text-center">
-              <div className="text-4xl mb-4">🔧</div>
+              <div className="text-6xl font-thin text-gray-500 mb-6">03</div>
               <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('customSolutionsTitle')}</h3>
               <p className="text-gray-400">
                 {tWhyChoose('customSolutionsText')}
@@ -444,17 +444,26 @@ export default function BRMHomePageClient() {
               <p className="text-gray-400">
                 {tFAQ('answer1')}
               </p>
+              <p className="text-gray-500 text-sm mt-2">
+                → Learn more about our <Link href="/services/ai-business-automation" className="text-white hover:text-gray-300 underline">AI automation services</Link>
+              </p>
             </div>
             <div className="border-b border-gray-800 pb-6">
               <h3 className="text-xl mb-4">{tFAQ('question2')}</h3>
               <p className="text-gray-400">
                 {tFAQ('answer2')}
               </p>
+              <p className="text-gray-500 text-sm mt-2">
+                → Read implementation guides in our <Link href="/blog" className="text-white hover:text-gray-300 underline">automation blog</Link>
+              </p>
             </div>
             <div className="border-b border-gray-800 pb-6">
               <h3 className="text-xl mb-4">{tFAQ('question3')}</h3>
               <p className="text-gray-400">
                 {tFAQ('answer3')}
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                → Explore our <Link href="#services" className="text-white hover:text-gray-300 underline">complete service portfolio</Link>
               </p>
             </div>
             <div className="border-b border-gray-800 pb-6">
@@ -467,6 +476,9 @@ export default function BRMHomePageClient() {
               <h3 className="text-xl mb-4">{tFAQ('question5')}</h3>
               <p className="text-gray-400">
                 {tFAQ('answer5')}
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                → <Link href="#contact" className="text-white hover:text-gray-300 underline">Contact our experts</Link> for a free consultation
               </p>
             </div>
           </div>

@@ -147,10 +147,10 @@ const MercuryLiquidEffect = () => {
           particle.x, particle.y, size
         );
         
-        // Black magnetic fluid base
-        gradient.addColorStop(0, 'rgba(10, 10, 10, 0.8)');
-        gradient.addColorStop(0.5, 'rgba(5, 5, 5, 0.6)');
-        gradient.addColorStop(0.8, 'rgba(0, 0, 0, 0.3)');
+        // Black magnetic fluid base - increased brightness by 10%
+        gradient.addColorStop(0, 'rgba(22, 22, 22, 0.9)');
+        gradient.addColorStop(0.5, 'rgba(15, 15, 15, 0.7)');
+        gradient.addColorStop(0.8, 'rgba(8, 8, 8, 0.4)');
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
         
         ctx.fillStyle = gradient;
@@ -158,7 +158,7 @@ const MercuryLiquidEffect = () => {
         ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
         ctx.fill();
 
-        // Mercury highlight on edges
+        // Mercury highlight on edges - increased brightness by 10%
         const highlightAngle = Math.atan2(particle.vy, particle.vx);
         const highlightX = particle.x + Math.cos(highlightAngle) * size * 0.6;
         const highlightY = particle.y + Math.sin(highlightAngle) * size * 0.6;
@@ -168,14 +168,14 @@ const MercuryLiquidEffect = () => {
           highlightX, highlightY, size * 0.4
         );
         
-        // Metallic mercury highlight
+        // Metallic mercury highlight - increased brightness by 10%
         const intensity = Math.abs(particle.vx) + Math.abs(particle.vy);
-        const brightness = Math.min(intensity * 0.1, 0.5);
+        const brightness = Math.min(intensity * 0.15, 0.6);
         
         highlight.addColorStop(0, `rgba(255, 255, 255, ${brightness})`);
-        highlight.addColorStop(0.3, `rgba(200, 200, 220, ${brightness * 0.5})`);
-        highlight.addColorStop(0.6, `rgba(150, 150, 170, ${brightness * 0.2})`);
-        highlight.addColorStop(1, 'rgba(100, 100, 120, 0)');
+        highlight.addColorStop(0.3, `rgba(220, 220, 240, ${brightness * 0.6})`);
+        highlight.addColorStop(0.6, `rgba(170, 170, 190, ${brightness * 0.3})`);
+        highlight.addColorStop(1, 'rgba(120, 120, 140, 0)');
         
         ctx.fillStyle = highlight;
         ctx.beginPath();

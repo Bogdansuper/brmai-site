@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import { locales, defaultLocale } from "../i18n.ts"; // Обновленный путь к i18n.ts из папки src
+import { locales, defaultLocale } from "../i18n.ts";
 import { ChangeEvent } from "react";
 
 export default function LanguageSwitcher() {
@@ -13,23 +13,33 @@ export default function LanguageSwitcher() {
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const newLocale = event.target.value;
     
-    let newPath = pathname;
-
-    if (pathname.startsWith(`/${currentLocale}/`)) {
-      newPath = `/${newLocale}${pathname.substring(currentLocale.length + 1)}`;
-    } else if (pathname === `/${currentLocale}`) {
-      newPath = `/${newLocale}`;
-    } else {
-      if (pathname === "/") {
-        newPath = `/${newLocale}`;
-      } else {
-        newPath = `/${newLocale}${pathname}`;
-      }
+    // Не делаем ничего если выбран тот же язык
+    if (newLocale === currentLocale) {
+      return;
     }
     
-    if (newLocale === defaultLocale && newPath === `/${defaultLocale}`) {
-        newPath = "/";
+    let newPath = "";
+    
+    // Определяем базовый путь без локали
+    let basePath = "";
+    
+    // Теперь все языки имеют префиксы, включая английский
+    if (pathname.startsWith(`/${currentLocale}/`)) {
+      basePath = pathname.substring(`/${currentLocale}`.length);
+    } else if (pathname === `/${currentLocale}`) {
+      basePath = "/";
+    } else {
+      // Fallback: если путь не содержит локаль, считаем что это главная страница
+      basePath = "/";
     }
+    
+    // Формируем новый путь (всегда с префиксом локали)
+    newPath = basePath === "/" ? `/${newLocale}` : `/${newLocale}${basePath}`;
+
+    console.log(`[LanguageSwitcher] Switching from ${currentLocale} to ${newLocale}`);
+    console.log(`[LanguageSwitcher] Current pathname: ${pathname}`);
+    console.log(`[LanguageSwitcher] Base path: ${basePath}`);
+    console.log(`[LanguageSwitcher] New path: ${newPath}`);
 
     router.replace(newPath, { scroll: false });
   };

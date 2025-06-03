@@ -1,4 +1,6 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
 // Define a type for the section structure if needed, or use 'any' for simplicity here
 type PrivacySection = {
@@ -9,53 +11,94 @@ type PrivacySection = {
 
 // Consolidated Props type for both page component and generateMetadata
 type Props = {
-  params: Promise<{ locale: string }>; // params is a Promise
+  params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({params: paramsPromise}: Props) { // Use consolidated Props
-  const params = await paramsPromise; // Await the promise
-  const locale = params.locale;
-  setRequestLocale(locale);
-  const t = await getTranslations({locale, namespace: 'PrivacyPolicy'});
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'PrivacyPolicy' });
+  
   return {
-    title: t('title')
+    title: `${t('title')} | BRM AI`,
+    description: t('introduction.paragraph1'),
   };
 }
 
-export default async function PrivacyPolicyPage({params: paramsPromise }: Props) { // Use consolidated Props
-  const params = await paramsPromise; // Await the promise
-  const locale = params.locale;
+export default async function PrivacyPolicyPage({ params }: Props) {
+  const resolvedParams = await params;
+  const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'PrivacyPolicy' });
+  const tShared = await getTranslations({ locale: resolvedParams.locale, namespace: 'Shared' });
   
-  // Enable static rendering
-  setRequestLocale(locale);
-
-  const t = await getTranslations({ locale, namespace: 'PrivacyPolicy' });
-
-  const sections: Array<{key: string, content: PrivacySection}> = [
-    { key: 'introduction', content: { heading: t('introduction.heading'), paragraph1: t('introduction.paragraph1') } },
-    { key: 'informationWeCollect', content: { heading: t('informationWeCollect.heading'), paragraph1: t('informationWeCollect.paragraph1') } },
-    { key: 'howWeUseInformation', content: { heading: t('howWeUseInformation.heading'), paragraph1: t('howWeUseInformation.paragraph1') } },
-    { key: 'dataSharing', content: { heading: t('dataSharing.heading'), paragraph1: t('dataSharing.paragraph1') } },
-    { key: 'yourRights', content: { heading: t('yourRights.heading'), paragraph1: t('yourRights.paragraph1') } },
-    { key: 'contactUs', content: { heading: t('contactUs.heading'), paragraph1: t('contactUs.paragraph1') } }
-  ];
-
   return (
-    <div className="container mx-auto px-4 py-8 max-w-3xl">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-gray-900 dark:text-white">{t('title')}</h1>
-      <div className="space-y-6 text-gray-700 dark:text-gray-300">
-        {sections.map((section) => (
-            <section key={section.key}>
-              <h2 className="text-2xl font-semibold mb-3 text-gray-800 dark:text-gray-200">{section.content.heading}</h2>
-              <p className="leading-relaxed">{section.content.paragraph1}</p>
+    <div className="min-h-screen bg-black text-white">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-900/50">
+        <nav className="px-6 md:px-12 py-4">
+          <div className="flex items-center justify-between">
+            <Link href={`/${resolvedParams.locale}`} className="text-xl font-medium tracking-tight">
+              BRM-AI
+            </Link>
+            <Link href={`/${resolvedParams.locale}#contact`} className="px-4 py-2 border border-white hover:bg-white hover:text-black transition-all text-sm">
+              {tShared('contactUsButton')}
+            </Link>
+          </div>
+        </nav>
+      </header>
+
+      {/* Content */}
+      <main className="pt-32 pb-24 px-8 md:px-12">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-normal mb-16 uppercase tracking-wider">
+            {t('title')}
+          </h1>
+          
+          <div className="prose prose-invert max-w-none space-y-12">
+            <section>
+              <h2 className="text-2xl mb-6 uppercase tracking-wider">{t('introduction.heading')}</h2>
+              <p className="text-gray-400 leading-relaxed">{t('introduction.paragraph1')}</p>
             </section>
-        ))}
-        <section className="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
-            {t('lastUpdated', {date: new Date().toLocaleDateString()})}
+
+            <section>
+              <h2 className="text-2xl mb-6 uppercase tracking-wider">{t('informationWeCollect.heading')}</h2>
+              <p className="text-gray-400 leading-relaxed">{t('informationWeCollect.paragraph1')}</p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl mb-6 uppercase tracking-wider">{t('howWeUseInformation.heading')}</h2>
+              <p className="text-gray-400 leading-relaxed">{t('howWeUseInformation.paragraph1')}</p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl mb-6 uppercase tracking-wider">{t('dataSharing.heading')}</h2>
+              <p className="text-gray-400 leading-relaxed">{t('dataSharing.paragraph1')}</p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl mb-6 uppercase tracking-wider">{t('yourRights.heading')}</h2>
+              <p className="text-gray-400 leading-relaxed">{t('yourRights.paragraph1')}</p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl mb-6 uppercase tracking-wider">{t('contactUs.heading')}</h2>
+              <p className="text-gray-400 leading-relaxed">{t('contactUs.paragraph1')}</p>
+            </section>
+          </div>
+
+          <p className="text-gray-500 mt-16 text-sm">
+            {t('lastUpdated', { date: new Date().toLocaleDateString() })}
           </p>
-        </section>
-      </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="py-8 px-8 md:px-12 border-t border-gray-900">
+        <div className="max-w-6xl mx-auto flex justify-between items-center text-sm text-gray-500">
+          <p>© {new Date().getFullYear()} BRM AI</p>
+          <Link href={`/${resolvedParams.locale}`} className="hover:text-white transition-colors">
+            {tShared('home')}
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 } 

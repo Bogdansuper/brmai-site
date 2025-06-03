@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 
 interface Props {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'Blog' });
+  const resolvedParams = await params;
+  const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'Blog' });
   const baseUrl = "https://mybrmai.com";
-  const canonicalUrl = `${baseUrl}/${params.locale}/blog`;
+  const canonicalUrl = `${baseUrl}/${resolvedParams.locale}/blog`;
   
   return {
     title: t('seoTitle'),
@@ -55,9 +56,10 @@ const blogPosts = [
   }
 ];
 
-export default async function BlogPage(props: Props) {
-  const { params } = props;
-  const t = await getTranslations({ locale: params.locale, namespace: 'Blog' });
+export default async function BlogPage({ params }: Props) {
+  const resolvedParams = await params;
+  const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'Blog' });
+  const tShared = await getTranslations({ locale: resolvedParams.locale, namespace: 'Shared' });
   
   return (
     <div className="min-h-screen bg-black text-white">
@@ -65,11 +67,11 @@ export default async function BlogPage(props: Props) {
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-900/50">
         <nav className="px-6 md:px-12 py-4">
           <div className="flex items-center justify-between">
-            <Link href={`/${params.locale}`} className="text-xl font-medium tracking-tight">
+            <Link href={`/${resolvedParams.locale}`} className="text-xl font-medium tracking-tight">
               BRM-AI
             </Link>
-            <Link href={`/${params.locale}#contact`} className="px-4 py-2 border border-white hover:bg-white hover:text-black transition-all text-sm">
-              CONTACT US
+            <Link href={`/${resolvedParams.locale}#contact`} className="px-4 py-2 border border-white hover:bg-white hover:text-black transition-all text-sm">
+              {tShared('contactUsButton')}
             </Link>
           </div>
         </nav>
@@ -79,11 +81,10 @@ export default async function BlogPage(props: Props) {
       <main className="pt-32 pb-24 px-8 md:px-12">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-normal mb-8 uppercase tracking-wider">
-            BLOG
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-400 mb-16 max-w-3xl">
-            Insights on business process automation, AI implementation, and digital transformation strategies 
-            to help your business thrive in the modern economy.
+            {t('subtitle')}
           </p>
 
           {/* Blog Grid */}
@@ -99,7 +100,7 @@ export default async function BlogPage(props: Props) {
                 </div>
                 <h2 className="text-xl mb-3 font-medium">
                   <Link 
-                    href={`/${params.locale}/blog/${post.id}`}
+                    href={`/${resolvedParams.locale}/blog/${post.id}`}
                     className="hover:text-gray-300 transition-colors"
                   >
                     {post.title}
@@ -109,10 +110,10 @@ export default async function BlogPage(props: Props) {
                   {post.excerpt}
                 </p>
                 <Link 
-                  href={`/${params.locale}/blog/${post.id}`}
+                  href={`/${resolvedParams.locale}/blog/${post.id}`}
                   className="text-sm uppercase tracking-wider hover:text-gray-300 transition-colors"
                 >
-                  Read More →
+                  {t('readMore')}
                 </Link>
               </article>
             ))}
@@ -121,34 +122,23 @@ export default async function BlogPage(props: Props) {
           {/* SEO Content Section */}
           <section className="mt-24 border-t border-gray-900 pt-16">
             <h2 className="text-2xl mb-8 uppercase tracking-wider">
-              Why Business Process Automation Matters
+              {t('whyAutomationMatters')}
             </h2>
             <div className="prose prose-invert max-w-none">
               <p className="text-gray-400 mb-6 leading-relaxed">
-                In today's competitive business landscape, business process automation has become essential for 
-                companies looking to maintain their edge. By implementing business automation solutions, organizations 
-                can reduce operational costs, minimize errors, and free up valuable human resources for more strategic tasks.
+                {t('automationDescription1')}
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Business process automation software powered by artificial intelligence takes this to the next level. 
-                AI business automation not only handles repetitive tasks but also learns from patterns, makes intelligent 
-                decisions, and continuously improves processes. This combination of business process automation with AI 
-                creates a powerful synergy that drives unprecedented efficiency gains.
+                {t('automationDescription2')}
               </p>
-              <h3 className="text-xl mt-8 mb-4">Key Areas for Business Automation</h3>
+              <h3 className="text-xl mt-8 mb-4">{t('keyAreasTitle')}</h3>
               <ul className="space-y-2 text-gray-400 mb-6">
-                <li>• Customer service and support automation</li>
-                <li>• Financial process automation and invoicing</li>
-                <li>• Supply chain and inventory management</li>
-                <li>• HR and recruitment process automation</li>
-                <li>• Marketing automation and lead generation</li>
-                <li>• Document processing and data entry</li>
+                {(t.raw('automationAreas') as string[]).map((area: string, index: number) => (
+                  <li key={index}>• {area}</li>
+                ))}
               </ul>
               <p className="text-gray-400 leading-relaxed">
-                Whether you're exploring business process automation for the first time or looking to enhance your 
-                existing automation capabilities, understanding the latest trends and best practices is crucial. 
-                Our blog provides insights, case studies, and practical guides to help you navigate the world of 
-                AI for business automation and implement solutions that deliver real value.
+                {t('automationDescription3')}
               </p>
             </div>
           </section>
@@ -159,8 +149,8 @@ export default async function BlogPage(props: Props) {
       <footer className="py-8 px-8 md:px-12 border-t border-gray-900">
         <div className="max-w-6xl mx-auto flex justify-between items-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} BRM AI</p>
-          <Link href={`/${params.locale}`} className="hover:text-white transition-colors">
-            Back to Home
+          <Link href={`/${resolvedParams.locale}`} className="hover:text-white transition-colors">
+            {t('backToHome')}
           </Link>
         </div>
       </footer>

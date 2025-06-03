@@ -2,34 +2,29 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center px-6">
-      <div className="text-center max-w-2xl">
-        <h1 className="text-6xl md:text-8xl font-bold mb-4">404</h1>
-        <h2 className="text-2xl md:text-3xl mb-8 text-gray-400">
-          Page Not Found
-        </h2>
-        <p className="text-lg text-gray-500 mb-12">
-          The page you are looking for doesn't exist or has been moved.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-6xl font-normal mb-8 uppercase tracking-wider">404</h1>
+        <h2 className="text-2xl mb-4">Page Not Found</h2>
+        <p className="text-gray-400 mb-8">Sorry, the page you are looking for could not be found.</p>
+        <div className="flex gap-4 justify-center">
           <Link 
             href="/"
-            className="px-8 py-4 bg-white text-black font-medium hover:bg-gray-200 transition-all text-sm tracking-wider text-center"
+            className="px-6 py-3 bg-white text-black hover:bg-gray-200 transition-colors"
           >
-            Back to Home →
+            HOME
           </Link>
           <Link 
             href="/#services"
-            className="px-8 py-4 border border-white hover:bg-white hover:text-black transition-all text-sm tracking-wider text-center"
+            className="px-6 py-3 border border-white hover:bg-white hover:text-black transition-colors"
           >
-            Our Services
+            SERVICES
           </Link>
           <Link 
             href="/#contact"
-            className="px-8 py-4 border border-white hover:bg-white hover:text-black transition-all text-sm tracking-wider text-center"
+            className="px-6 py-3 border border-white hover:bg-white hover:text-black transition-colors"
           >
-            Contact Us
+            CONTACT US
           </Link>
         </div>
       </div>

@@ -6,10 +6,10 @@
       "heroSubtitle": "Aprovecha la IA para la automatización empresarial y optimiza tus procesos de negocio. BRM AI ofrece soluciones de IA dirigidas y transformación digital completa usando inteligencia artificial.",
       "servicesTitle": "Nuestros Servicios Integrales Incluyen:",
       "servicesDescription": "Nuestro conjunto integral de servicios de automatización empresarial está diseñado para abordar cada aspecto de tu viaje de transformación digital. Desde automatización de procesos impulsada por IA hasta desarrollo de software personalizado, proporcionamos soluciones integrales que generan resultados empresariales medibles.",
-      "valueProposition": "BRM AI Automatización Empresarial – ¡tu socio confiable en el mundo de las tecnologías digitales y la inteligencia artificial! 🚀",
-      "ctaTitle": "¿Listo para llevar tu negocio al siguiente nivel? 📈",
+      "valueProposition": "BRM AI Automatización de Negocios: tu socio confiable en el mundo de las tecnologías digitales y la inteligencia artificial!",
+      "ctaTitle": "¿Listo para llevar tu negocio al siguiente nivel?",
       "ctaSubtitle": "Contáctanos para discutir cómo podemos ayudar a tu negocio a crecer y prosperar.",
-      "contactTitle": "👇 ¡Contáctanos Hoy! 👇",
+      "contactTitle": "Contáctanos hoy",
       "getStarted": "COMENZAR →",
       "viewServices": "VER SERVICIOS",
       "learnMore": "Saber Más →"
@@ -75,8 +75,8 @@
       "googleBusiness_title": "Google Business Profile",
       "googleBusiness_desc": "Haremos visible tu negocio en Google Maps.",
       "aiAutomation_title": "Automatización con IA",
-      "aiAutomation_subService1": "🗣️ Agentes IA Inteligentes: comunicación 24/7 con clientes en mensajeros y en el sitio web.",
-      "aiAutomation_subService2": "📞 Gerente de Ventas IA por Voz: Consulta a clientes por voz directamente desde tu sitio web, ¡usando tu base de datos!",
+      "aiAutomation_subService1": "Agentes IA Inteligentes: comunicación 24/7 con clientes en mensajeros y en el sitio web.",
+      "aiAutomation_subService2": "Gerente de Ventas IA por Voz: Consulta a clientes por voz directamente desde tu sitio web, ¡usando tu base de datos!",
       "leadAutomation_title": "Automatización de Leads y Solicitudes",
       "leadAutomation_desc": "¡Ninguna consulta se perdrá!",
       "continuousImprovement_title": "Mejora Continua",
@@ -101,6 +101,9 @@
     },
     "Shared": {
       "contactUs": "Contáctanos",
+      "contactUsButton": "CONTÁCTANOS",
+      "home": "Inicio",
+      "backToBlog": "Volver al blog",
       "discussProject": "Discutir Proyecto",
       "ourServices": "Nuestros Servicios",
       "phone": "Teléfono",
@@ -124,10 +127,25 @@
       "contact": "CONTÁCTANOS"
     },
     "Blog": {
-      "seoTitle": "Blog de Automatización de Procesos de Negocio | Insights de Automatización con IA | BRM AI",
-      "seoDescription": "Insights expertos sobre automatización de procesos de negocio, estrategias de implementación de IA y software de automatización. Aprende cómo transformar tu negocio con automatización inteligente.",
-      "title": "Blog",
-      "readMore": "Leer Más"
+      "seoTitle": "Blog de Automatización de Procesos Empresariales | BRM AI",
+      "seoDescription": "Conocimientos expertos sobre automatización de procesos empresariales, implementación de IA y estrategias de transformación digital. Aprende a optimizar las operaciones empresariales con soluciones de IA.",
+      "title": "Blog de Automatización Empresarial",
+      "subtitle": "Conocimientos sobre automatización de procesos empresariales, implementación de IA y estrategias de transformación digital para ayudar a tu negocio a prosperar en la economía moderna.",
+      "readMore": "Leer más →",
+      "backToHome": "Volver al inicio",
+      "keyAreasTitle": "Áreas Clave para la Automatización Empresarial",
+      "whyAutomationMatters": "Por Qué Importa la Automatización de Procesos Empresariales",
+      "automationDescription1": "En el panorama empresarial competitivo de hoy, la automatización de procesos empresariales se ha vuelto esencial para las empresas que buscan mantener su ventaja. Al implementar soluciones de automatización empresarial, las organizaciones pueden reducir costos operativos, minimizar errores y liberar valiosos recursos humanos para tareas más estratégicas.",
+      "automationDescription2": "El software de automatización de procesos empresariales impulsado por inteligencia artificial lleva esto al siguiente nivel. La automatización empresarial con IA no solo maneja tareas repetitivas, sino que también aprende de patrones, toma decisiones inteligentes y mejora continuamente los procesos.",
+      "automationDescription3": "Ya sea que estés explorando la automatización de procesos empresariales por primera vez o buscando mejorar tus capacidades de automatización existentes, entender las últimas tendencias y mejores prácticas es crucial. Nuestro blog proporciona conocimientos, casos de estudio y guías prácticas.",
+      "automationAreas": [
+        "Automatización de servicio al cliente y soporte",
+        "Automatización de procesos financieros y facturación",
+        "Gestión de cadena de suministro e inventarios",
+        "Automatización de RRHH y procesos de reclutamiento",
+        "Automatización de marketing y generación de leads",
+        "Procesamiento de documentos e ingreso de datos"
+      ]
     },
     "PrivacyPolicy": {
       "title": "Política de Privacidad",
@@ -156,5 +174,87 @@
         "paragraph1": "Si tienes preguntas o comentarios sobre esta política, puedes enviarnos un correo electrónico a privacy@brm.ai o por correo a: [Dirección de tu Empresa]."
       },
       "lastUpdated": "Última actualización: {date}"
+    },
+    "AIBusinessAutomation": {
+      "seoTitle": "Servicios de Automatización Empresarial con IA | Automatización de Procesos con IA | BRM AI",
+      "seoDescription": "Transforma tu negocio con automatización impulsada por IA. Nuestro software de automatización de procesos empresariales utiliza inteligencia artificial para optimizar operaciones, reducir costos y aumentar la eficiencia.",
+      "heroTitle": "AUTOMATIZACIÓN EMPRESARIAL CON IA",
+      "heroSubtitle": "Transforma tus procesos empresariales con inteligencia artificial. Reduce los costos operativos hasta un 70% mientras mejoras la eficiencia y precisión a través de la automatización inteligente.",
+      "startJourney": "COMENZAR TU AUTOMATIZACIÓN →",
+      "whatIsTitle": "¿QUÉ ES LA AUTOMATIZACIÓN EMPRESARIAL CON IA?",
+      "whatIsDesc1": "La automatización empresarial con IA combina inteligencia artificial con automatización de procesos empresariales para crear sistemas inteligentes que no solo ejecutan tareas sino que también aprenden, se adaptan y toman decisiones. A diferencia de la automatización tradicional, las soluciones impulsadas por IA pueden manejar datos y procesos complejos y no estructurados que anteriormente requerían inteligencia humana.",
+      "whatIsDesc2": "Nuestra automatización de procesos empresariales con IA va más allá de la simple automatización basada en reglas. Implementamos algoritmos de aprendizaje automático, procesamiento de lenguaje natural y visión por computadora para crear soluciones de automatización verdaderamente inteligentes que evolucionan con tu negocio.",
+      "intelligentDecisionTitle": "TOMA DE DECISIONES INTELIGENTE",
+      "intelligentDecisionDesc": "La IA analiza patrones y toma decisiones complejas basadas en datos históricos y entradas en tiempo real.",
+      "continuousLearningTitle": "APRENDIZAJE CONTINUO",
+      "continuousLearningDesc": "Los sistemas mejoran con el tiempo, adaptándose a nuevos escenarios y optimizando procesos automáticamente.",
+      "scalableSolutionsTitle": "SOLUCIONES ESCALABLES",
+      "scalableSolutionsDesc": "Maneja cargas de trabajo crecientes sin aumentos proporcionales en recursos o costos.",
+      "keyFeaturesTitle": "CARACTERÍSTICAS CLAVE DE NUESTRA AUTOMATIZACIÓN CON IA",
+      "naturalLanguageTitle": "PROCESAMIENTO DE LENGUAJE NATURAL",
+      "naturalLanguageDesc": "Procesa y entiende el lenguaje humano en documentos, correos electrónicos y conversaciones. Automatiza el servicio al cliente, análisis de documentos y flujos de trabajo de comunicación.",
+      "computerVisionTitle": "VISIÓN POR COMPUTADORA",
+      "computerVisionDesc": "Extrae información de imágenes y videos. Automatiza el control de calidad, procesamiento de documentos y tareas de inspección visual con precisión sin precedentes.",
+      "predictiveAnalyticsTitle": "ANÁLISIS PREDICTIVO",
+      "predictiveAnalyticsDesc": "Pronostica tendencias y comportamientos futuros. Optimiza inventarios, predice necesidades de mantenimiento y toma decisiones basadas en datos automáticamente.",
+      "intelligentWorkflowsTitle": "FLUJOS DE TRABAJO INTELIGENTES",
+      "intelligentWorkflowsDesc": "Crea flujos de trabajo auto-optimizantes que se adaptan a condiciones cambiantes. Enruta tareas inteligentemente y maneja excepciones sin intervención humana.",
+      "seamlessIntegrationTitle": "INTEGRACIÓN PERFECTA",
+      "seamlessIntegrationDesc": "Conecta con sistemas y bases de datos existentes. Nuestra automatización con IA funciona con tu infraestructura actual, mejorando en lugar de reemplazar.",
+      "realTimeMonitoringTitle": "MONITOREO EN TIEMPO REAL",
+      "realTimeMonitoringDesc": "Rastrea el rendimiento, identifica cuellos de botella y recibe recomendaciones inteligentes para la mejora continua de tus procesos automatizados.",
+      "useCasesTitle": "CASOS DE USO DE AUTOMATIZACIÓN EMPRESARIAL",
+      "useCasesDesc": "La automatización empresarial con IA transforma cada departamento en tu organización. Desde finanzas hasta servicio al cliente, nuestras soluciones brindan ganancias de eficiencia en todas las funciones empresariales.",
+      "financeTitle": "FINANZAS Y CONTABILIDAD",
+      "financeList": [
+        "Procesamiento automatizado de facturas y flujos de trabajo de aprobación",
+        "Categorización inteligente de gastos y reportes",
+        "Detección y prevención de fraudes en tiempo real",
+        "Reconciliación financiera y auditoría automatizada"
+      ],
+      "customerServiceTitle": "SERVICIO AL CLIENTE",
+      "customerServiceList": [
+        "Chatbots impulsados por IA para soporte al cliente 24/7",
+        "Enrutamiento inteligente y priorización de tickets",
+        "Generación automática de respuestas para consultas comunes",
+        "Análisis de sentimientos y seguimiento de satisfacción del cliente"
+      ],
+      "humanResourcesTitle": "RECURSOS HUMANOS",
+      "humanResourcesList": [
+        "Filtrado de currículums y coincidencia de candidatos",
+        "Procesos automatizados de incorporación y capacitación",
+        "Programación inteligente y gestión de permisos",
+        "Análisis de rendimiento y automatización de retroalimentación"
+      ],
+      "supplyChainTitle": "CADENA DE SUMINISTRO Y LOGÍSTICA",
+      "supplyChainList": [
+        "Pronóstico de demanda y optimización de inventarios",
+        "Procesamiento automatizado de pedidos y cumplimiento",
+        "Optimización de rutas y programación de entregas",
+        "Mantenimiento predictivo para equipos y vehículos"
+      ],
+      "roiTitle": "RETORNO DE INVERSIÓN COMPROBADO",
+      "roiDesc": "Nuestras soluciones de automatización empresarial con IA entregan resultados medibles. La mayoría de los clientes ven ROI positivo dentro de 6 meses y recuperación completa dentro de 12-18 meses de implementación.",
+      "costReduction": "Reducción en costos operativos",
+      "fasterProcessing": "Finalización más rápida de procesos",
+      "accuracyImprovement": "Mejora en precisión",
+      "productivityIncrease": "Aumento de productividad",
+      "ctaTitle": "¿LISTO PARA AUTOMATIZAR TU NEGOCIO?",
+      "ctaDesc": "Discutamos cómo la automatización empresarial con IA puede transformar tus operaciones. Obtén una consulta gratuita y una hoja de ruta de automatización personalizada para tu negocio.",
+      "getFreeConsultation": "OBTENER CONSULTA GRATUITA →",
+      "learnMoreBlog": "APRENDER MÁS EN NUESTRO BLOG",
+      "footerCopyright": "BRM AI - Automatización de Procesos Empresariales",
+      "allServices": "TODOS LOS SERVICIOS",
+      "getStarted": "COMENZAR",
+      "home": "Inicio"
+    },
+    "BlogPost": {
+      "contactUs": "CONTÁCTANOS",
+      "home": "Inicio",
+      "blog": "Blog",
+      "ctaTitle": "¿Listo para Automatizar tus Procesos Empresariales?",
+      "ctaDesc": "Nuestros expertos están listos para ayudarte a implementar soluciones de automatización de vanguardia que transformarán tus operaciones empresariales e impulsarán el crecimiento.",
+      "getFreeConsultation": "Obtener Consulta Gratuita",
+      "viewServices": "Ver Nuestros Servicios"
     }
   }

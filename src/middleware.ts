@@ -8,8 +8,11 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale: defaultLocale,
 
-  // Don't prefix the default locale
-  localePrefix: 'as-needed',
+  // Always show locale prefix, including for default locale
+  localePrefix: 'always',
+
+  // Disable automatic locale detection from browser
+  localeDetection: false,
 });
 
 export const config = {

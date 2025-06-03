@@ -6,10 +6,10 @@
     "heroSubtitle": "Leverage AI for business automation and streamline your business processes. BRM AI offers targeted AI solutions and full-stack digital transformation using artificial intelligence.",
     "servicesTitle": "Our Comprehensive Services Include:",
     "servicesDescription": "Our comprehensive suite of business automation services is designed to address every aspect of your digital transformation journey. From AI-powered process automation to custom software development, we provide end-to-end solutions that drive measurable business outcomes.",
-    "valueProposition": "BRM AI Business Automation – your reliable partner in the world of digital technologies and artificial intelligence! 🚀",
-    "ctaTitle": "Ready to take your business to the next level? 📈",
+    "valueProposition": "BRM AI Business Automation – your reliable partner in the world of digital technologies and artificial intelligence!",
+    "ctaTitle": "Ready to take your business to the next level?",
     "ctaSubtitle": "Contact us to discuss how we can help your business grow and thrive.",
-    "contactTitle": "👇 Contact Us Today! 👇",
+    "contactTitle": "Contact Us Today",
     "getStarted": "GET STARTED →",
     "viewServices": "VIEW SERVICES",
     "learnMore": "Learn More →"
@@ -75,8 +75,8 @@
     "googleBusiness_title": "Google Business Profile",
     "googleBusiness_desc": "We'll make your business visible on Google Maps.",
     "aiAutomation_title": "AI Automation",
-    "aiAutomation_subService1": "🗣️ Smart AI Agents: 24/7 communication with clients in messengers and on the website.",
-    "aiAutomation_subService2": "📞 Voice AI Sales Manager: Consults clients by voice directly from your website, using your database!",
+    "aiAutomation_subService1": "Smart AI Agents: 24/7 communication with clients in messengers and on the website.",
+    "aiAutomation_subService2": "Voice AI Sales Manager: Consults clients by voice directly from your website, using your database!",
     "leadAutomation_title": "Lead and Request Automation",
     "leadAutomation_desc": "No inquiry will be lost!",
     "continuousImprovement_title": "Continuous Improvement",
@@ -101,6 +101,9 @@
   },
   "Shared": {
     "contactUs": "Contact Us",
+    "contactUsButton": "CONTACT US",
+    "home": "Home",
+    "backToBlog": "Back to Blog",
     "discussProject": "Discuss Project",
     "ourServices": "Our Services",
     "phone": "Phone",
@@ -124,10 +127,25 @@
     "contact": "CONTACT US"
   },
   "Blog": {
-    "seoTitle": "Business Process Automation Blog | AI Automation Insights | BRM AI",
-    "seoDescription": "Expert insights on business process automation, AI implementation strategies, and automation software. Learn how to transform your business with intelligent automation.",
-    "title": "Blog",
-    "readMore": "Read More"
+    "seoTitle": "Business Process Automation Blog | BRM AI",
+    "seoDescription": "Expert insights on business process automation, AI implementation, and digital transformation strategies. Learn how to optimize your business operations with AI-powered solutions.",
+    "title": "Business Automation Blog",
+    "subtitle": "Insights on business process automation, AI implementation, and digital transformation strategies to help your business thrive in the modern economy.",
+    "readMore": "Read More →",
+    "backToHome": "Back to Home",
+    "keyAreasTitle": "Key Areas for Business Automation",
+    "whyAutomationMatters": "Why Business Process Automation Matters",
+    "automationDescription1": "In today's competitive business landscape, business process automation has become essential for companies looking to maintain their edge. By implementing business automation solutions, organizations can reduce operational costs, minimize errors, and free up valuable human resources for more strategic tasks.",
+    "automationDescription2": "Business process automation software powered by artificial intelligence takes this to the next level. AI business automation not only handles repetitive tasks but also learns from patterns, makes intelligent decisions, and continuously improves processes. This combination of business process automation with AI creates a powerful synergy that drives unprecedented efficiency gains.",
+    "automationDescription3": "Whether you're exploring business process automation for the first time or looking to enhance your existing automation capabilities, understanding the latest trends and best practices is crucial. Our blog provides insights, case studies, and practical guides to help you navigate the world of AI for business automation and implement solutions that deliver real value.",
+    "automationAreas": [
+      "Customer service and support automation",
+      "Financial process automation and invoicing",
+      "Supply chain and inventory management",
+      "HR and recruitment process automation",
+      "Marketing automation and lead generation",
+      "Document processing and data entry"
+    ]
   },
   "PrivacyPolicy": {
     "title": "Privacy Policy",
@@ -156,5 +174,87 @@
       "paragraph1": "If you have questions or comments about this policy, you may email us at privacy@brm.ai or by post to: [Your Company Address]."
     },
     "lastUpdated": "Last updated: {date}"
+  },
+  "AIBusinessAutomation": {
+    "seoTitle": "AI Business Automation Services | Business Process Automation with AI | BRM AI",
+    "seoDescription": "Transform your business with AI-powered automation. Our business process automation software uses artificial intelligence to streamline operations, reduce costs, and increase efficiency.",
+    "heroTitle": "AI BUSINESS AUTOMATION",
+    "heroSubtitle": "Transform your business processes with artificial intelligence. Reduce operational costs by up to 70% while improving efficiency and accuracy through intelligent automation.",
+    "startJourney": "START YOUR AUTOMATION JOURNEY →",
+    "whatIsTitle": "WHAT IS AI BUSINESS AUTOMATION?",
+    "whatIsDesc1": "AI business automation combines artificial intelligence with business process automation to create intelligent systems that not only execute tasks but also learn, adapt, and make decisions. Unlike traditional automation, AI-powered solutions can handle complex, unstructured data and processes that previously required human intelligence.",
+    "whatIsDesc2": "Our business process automation with AI goes beyond simple rule-based automation. We implement machine learning algorithms, natural language processing, and computer vision to create truly intelligent automation solutions that evolve with your business.",
+    "intelligentDecisionTitle": "INTELLIGENT DECISION MAKING",
+    "intelligentDecisionDesc": "AI analyzes patterns and makes complex decisions based on historical data and real-time inputs.",
+    "continuousLearningTitle": "CONTINUOUS LEARNING", 
+    "continuousLearningDesc": "Systems improve over time, adapting to new scenarios and optimizing processes automatically.",
+    "scalableSolutionsTitle": "SCALABLE SOLUTIONS",
+    "scalableSolutionsDesc": "Handle increasing workloads without proportional increases in resources or costs.",
+    "keyFeaturesTitle": "KEY FEATURES OF OUR AI AUTOMATION",
+    "naturalLanguageTitle": "NATURAL LANGUAGE PROCESSING",
+    "naturalLanguageDesc": "Process and understand human language in documents, emails, and conversations. Automate customer service, document analysis, and communication workflows.",
+    "computerVisionTitle": "COMPUTER VISION",
+    "computerVisionDesc": "Extract information from images and videos. Automate quality control, document processing, and visual inspection tasks with unprecedented accuracy.",
+    "predictiveAnalyticsTitle": "PREDICTIVE ANALYTICS",
+    "predictiveAnalyticsDesc": "Forecast future trends and behaviors. Optimize inventory, predict maintenance needs, and make data-driven decisions automatically.",
+    "intelligentWorkflowsTitle": "INTELLIGENT WORKFLOWS",
+    "intelligentWorkflowsDesc": "Create self-optimizing workflows that adapt to changing conditions. Route tasks intelligently and handle exceptions without human intervention.",
+    "seamlessIntegrationTitle": "SEAMLESS INTEGRATION",
+    "seamlessIntegrationDesc": "Connect with existing systems and databases. Our AI automation works with your current infrastructure, enhancing rather than replacing.",
+    "realTimeMonitoringTitle": "REAL-TIME MONITORING",
+    "realTimeMonitoringDesc": "Track performance, identify bottlenecks, and receive intelligent recommendations for continuous improvement of your automated processes.",
+    "useCasesTitle": "BUSINESS AUTOMATION USE CASES",
+    "useCasesDesc": "AI business automation transforms every department in your organization. From finance to customer service, our solutions deliver efficiency gains across all business functions.",
+    "financeTitle": "FINANCE & ACCOUNTING",
+    "financeList": [
+      "Automated invoice processing and approval workflows",
+      "Intelligent expense categorization and reporting", 
+      "Real-time fraud detection and prevention",
+      "Automated financial reconciliation and auditing"
+    ],
+    "customerServiceTitle": "CUSTOMER SERVICE",
+    "customerServiceList": [
+      "AI-powered chatbots for 24/7 customer support",
+      "Intelligent ticket routing and prioritization",
+      "Automated response generation for common queries",
+      "Sentiment analysis and customer satisfaction tracking"
+    ],
+    "humanResourcesTitle": "HUMAN RESOURCES",
+    "humanResourcesList": [
+      "Resume screening and candidate matching",
+      "Automated onboarding and training processes",
+      "Intelligent scheduling and leave management",
+      "Performance analysis and feedback automation"
+    ],
+    "supplyChainTitle": "SUPPLY CHAIN & LOGISTICS",
+    "supplyChainList": [
+      "Demand forecasting and inventory optimization",
+      "Automated order processing and fulfillment",
+      "Route optimization and delivery scheduling",
+      "Predictive maintenance for equipment and vehicles"
+    ],
+    "roiTitle": "PROVEN RETURN ON INVESTMENT",
+    "roiDesc": "Our AI business automation solutions deliver measurable results. Most clients see positive ROI within 6 months and full payback within 12-18 months of implementation.",
+    "costReduction": "Reduction in operational costs",
+    "fasterProcessing": "Faster process completion",
+    "accuracyImprovement": "Accuracy improvement",
+    "productivityIncrease": "Productivity increase",
+    "ctaTitle": "READY TO AUTOMATE YOUR BUSINESS?",
+    "ctaDesc": "Let's discuss how AI business automation can transform your operations. Get a free consultation and custom automation roadmap for your business.",
+    "getFreeConsultation": "GET FREE CONSULTATION →",
+    "learnMoreBlog": "LEARN MORE IN OUR BLOG",
+    "footerCopyright": "BRM AI - Business Process Automation",
+    "allServices": "ALL SERVICES",
+    "getStarted": "GET STARTED",
+    "home": "Home"
+  },
+  "BlogPost": {
+    "contactUs": "CONTACT US",
+    "home": "Home",
+    "blog": "Blog", 
+    "ctaTitle": "Ready to Automate Your Business Processes?",
+    "ctaDesc": "Our experts are ready to help you implement cutting-edge automation solutions that will transform your business operations and drive growth.",
+    "getFreeConsultation": "Get Free Consultation",
+    "viewServices": "View Our Services"
   }
 }
