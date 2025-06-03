@@ -7,6 +7,7 @@ module.exports = {
   changefreq: 'weekly',
   priority: 0.7,
   sitemapSize: 5000,
+  convertAlternateRefsToAbsolute: false,
   
   robotsTxtOptions: {
     policies: [
@@ -15,57 +16,84 @@ module.exports = {
         allow: '/',
       },
     ],
-    additionalSitemaps: [
-      'https://mybrmai.com/sitemap.xml',
-    ],
   },
 
-  transform: async (config, path) => {
+  additionalPaths: async (config) => {
     const supportedLocales = ['en', 'ru', 'es', 'ca', 'uk'];
+    const blogSlugs = [
+      'business-process-automation-guide',
+      'ai-business-automation-benefits', 
+      'choosing-automation-software'
+    ];
     
-    // Skip root path - it redirects to /en
-    if (path === '/') {
-      return null;
-    }
-
-    // Generate priority based on path
-    let priority = 0.7;
-    if (path.includes('/blog/')) {
-      priority = 0.6;
-    } else if (path.includes('/services/')) {
-      priority = 0.8;
-    } else if (path.match(/^\/(en|ru|es|ca|uk)$/)) {
-      priority = 1.0; // Homepage versions
-    }
-
-    // Generate hreflang alternates
-    const alternateRefs = [];
-    const pathMatch = path.match(/^\/(en|ru|es|ca|uk)(\/.*)?$/);
+    const paths = [];
     
-    if (pathMatch) {
-      const currentLocale = pathMatch[1];
-      const pathWithoutLocale = pathMatch[2] || '';
-      
-      supportedLocales.forEach(locale => {
-        alternateRefs.push({
-          href: `${config.siteUrl}/${locale}${pathWithoutLocale}`,
-          hreflang: locale,
-        });
-      });
-
-      // Add x-default to English version
-      alternateRefs.push({
-        href: `${config.siteUrl}/en${pathWithoutLocale}`,
+    // Helper function to generate alternateRefs with absolute hrefs
+    const generateAlternateRefs = (pathWithoutLocale) => { // e.g., '', '/blog', '/blog/slug'
+      const refs = supportedLocales.map(altLocale => ({
+        href: `${config.siteUrl}/${altLocale}${pathWithoutLocale}`, // Absolute href
+        hreflang: altLocale,
+      }));
+      refs.push({
+        href: `${config.siteUrl}/en${pathWithoutLocale}`, // x-default to English, absolute href
         hreflang: 'x-default',
       });
-    }
-
-    return {
-      loc: path,
-      changefreq: config.changefreq,
-      priority: priority,
-      lastmod: new Date().toISOString(),
-      alternateRefs: alternateRefs.length > 0 ? alternateRefs : undefined,
+      return refs;
     };
+
+    supportedLocales.forEach(locale => {
+      const commonPathData = {
+        lastmod: new Date().toISOString(),
+      };
+
+      // Homepage
+      paths.push({
+        loc: `/${locale}`,
+        changefreq: 'weekly',
+        priority: 1.0,
+        ...commonPathData,
+        alternateRefs: generateAlternateRefs(''),
+      });
+      
+      // Blog main page
+      paths.push({
+        loc: `/${locale}/blog`,
+        changefreq: 'weekly', 
+        priority: 0.8,
+        ...commonPathData,
+        alternateRefs: generateAlternateRefs('/blog'),
+      });
+
+      // AI business automation service page
+      paths.push({
+        loc: `/${locale}/services/ai-business-automation`,
+        changefreq: 'monthly',
+        priority: 0.9,
+        ...commonPathData,
+        alternateRefs: generateAlternateRefs('/services/ai-business-automation'),
+      });
+
+      // Privacy policy
+      paths.push({
+        loc: `/${locale}/privacy-policy`,
+        changefreq: 'yearly',
+        priority: 0.3,
+        ...commonPathData,
+        alternateRefs: generateAlternateRefs('/privacy-policy'),
+      });
+
+      // Blog posts
+      blogSlugs.forEach(slug => {
+        paths.push({
+          loc: `/${locale}/blog/${slug}`,
+          changefreq: 'monthly',
+          priority: 0.6,
+          ...commonPathData,
+          alternateRefs: generateAlternateRefs(`/blog/${slug}`),
+        });
+      });
+    });
+    
+    return paths;
   },
 }
