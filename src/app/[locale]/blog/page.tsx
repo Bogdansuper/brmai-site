@@ -78,6 +78,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const blogPosts = [
   {
+    id: 'how-to-implement-ai-automation',
+    title: 'How to Implement AI Automation in Business: Complete Guide 2024',
+    excerpt: 'Learn how to implement AI automation in business with our comprehensive step-by-step guide. Discover benefits of AI in business and real case studies.',
+    date: '2024-06-03',
+    readTime: '15 min read',
+    category: 'Implementation',
+    keywords: ['how to implement AI automation in business', 'benefits of AI in business', 'AI automation case study']
+  },
+  {
+    id: 'build-small-business-website',
+    title: 'How to Build a Small Business Website: Complete Guide 2024',
+    excerpt: 'Building a small business website doesn\'t have to be complicated or expensive. This comprehensive guide walks you through every step.',
+    date: '2024-06-03',
+    readTime: '12 min read',
+    category: 'Web Development',
+    keywords: ['how to build a small business website', 'small business website design', 'affordable website for small business']
+  },
+  {
+    id: 'local-seo-checklist',
+    title: 'Local SEO Checklist 2025: How to Do SEO for Small Business',
+    excerpt: 'Complete local SEO checklist for small businesses. Learn how to optimize Google Business Profile, improve local rankings, and attract nearby customers.',
+    date: '2024-06-03',
+    readTime: '10 min read',
+    category: 'Local SEO',
+    keywords: ['how to do SEO for small business', 'local SEO checklist 2025', 'optimize Google Business Profile']
+  },
+  {
     id: 'business-process-automation-guide',
     title: 'Complete Guide to Business Process Automation in 2024',
     excerpt: 'Learn how business process automation can transform your operations, reduce costs, and improve efficiency with AI-powered solutions.',
@@ -180,22 +207,155 @@ export default async function BlogPage({ params }: Props) {
 
           {/* Internal Links Section */}
           <section className="mt-16 p-8 border border-gray-800">
-            <h2 className="text-2xl mb-6 uppercase tracking-wider">Explore Our Services</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link 
-                href={`/${resolvedParams.locale}/services/ai-business-automation`}
-                className="block p-4 border border-gray-700 hover:border-gray-500 transition-colors"
-              >
-                <h3 className="text-lg mb-2 font-medium">AI Business Automation</h3>
-                <p className="text-gray-400 text-sm">Discover our comprehensive automation solutions</p>
-              </Link>
-              <Link 
-                href={`/${resolvedParams.locale}/privacy-policy`}
-                className="block p-4 border border-gray-700 hover:border-gray-500 transition-colors"
-              >
-                <h3 className="text-lg mb-2 font-medium">Privacy Policy</h3>
-                <p className="text-gray-400 text-sm">Learn about our data protection practices</p>
-              </Link>
+            <h2 className="text-2xl mb-6 uppercase tracking-wider">All Our Services & Resources</h2>
+            
+            {/* US Services */}
+            <div className="mb-8">
+              <h3 className="text-xl mb-4 font-medium text-white">🇺🇸 United States Services</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Link 
+                  href={`/${resolvedParams.locale}/ai-automation-services`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">AI Automation Services</h4>
+                  <p className="text-gray-400 text-sm">Complete AI business automation solutions</p>
+                </Link>
+                <Link 
+                  href={`/${resolvedParams.locale}/web-development-company`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">Web Development Company</h4>
+                  <p className="text-gray-400 text-sm">Professional website development services</p>
+                </Link>
+                <Link 
+                  href={`/${resolvedParams.locale}/crm-development-services`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">CRM Development Services</h4>
+                  <p className="text-gray-400 text-sm">Custom CRM software development</p>
+                </Link>
+                <Link 
+                  href={`/${resolvedParams.locale}/digital-marketing-agency-usa`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">Digital Marketing Agency USA</h4>
+                  <p className="text-gray-400 text-sm">Expert digital marketing services</p>
+                </Link>
+                <Link 
+                  href={`/${resolvedParams.locale}/local-seo-services`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">Local SEO Services</h4>
+                  <p className="text-gray-400 text-sm">Professional local SEO optimization</p>
+                </Link>
+              </div>
+            </div>
+
+            {/* Canada Services */}
+            <div className="mb-8">
+              <h3 className="text-xl mb-4 font-medium text-white">🇨🇦 Canada Services</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Link 
+                  href="/ca/ai-automation-solutions"
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">AI Automation Solutions Canada</h4>
+                  <p className="text-gray-400 text-sm">CAD pricing, bilingual support, PIPEDA compliance</p>
+                </Link>
+                <Link 
+                  href="/ca/web-design-services"
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">Web Design Services Canada</h4>
+                  <p className="text-gray-400 text-sm">All provinces, Canadian hosting, bilingual</p>
+                </Link>
+                <Link 
+                  href="/ca/local-seo-services"
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">Local SEO Services Canada</h4>
+                  <p className="text-gray-400 text-sm">Canadian directories, Google My Business</p>
+                </Link>
+              </div>
+            </div>
+
+            {/* UK Services */}
+            <div className="mb-8">
+              <h3 className="text-xl mb-4 font-medium text-white">🇬🇧 United Kingdom Services</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Link 
+                  href="/uk/ai-business-automation"
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">AI Business Automation UK</h4>
+                  <p className="text-gray-400 text-sm">GBP pricing, HMRC compliance, GDPR ready</p>
+                </Link>
+                <div className="block p-3 border border-gray-600 opacity-60">
+                  <h4 className="font-medium mb-1">CRM Software Development UK</h4>
+                  <p className="text-gray-400 text-sm">Coming soon - UK-specific CRM solutions</p>
+                </div>
+                <div className="block p-3 border border-gray-600 opacity-60">
+                  <h4 className="font-medium mb-1">London Digital Marketing Agency</h4>
+                  <p className="text-gray-400 text-sm">Coming soon - London-focused marketing</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Australia Services */}
+            <div className="mb-8">
+              <h3 className="text-xl mb-4 font-medium text-white">🇦🇺 Australia Services</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="block p-3 border border-gray-600 opacity-60">
+                  <h4 className="font-medium mb-1">Web Design Company Australia</h4>
+                  <p className="text-gray-400 text-sm">Coming soon - AUD pricing, Australian hosting</p>
+                </div>
+                <div className="block p-3 border border-gray-600 opacity-60">
+                  <h4 className="font-medium mb-1">SEO for Small Business Australia</h4>
+                  <p className="text-gray-400 text-sm">Coming soon - Australian local SEO</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Blog Articles */}
+            <div className="mb-8">
+              <h3 className="text-xl mb-4 font-medium text-white">📝 Expert Guides & Articles</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Link 
+                  href={`/${resolvedParams.locale}/blog/how-to-implement-ai-automation`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">How to Implement AI Automation</h4>
+                  <p className="text-gray-400 text-sm">2000+ words comprehensive guide</p>
+                </Link>
+                <Link 
+                  href={`/${resolvedParams.locale}/blog/build-small-business-website`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">How to Build a Small Business Website</h4>
+                  <p className="text-gray-400 text-sm">1800+ words complete guide</p>
+                </Link>
+                <Link 
+                  href={`/${resolvedParams.locale}/blog/local-seo-checklist`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">Local SEO Checklist 2025</h4>
+                  <p className="text-gray-400 text-sm">1500+ words with free PDF download</p>
+                </Link>
+              </div>
+            </div>
+
+            {/* General Services */}
+            <div>
+              <h3 className="text-xl mb-4 font-medium text-white">🔧 Additional Services</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Link 
+                  href={`/${resolvedParams.locale}/services/ai-business-automation`}
+                  className="block p-3 border border-gray-700 hover:border-gray-500 transition-colors"
+                >
+                  <h4 className="font-medium mb-1">AI Business Automation</h4>
+                  <p className="text-gray-400 text-sm">Comprehensive automation solutions</p>
+                </Link>
+              </div>
             </div>
           </section>
 

@@ -23,7 +23,7 @@ export default getRequestConfig(async ({locale}) => {
       };
     } catch (error) {
       console.error(`[i18n.ts] Error loading default locale messages:`, error);
-      notFound();
+    notFound();
     }
   }
 
@@ -46,7 +46,7 @@ export default getRequestConfig(async ({locale}) => {
       };
     } catch (fallbackError) {
       console.error(`[i18n.ts] Error loading default locale messages:`, fallbackError);
-      notFound();
+    notFound();
     }
   }
 });

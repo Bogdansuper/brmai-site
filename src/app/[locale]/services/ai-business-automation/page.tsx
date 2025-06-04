@@ -153,12 +153,12 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Service",
+    "@type": "Service",
         "@id": `https://mybrmai.com/${resolvedParams.locale}/services/ai-business-automation#service`,
         "name": "AI Business Process Automation",
         "description": "Professional AI-powered business process automation services to transform operations and increase efficiency",
-        "provider": {
-          "@type": "Organization",
+    "provider": {
+      "@type": "Organization",
           "@id": "https://mybrmai.com/#organization",
           "name": "BRM AI",
           "url": "https://mybrmai.com"
@@ -168,30 +168,30 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
           "@type": "Country",
           "name": "Worldwide"
         },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "AI Automation Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Automation Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
                 "name": "Business Process Analysis",
                 "description": "Comprehensive analysis of current business processes to identify automation opportunities"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
                 "name": "AI Implementation",
                 "description": "Custom AI solution development and implementation for business process automation"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
                 "name": "Process Optimization",
                 "description": "Continuous improvement and optimization of automated business processes"
               }
@@ -236,7 +236,7 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
       }
     ]
   };
-  
+
   return (
     <>
       <Script
@@ -260,7 +260,7 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                 className="px-4 py-2 border border-white hover:bg-white hover:text-black transition-all text-sm"
               >
                 Get Started
-              </Link>
+                </Link>
             </div>
           </nav>
         </header>
@@ -285,18 +285,18 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                 AI Business Process
                 <br />
                 Automation Services
-              </h1>
+            </h1>
               <p className="text-xl text-gray-400 mb-8 max-w-3xl leading-relaxed">
                 Transform your business operations with our comprehensive AI-powered automation solutions. 
                 Increase efficiency, reduce costs, and accelerate growth through intelligent process automation.
-              </p>
-              <Link 
+            </p>
+            <Link 
                 href={`/${resolvedParams.locale}#contact`}
                 className="inline-block px-8 py-3 border border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm"
-              >
+            >
                 Start Your Automation Journey
-              </Link>
-            </section>
+            </Link>
+        </section>
 
             {/* Services Grid */}
             <section className="mb-20">
@@ -338,7 +338,7 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                   </ul>
                 </div>
 
-                <div className="border border-gray-800 p-8 hover:border-gray-600 transition-colors">
+              <div className="border border-gray-800 p-8 hover:border-gray-600 transition-colors">
                   <h3 className="text-xl mb-4 font-medium">Custom CRM Development</h3>
                   <p className="text-gray-400 mb-4 leading-relaxed">
                     Tailored Customer Relationship Management systems with built-in automation features to streamline your sales and customer service processes.
@@ -348,9 +348,9 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                     <li>• Workflow automation</li>
                     <li>• Integration capabilities</li>
                   </ul>
-                </div>
+              </div>
 
-                <div className="border border-gray-800 p-8 hover:border-gray-600 transition-colors">
+              <div className="border border-gray-800 p-8 hover:border-gray-600 transition-colors">
                   <h3 className="text-xl mb-4 font-medium">Document Processing</h3>
                   <p className="text-gray-400 mb-4 leading-relaxed">
                     Intelligent document processing and data extraction using AI to automate paperwork, invoicing, and data entry tasks.
@@ -360,9 +360,9 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                     <li>• Document classification</li>
                     <li>• Automated workflows</li>
                   </ul>
-                </div>
+              </div>
 
-                <div className="border border-gray-800 p-8 hover:border-gray-600 transition-colors">
+              <div className="border border-gray-800 p-8 hover:border-gray-600 transition-colors">
                   <h3 className="text-xl mb-4 font-medium">Training & Support</h3>
                   <p className="text-gray-400 mb-4 leading-relaxed">
                     Comprehensive training programs and ongoing support to ensure your team can effectively use and maintain the automated systems.
@@ -372,15 +372,15 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                     <li>• Documentation</li>
                     <li>• 24/7 support</li>
                   </ul>
-                </div>
-              </div>
-            </section>
+            </div>
+          </div>
+        </section>
 
             {/* Benefits Section */}
             <section className="mb-20 border-t border-gray-900 pt-16">
               <h2 className="text-3xl mb-12 uppercase tracking-wider">Why Choose AI Business Automation?</h2>
               <div className="grid md:grid-cols-2 gap-12">
-                <div>
+              <div>
                   <h3 className="text-xl mb-6 font-medium">Key Benefits</h3>
                   <ul className="space-y-4 text-gray-400">
                     <li className="flex items-start">
@@ -403,9 +403,9 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                       <span className="text-white mr-3">•</span>
                       <span><strong className="text-white">Competitive Advantage:</strong> Stay ahead with cutting-edge AI technology</span>
                     </li>
-                  </ul>
-                </div>
-                <div>
+                </ul>
+              </div>
+              <div>
                   <h3 className="text-xl mb-6 font-medium">Industries We Serve</h3>
                   <div className="grid grid-cols-2 gap-4 text-gray-400">
                     <div>• E-commerce</div>
@@ -416,19 +416,19 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                     <div>• Professional Services</div>
                     <div>• Retail</div>
                     <div>• Technology</div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            </div>
+          </div>
+          </div>
+        </section>
 
-            {/* CTA Section */}
+        {/* CTA Section */}
             <section className="text-center py-16 border border-gray-800">
               <h2 className="text-3xl mb-6 uppercase tracking-wider">Ready to Automate Your Business?</h2>
               <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Contact us today for a free consultation and discover how AI business process automation can transform your operations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
                   href={`/${resolvedParams.locale}#contact`}
                   className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm"
                 >
@@ -460,15 +460,15 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
                 >
                   <h3 className="text-lg mb-2 font-medium">Benefits of AI Automation</h3>
                   <p className="text-gray-400 text-sm">Discover the top advantages of AI-powered automation</p>
-                </Link>
-                <Link 
+              </Link>
+              <Link 
                   href={`/${resolvedParams.locale}/privacy-policy`}
                   className="block p-6 border border-gray-800 hover:border-gray-600 transition-colors"
-                >
+              >
                   <h3 className="text-lg mb-2 font-medium">Privacy Policy</h3>
                   <p className="text-gray-400 text-sm">Learn about our data protection practices</p>
-                </Link>
-              </div>
+              </Link>
+            </div>
             </section>
           </div>
         </main>
@@ -479,7 +479,7 @@ export default async function AIBusinessAutomationPage({ params }: Props) {
             <p>© {new Date().getFullYear()} BRM AI</p>
             <Link href={`/${resolvedParams.locale}`} className="hover:text-white transition-colors">
               Back to Home
-            </Link>
+              </Link>
           </div>
         </footer>
       </div>
