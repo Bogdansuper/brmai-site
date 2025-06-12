@@ -13,7 +13,6 @@ interface PageParams {
 // This is the props type Next.js will pass to the Page component for this route
 interface Props {
   params: Promise<PageParams>;
-  // searchParams?: { [key: string]: string | string[] | undefined }; // Include if you use searchParams
 }
 
 // Restore generateMetadata function with dynamic translations

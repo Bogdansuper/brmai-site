@@ -17,9 +17,11 @@
     "AboutUs": {
       "title": "ACERCA DE BRM AI",
       "paragraph1": "BRM AI es un proveedor líder de soluciones de automatización de procesos de negocio impulsadas por inteligencia artificial. Fundada en Barcelona, nos especializamos en ayudar a las empresas a transformar sus operaciones a través de la automatización inteligente, reduciendo costos mientras aumentamos la eficiencia y escalabilidad.",
+      "paragraph1_extra": "Nuestro equipo se especializa en soluciones de automatización empresarial con IA que transforman flujos de trabajo tradicionales en sistemas inteligentes y autogestionados.",
       "paragraph2": "Nuestro equipo combina experiencia profunda en IA, desarrollo de software y optimización de procesos empresariales para ofrecer soluciones personalizadas que impulsan resultados reales. Entendemos que cada negocio es único, por lo que adoptamos un enfoque personalizado para cada compromiso con el cliente.",
       "missionTitle": "NUESTRA MISIÓN",
-      "missionText": "Democratizar el acceso a la automatización empresarial impulsada por IA, permitiendo que empresas de todos los tamaños compitan más efectivamente en la economía digital. Creemos que la automatización inteligente debe ser accesible, asequible y alineada con tus objetivos empresariales.",
+      "missionText": "Democratizar el acceso a la automatización empresarial impulsada por IA, permitiendo que empresas de todos los tamaños compitan más efectivamente en la economía digital.",
+      "missionText_extra": "Creemos que mantenerse informado sobre las tendencias de automatización es crucial para el éxito empresarial.",
       "approachTitle": "NUESTRO ENFOQUE",
       "approach1": "Toma de decisiones basada en datos",
       "approach2": "Metodología de mejora continua",
@@ -46,7 +48,11 @@
       "question4": "¿Cuánto tiempo toma implementar la automatización empresarial?",
       "answer4": "El tiempo de implementación varía según la complejidad de tus procesos y el alcance de la automatización. Las automatizaciones simples pueden implementarse en semanas, mientras que los proyectos integrales de automatización de procesos de negocio pueden tomar varios meses. Proporcionamos cronogramas detallados durante la fase de consulta.",
       "question5": "¿Cuál es el ROI de la automatización de procesos de negocio?",
-      "answer5": "La mayoría de las empresas ven ROI dentro de 6-12 meses. Los beneficios incluyen costos laborales reducidos (30-70%), menos errores (hasta 90% de reducción), tiempos de procesamiento más rápidos (50-80% de mejora) y mayor satisfacción del cliente. El ROI exacto depende de tus procesos específicos y el alcance de implementación."
+      "answer5": "La mayoría de las empresas ven ROI dentro de 6-12 meses. Los beneficios incluyen costos laborales reducidos (30-70%), menos errores (hasta 90% de reducción), tiempos de procesamiento más rápidos (50-80% de mejora) y mayor satisfacción del cliente. El ROI exacto depende de tus procesos específicos y el alcance de implementación.",
+      "learnMoreAI": "Aprende más sobre nuestros servicios de automatización con IA",
+      "readGuides": "Lee guías de implementación en nuestro blog de automatización",
+      "exploreServices": "Explora nuestro portafolio completo de servicios",
+      "contactExperts": "Contacta a nuestros expertos para una consulta gratuita"
     },
     "Contact": {
       "directContactTitle": "Contacto Directo",
@@ -54,14 +60,30 @@
       "namePlaceholder": "NOMBRE",
       "emailPlaceholder": "CORREO",
       "messagePlaceholder": "MENSAJE",
-      "sendButton": "Enviar →"
+      "sendButton": "Enviar →",
+      "bookConsultation": "Reservar Consulta Gratuita →"
     },
     "Navigation": {
       "aboutUs": "NOSOTROS",
       "faq": "FAQ",
       "blog": "BLOG",
       "login": "INICIAR SESIÓN",
-      "signUp": "REGISTRARSE"
+      "signUp": "REGISTRARSE",
+      "services": "SERVICIOS"
+    },
+    "Booking": {
+      "title": "RESERVA TU CONSULTA GRATUITA",
+      "subtitle": "Programa una llamada de 30 minutos con nuestros expertos para discutir cómo la automatización empresarial con IA puede transformar tus operaciones.",
+      "whatToExpectTitle": "QUÉ ESPERAR",
+      "expectation1": "Consulta enfocada de 30 minutos",
+      "expectation2": "Análisis de tus procesos empresariales actuales",
+      "expectation3": "Recomendaciones personalizadas de automatización",
+      "expectation4": "Próximos pasos claros y opciones de precios",
+      "preparationTitle": "CÓMO PREPARARTE",
+      "preparation1": "Lista tus principales desafíos empresariales",
+      "preparation2": "Identifica tareas repetitivas que te gustaría automatizar",
+      "preparation3": "Ten preguntas listas sobre la implementación de IA",
+      "backToHome": "VOLVER AL INICIO"
     },
     "Services": {
       "websiteCreation_title": "Creación de Sitio Web de Ventas",
@@ -246,7 +268,51 @@
       "footerCopyright": "BRM AI - Automatización de Procesos Empresariales",
       "allServices": "TODOS LOS SERVICIOS",
       "getStarted": "COMENZAR",
-      "home": "Inicio"
+      "home": "Inicio",
+      "ctaButton": "Solicitar una demostración",
+      "whatWeOffer": {
+        "title": "Lo que ofrecemos",
+        "items": [
+          {
+            "title": "Análisis de procesos",
+            "description": "Analizamos sus flujos de trabajo actuales para identificar cuellos de botella y oportunidades de automatización."
+          },
+          {
+            "title": "Soluciones a medida",
+            "description": "Desarrollo e implementación de soluciones de IA adaptadas específicamente a las necesidades únicas de su negocio."
+          },
+          {
+            "title": "Integración y soporte",
+            "description": "Integración perfecta con sus sistemas existentes y soporte continuo para garantizar un funcionamiento sin problemas."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Beneficios de la automatización con IA",
+        "items": [
+          {
+            "title": "Aumento de la eficiencia",
+            "description": "Automatice tareas repetitivas y libere a sus empleados para que se centren en un trabajo más estratégico."
+          },
+          {
+            "title": "Reducción de costos",
+            "description": "Disminuya los gastos operativos minimizando el trabajo manual y los errores."
+          },
+          {
+            "title": "Mejora de la precisión",
+            "description": "Los algoritmos de IA garantizan una alta precisión en la ejecución de tareas, reduciendo los errores."
+          },
+          {
+            "title": "Escalabilidad",
+            "description": "Escale fácilmente sus operaciones sin un aumento proporcional de la plantilla."
+          }
+        ]
+      },
+      "cta": {
+        "title": "¿Listo para transformar su negocio?",
+        "subtitle": "Contáctenos hoy para descubrir cómo la automatización impulsada por IA puede revolucionar sus operaciones.",
+        "button": "Programar una consulta gratuita"
+      }
     },
     "BlogPost": {
       "contactUs": "CONTÁCTANOS",
@@ -256,5 +322,216 @@
       "ctaDesc": "Nuestros expertos están listos para ayudarte a implementar soluciones de automatización de vanguardia que transformarán tus operaciones empresariales e impulsarán el crecimiento.",
       "getFreeConsultation": "Obtener Consulta Gratuita",
       "viewServices": "Ver Nuestros Servicios"
+    },
+    "ServicePages": {
+      "aiBusinessAutomation": {
+        "metaTitle": "Servicios de Automatización de Procesos de Negocio con IA | BRM AI",
+        "metaDescription": "Servicios profesionales de automatización de procesos de negocio impulsados por IA para transformar operaciones y aumentar la eficiencia.",
+        "serviceType": "Automatización de Procesos de Negocio con IA",
+        "title": "Automatización con IA",
+        "subtitle": "Implementamos soluciones inteligentes basadas en IA para automatizar sus procesos de negocio, reducir costes y aumentar los beneficios.",
+        "videoTitle": "Ver en Acción",
+        "videoComingSoon": "Vídeo próximamente. ¡Estén atentos para una demostración en vivo!",
+        "whatWeOffer": {
+          "title": "Qué Ofrecemos",
+          "items": [
+            {
+              "title": "Agentes de IA Inteligentes",
+              "description": "Comunicación 24/7 con clientes en mensajería y en el sitio web sin intervención humana."
+            },
+            {
+              "title": "Gestor de IA por Voz",
+              "description": "Asesora a los clientes por voz directamente desde su sitio web, utilizando su base de conocimientos."
+            },
+            {
+              "title": "Optimización de Procesos",
+              "description": "Análisis y automatización de tareas rutinarias, liberando recursos para objetivos estratégicos."
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Beneficios Clave",
+          "items": [
+            {
+              "title": "Reducción de Costes",
+              "description": "Reduzca significativamente los costes operativos automatizando tareas manuales y repetitivas."
+            },
+            {
+              "title": "Mayor Eficiencia",
+              "description": "Acelere los procesos y mejore el rendimiento con operaciones automatizadas 24/7."
+            },
+            {
+              "title": "Reducción de Errores",
+              "description": "Minimice los errores humanos en la entrada y procesamiento de datos, asegurando una mayor precisión."
+            },
+            {
+              "title": "Escalabilidad",
+              "description": "Escale fácilmente las operaciones para manejar volúmenes crecientes sin un aumento lineal en los costes."
+            }
+          ]
+        },
+        "cta": {
+          "title": "¿Listo para la Transformación?",
+          "subtitle": "Solicite una demostración gratuita para ver cómo la IA puede automatizar su negocio hoy mismo.",
+          "button": "Reservar una Consulta Gratuita"
+        }
+      },
+      "seoOptimization": {
+        "packages": {
+          "title": "Paquetes de SEO",
+          "popular": "Popular",
+          "getStarted": "Empezar",
+          "items": [
+            {
+              "name": "SEO Esencial",
+              "price": "€999",
+              "period": "/mes",
+              "features": [
+                "Auditoría On-Page",
+                "Investigación de palabras clave (hasta 50)",
+                "Correcciones técnicas de SEO",
+                "Informe de rendimiento mensual"
+              ],
+              "popular": false
+            },
+            {
+              "name": "SEO Profesional",
+              "price": "€1999",
+              "period": "/mes",
+              "features": [
+                "Todo en Esencial",
+                "Creación de contenido (2 artículos/mes)",
+                "Campaña de construcción de enlaces",
+                "Gestión de Google Business Profile",
+                "Especialista SEO dedicado"
+              ],
+              "popular": true
+            },
+            {
+              "name": "SEO Empresarial",
+              "price": "€3499",
+              "period": "/mes",
+              "features": [
+                "Todo en Profesional",
+                "SEO técnico avanzado",
+                "PR digital y divulgación",
+                "Panel de análisis personalizado",
+                "Soporte prioritario 24/7"
+              ],
+              "popular": false
+            }
+          ]
+        },
+        "cta": {
+          "title": "¿Listo para dominar los resultados de búsqueda?",
+          "subtitle": "Obtenga una auditoría SEO gratuita para descubrir oportunidades y ver cómo podemos ayudarle a crecer.",
+          "auditButton": "Obtener auditoría gratuita"
+        }
+      },
+      "digitalMarketing": {
+        "ctaButton": "Obtener una consulta gratuita",
+        "packages": {
+          "title": "Paquetes de Marketing Digital",
+          "popular": "Popular",
+          "getStarted": "Empezar",
+          "items": [
+            {
+              "name": "Fundación",
+              "price": "€1,500",
+              "period": "/mes",
+              "features": [
+                "Gestión de redes sociales (2 plataformas)",
+                "Configuración de campaña PPC (Google o FB)",
+                "Análisis e informes mensuales",
+                "Campaña de marketing por correo electrónico"
+              ],
+              "popular": false
+            },
+            {
+              "name": "Crecimiento",
+              "price": "€3,000",
+              "period": "/mes",
+              "features": [
+                "Todo en Fundación",
+                "Gestión de PPC multicanal",
+                "Marketing de contenidos (2 blogs/mes)",
+                "Optimización de la tasa de conversión (CRO)",
+                "Estratega de marketing dedicado"
+              ],
+              "popular": true
+            },
+            {
+              "name": "Escala",
+              "price": "€5,500",
+              "period": "/mes",
+              "features": [
+                "Todo en Crecimiento",
+                "Análisis y atribución avanzados",
+                "Publicidad programática",
+                "Alcance de marketing de influencers",
+                "Estrategia de embudo completo"
+              ],
+              "popular": false
+            }
+          ]
+        },
+        "cta": {
+          "title": "¿Listo para hacer crecer su negocio?",
+          "subtitle": "Contáctenos para una consulta gratuita y analicemos cómo podemos elevar su presencia digital.",
+          "requestButton": "Solicitar una consulta"
+        }
+      },
+      "googleAds": {
+        "packages": {
+          "title": "Paquetes de Google Ads",
+          "popular": "Popular",
+          "getStarted": "Empezar",
+          "items": [
+            {
+              "name": "PPC Inicial",
+              "price": "€750",
+              "period": "/mes",
+              "features": [
+                "Hasta €2,500 de gasto publicitario",
+                "Configuración y estrategia de campaña",
+                "Creación de palabras clave y textos de anuncios",
+                "Informe de rendimiento mensual"
+              ],
+              "popular": false
+            },
+            {
+              "name": "PPC Profesional",
+              "price": "€1,500",
+              "period": "/mes",
+              "features": [
+                "Hasta €10,000 de gasto publicitario",
+                "Todo en Inicial",
+                "Optimización de la página de destino",
+                "Pruebas A/B y análisis",
+                "Gestor de PPC dedicado"
+              ],
+              "popular": true
+            },
+            {
+              "name": "PPC Empresarial",
+              "price": "€2,500+",
+              "period": "/mes",
+              "features": [
+                "Más de €10,000 de gasto publicitario",
+                "Todo en Profesional",
+                "Campañas de Shopping y Display",
+                "Panel de informes personalizado",
+                "Estrategia multicanal"
+              ],
+              "popular": false
+            }
+          ]
+        },
+        "cta": {
+          "title": "¿Listo para obtener más clientes potenciales?",
+          "subtitle": "Obtenga una auditoría de PPC gratuita y sin compromiso para ver cómo podemos mejorar el rendimiento de sus Google Ads.",
+          "auditButton": "Obtenga su auditoría gratuita"
+        }
+      }
     }
   }

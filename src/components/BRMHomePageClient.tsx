@@ -17,6 +17,7 @@ import {
 import LanguageSwitcher from "./LanguageSwitcher.tsx";
 import Link from "next/link";
 import MercuryLiquidEffect from './MercuryLiquidEffect';
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 interface Service {
   title: string;
@@ -62,7 +63,7 @@ export default function BRMHomePageClient() {
   const serviceItemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  const recipientEmail = 'bogdanantonov92@gmail.com';
+  const recipientEmail = 'brmai@mybrmai.com';
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -76,52 +77,128 @@ export default function BRMHomePageClient() {
       title: tServices("websiteCreation_title"),
       description: tServices("websiteCreation_desc"),
       icon: Globe,
+      link: "/services/website-creation"
     },
     {
       title: tServices("seoOptimization_title"),
       description: tServices("seoOptimization_desc"),
       icon: TrendingUp,
+      link: "/services/seo-optimization"
     },
     {
       title: tServices("digitalMarketing_title"),
       description: tServices("digitalMarketing_desc"),
       icon: Megaphone,
+      link: "/services/digital-marketing"
     },
     {
       title: tServices("googleAds_title"),
       description: tServices("googleAds_desc"),
       icon: Target,
+      link: "/services/google-ads"
     },
     {
       title: tServices("googleBusiness_title"),
       description: tServices("googleBusiness_desc"),
       icon: MapPin,
+      link: "/services/google-business-profile"
     },
     {
       title: tServices("aiAutomation_title"),
+      description: tServices("aiAutomation_desc"),
       icon: Brain,
-      subServices: [
-        tServices("aiAutomation_subService1"),
-        tServices("aiAutomation_subService2")
-      ],
       link: "/services/ai-business-automation"
     },
     {
       title: tServices("leadAutomation_title"),
       description: tServices("leadAutomation_desc"),
       icon: DatabaseZap,
+      link: "/services/lead-automation"
     },
     {
       title: tServices("continuousImprovement_title"),
       description: tServices("continuousImprovement_desc"),
       icon: Lightbulb,
+      link: "/services/continuous-improvement"
     },
     {
       title: tServices("customCrm_title"),
       description: tServices("customCrm_desc"),
       icon: Settings2,
+      link: "/services/custom-crm-system"
     },
   ];
+
+  const AboutSection = () => {
+    const sectionRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+      target: sectionRef,
+      offset: ["start end", "end start"]
+    });
+
+    // Animate left block from center-ish to left
+    const xLeft = useTransform(scrollYProgress, [0.1, 0.5], ["50%", "0%"]);
+    const scaleLeft = useTransform(scrollYProgress, [0.1, 0.5], [0.9, 1]);
+    
+    // Animate right block from off-screen to its position
+    const xRight = useTransform(scrollYProgress, [0.1, 0.5], ["100%", "0%"]);
+    const opacityRight = useTransform(scrollYProgress, [0.1, 0.5], [0, 1]);
+
+    return (
+      <section 
+        id="about" 
+        className="relative bg-white text-black py-24 md:py-32 h-[120vh] overflow-visible" // Inverted colors and kept animation height
+        ref={sectionRef}
+      >
+        <div className="sticky top-1/4 container mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-16 items-center">
+            <motion.div 
+              className="md:col-span-1"
+              style={{ x: xLeft, scale: scaleLeft }}
+            >
+              <h2 className="text-5xl md:text-6xl font-normal tracking-wider mb-6">
+                {tAbout('title')}
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-base">
+                {tAbout('paragraph1')}
+              </p>
+            </motion.div>
+            <motion.div 
+              className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8"
+              style={{ x: xRight, opacity: opacityRight }}
+            >
+              <div className="bg-black text-white p-8">
+                <h3 className="text-3xl font-normal mb-4 tracking-wider">{tAbout('missionTitle')}</h3>
+                <p className="text-gray-400 text-base leading-relaxed">{tAbout('missionText')}</p>
+                <p className="text-gray-400 text-base leading-relaxed mt-2">{tAbout('missionText_extra')}</p>
+              </div>
+              <div className="bg-black text-white p-8">
+                <h3 className="text-3xl font-normal mb-4 tracking-wider">{tAbout('approachTitle')}</h3>
+                <ul className="text-gray-400 text-base space-y-2">
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-400">•</span>
+                    {tAbout('approach1')}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-400">•</span>
+                    {tAbout('approach2')}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-400">•</span>
+                    {tAbout('approach3')}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-400">•</span>
+                    {tAbout('approach4')}
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    );
+  };
 
   // Set up Intersection Observer for scroll animations
   useEffect(() => {
@@ -202,7 +279,7 @@ export default function BRMHomePageClient() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-mono">
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-900/50">
         <nav className="px-6 md:px-12 py-4">
@@ -304,276 +381,239 @@ export default function BRMHomePageClient() {
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section id="about" className="py-24 px-8 md:px-12 bg-black border-t border-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-normal mb-8 uppercase tracking-wider">
-            {tAbout('title')}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                {tAbout('paragraph1')} Our team specializes in <Link href="/services/ai-business-automation" className="text-white hover:text-gray-300 underline">AI business automation</Link> solutions that transform traditional workflows into intelligent, self-managing systems.
-              </p>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                {tAbout('paragraph2')} Whether you need <Link href="#services" className="text-white hover:text-gray-300 underline">business process automation</Link> or comprehensive digital transformation, our expertise ensures successful implementation and measurable results.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl mb-4 uppercase tracking-wide">{tAbout('missionTitle')}</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                {tAbout('missionText')} We believe that <Link href="/blog" className="text-white hover:text-gray-300 underline">staying informed about automation trends</Link> is crucial for business success in the digital age.
-              </p>
-              <h3 className="text-xl mb-4 uppercase tracking-wide">{tAbout('approachTitle')}</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>• {tAbout('approach1')}</li>
-                <li>• {tAbout('approach2')}</li>
-                <li>• {tAbout('approach3')}</li>
-                <li>• {tAbout('approach4')}</li>
-              </ul>
+      {/* Main Content Sections */}
+      <main>
+        {/* About Section */}
+        <AboutSection />
+
+        {/* Why Choose Us Section */}
+        <section className="py-24 px-8 md:px-12 bg-black">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-normal mb-16 uppercase tracking-wider text-center">
+              {tWhyChoose('title')}
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-6xl font-thin text-gray-500 mb-6">01</div>
+                <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('provenResultsTitle')}</h3>
+                <p className="text-gray-400">
+                  {tWhyChoose('provenResultsText')}
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-6xl font-thin text-gray-500 mb-6">02</div>
+                <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('aiExpertiseTitle')}</h3>
+                <p className="text-gray-400">
+                  {tWhyChoose('aiExpertiseText')}
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-6xl font-thin text-gray-500 mb-6">03</div>
+                <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('customSolutionsTitle')}</h3>
+                <p className="text-gray-400">
+                  {tWhyChoose('customSolutionsText')}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-24 px-8 md:px-12 bg-black">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-normal mb-16 uppercase tracking-wider text-center">
-            {tWhyChoose('title')}
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-6xl font-thin text-gray-500 mb-6">01</div>
-              <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('provenResultsTitle')}</h3>
-              <p className="text-gray-400">
-                {tWhyChoose('provenResultsText')}
-              </p>
+        {/* Services Section - New Layout */}
+        <section id="services" className="py-24 px-8 md:px-12 bg-black">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-normal mb-4 uppercase tracking-wider">{t('servicesTitle')}</h2>
+              <p className="text-lg text-gray-400 max-w-3xl mx-auto">{t('servicesDescription')}</p>
             </div>
-            <div className="text-center">
-              <div className="text-6xl font-thin text-gray-500 mb-6">02</div>
-              <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('aiExpertiseTitle')}</h3>
-              <p className="text-gray-400">
-                {tWhyChoose('aiExpertiseText')}
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl font-thin text-gray-500 mb-6">03</div>
-              <h3 className="text-xl mb-4 uppercase tracking-wide">{tWhyChoose('customSolutionsTitle')}</h3>
-              <p className="text-gray-400">
-                {tWhyChoose('customSolutionsText')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section - Minimalist */}
-      <section 
-        id="services" 
-        ref={servicesRef}
-        className={`py-24 px-8 md:px-12 bg-black border-t border-gray-900 transition-all duration-1000 ${
-          visibleSections.has('services') ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <div className="max-w-6xl mx-auto">
-          <h2 className={`text-3xl md:text-4xl font-normal mb-8 uppercase tracking-wider transition-all duration-700 transform ${
-            visibleSections.has('services') ? 'translate-y-0' : 'translate-y-8'
-          }`}>
-            {t('servicesTitle')}
-          </h2>
-          <p className="text-gray-400 mb-16 max-w-3xl">
-            {t('servicesDescription')}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                id={`service-${index}`}
-                ref={el => { serviceItemsRef.current[index] = el; }}
-                className={`border border-gray-800 p-6 hover:border-gray-600 transition-all duration-700 transform ${
-                  typeof window !== 'undefined' && window.innerWidth >= 768
-                    ? visibleSections.has(`service-${index}`)
-                      ? 'translate-y-0 opacity-100'
-                      : 'translate-y-12 opacity-0'
-                    : ''
-                }`}
-                style={{
-                  transitionDelay: typeof window !== 'undefined' && window.innerWidth >= 768 
-                    ? `${index * 100}ms` 
-                    : '0ms'
-                }}
-              >
-                <service.icon className="h-8 w-8 mb-4 text-gray-400" />
-                <h3 className="text-lg font-medium mb-2 uppercase tracking-wide">{service.title}</h3>
-                {service.description && (
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {service.description}
-                  </p>
-                )}
-                {service.subServices && (
-                  <ul className="mt-3 space-y-1">
-                    {service.subServices.map((sub, i) => (
-                      <li key={i} className="text-sm text-gray-500">• {sub}</li>
-                    ))}
-                  </ul>
-                )}
-                {service.link && (
-                  <Link 
-                    href={service.link}
-                    className="inline-block mt-4 text-sm uppercase tracking-wider hover:text-gray-300 transition-colors"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <Link href={service.link || '#'} key={index}>
+                  <div
+                    id={`service-${index}`}
+                    className="group relative border border-gray-800 p-8 hover:border-white transition-all duration-300 cursor-pointer overflow-hidden"
                   >
-                    {t('learnMore')}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className="py-24 px-8 md:px-12 bg-black">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-normal mb-16 uppercase tracking-wider text-center">
-            {tFAQ('title')}
-          </h2>
-          <div className="space-y-8">
-            <div className="border-b border-gray-800 pb-6">
-              <h3 className="text-xl mb-4">{tFAQ('question1')}</h3>
-              <p className="text-gray-400">
-                {tFAQ('answer1')}
-              </p>
-              <p className="text-gray-500 text-sm mt-2">
-                → Learn more about our <Link href="/services/ai-business-automation" className="text-white hover:text-gray-300 underline">AI automation services</Link>
-              </p>
-            </div>
-            <div className="border-b border-gray-800 pb-6">
-              <h3 className="text-xl mb-4">{tFAQ('question2')}</h3>
-              <p className="text-gray-400">
-                {tFAQ('answer2')}
-              </p>
-              <p className="text-gray-500 text-sm mt-2">
-                → Read implementation guides in our <Link href="/blog" className="text-white hover:text-gray-300 underline">automation blog</Link>
-              </p>
-            </div>
-            <div className="border-b border-gray-800 pb-6">
-              <h3 className="text-xl mb-4">{tFAQ('question3')}</h3>
-              <p className="text-gray-400">
-                {tFAQ('answer3')}
-              </p>
-              <p className="text-gray-500 text-sm mt-2">
-                → Explore our <Link href="#services" className="text-white hover:text-gray-300 underline">complete service portfolio</Link>
-              </p>
-            </div>
-            <div className="border-b border-gray-800 pb-6">
-              <h3 className="text-xl mb-4">{tFAQ('question4')}</h3>
-              <p className="text-gray-400">
-                {tFAQ('answer4')}
-              </p>
-            </div>
-            <div className="border-b border-gray-800 pb-6">
-              <h3 className="text-xl mb-4">{tFAQ('question5')}</h3>
-              <p className="text-gray-400">
-                {tFAQ('answer5')}
-              </p>
-              <p className="text-gray-500 text-sm mt-2">
-                → <Link href="#contact" className="text-white hover:text-gray-300 underline">Contact our experts</Link> for a free consultation
-              </p>
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10">
+                      <service.icon className="h-10 w-10 mb-6 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                      <h3 className="text-xl font-medium mb-3 uppercase tracking-wide">{service.title}</h3>
+                      <p className="text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300 leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div className="mt-6 text-sm text-white uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {t('learnMore')}
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Section - Minimalist */}
-      <section 
-        id="contact" 
-        ref={contactRef}
-        className={`py-24 px-8 md:px-12 bg-black border-t border-gray-900 transition-all duration-1000 ${
-          visibleSections.has('contact') ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <div className="max-w-6xl mx-auto">
-          <h2 className={`text-3xl md:text-4xl font-normal mb-16 uppercase tracking-wider transition-all duration-700 transform ${
-            visibleSections.has('contact') ? 'translate-y-0' : 'translate-y-8'
-          }`}>
-            {t('contactTitle')}
-          </h2>
-          
-          <div className={`grid md:grid-cols-2 gap-16 transition-all duration-1000 transform ${
-            visibleSections.has('contact') ? 'translate-y-0' : 'translate-y-12'
-          }`}>
-            {/* Direct Contact */}
-            <div className="transition-all duration-700" style={{ transitionDelay: '200ms' }}>
-              <h3 className="text-xl mb-8 uppercase tracking-wide">{tContact('directContactTitle')}</h3>
-              <div className="space-y-4">
-                <a 
-                  href="https://wa.me/34637523323"
-                  className="block text-gray-400 hover:text-white transition-colors"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
-                  → WhatsApp
-                </a>
-                <a 
-                  href="https://www.linkedin.com/in/bogdan-antonov-b48901206"
-                  className="block text-gray-400 hover:text-white transition-colors"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
-                  → LinkedIn
-                </a>
+        {/* FAQ Section */}
+        <section id="faq" className="py-24 px-8 md:px-12 bg-black">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-normal mb-16 uppercase tracking-wider text-center">
+              {tFAQ('title')}
+            </h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-800 pb-6">
+                <h3 className="text-xl mb-4">{tFAQ('question1')}</h3>
+                <p className="text-gray-400">
+                  {tFAQ('answer1')}
+                </p>
+                <p className="text-gray-500 text-sm mt-2">
+                  → <Link href="/services/ai-business-automation" className="text-white hover:text-gray-300 underline">{tFAQ('learnMoreAI')}</Link>
+                </p>
+              </div>
+              <div className="border-b border-gray-800 pb-6">
+                <h3 className="text-xl mb-4">{tFAQ('question2')}</h3>
+                <p className="text-gray-400">
+                  {tFAQ('answer2')}
+                </p>
+                <p className="text-gray-500 text-sm mt-2">
+                  → <Link href="/blog" className="text-white hover:text-gray-300 underline">{tFAQ('readGuides')}</Link>
+                </p>
+              </div>
+              <div className="border-b border-gray-800 pb-6">
+                <h3 className="text-xl mb-4">{tFAQ('question3')}</h3>
+                <p className="text-gray-400">
+                  {tFAQ('answer3')}
+                </p>
+                <p className="text-gray-500 text-sm mt-2">
+                  → <Link href="#services" className="text-white hover:text-gray-300 underline">{tFAQ('exploreServices')}</Link>
+                </p>
+              </div>
+              <div className="border-b border-gray-800 pb-6">
+                <h3 className="text-xl mb-4">{tFAQ('question4')}</h3>
+                <p className="text-gray-400">
+                  {tFAQ('answer4')}
+                </p>
+              </div>
+              <div className="border-b border-gray-800 pb-6">
+                <h3 className="text-xl mb-4">{tFAQ('question5')}</h3>
+                <p className="text-gray-400">
+                  {tFAQ('answer5')}
+                </p>
+                <p className="text-gray-500 text-sm mt-2">
+                  → <Link href="#contact" className="text-white hover:text-gray-300 underline">{tFAQ('contactExperts')}</Link>
+                </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Contact Section - Minimalist */}
+        <section 
+          id="contact" 
+          ref={contactRef}
+          className={`py-24 px-8 md:px-12 bg-black border-t border-gray-900 transition-all duration-1000 ${
+            visibleSections.has('contact') ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className={`text-3xl md:text-4xl font-normal mb-16 uppercase tracking-wider transition-all duration-700 transform ${
+              visibleSections.has('contact') ? 'translate-y-0' : 'translate-y-8'
+            }`}>
+              {t('contactTitle')}
+            </h2>
             
-            {/* Form */}
-            <div className="transition-all duration-700" style={{ transitionDelay: '400ms' }}>
-              <h3 className="text-xl mb-8 uppercase tracking-wide">{tContact('sendMessageTitle')}</h3>
-              <form onSubmit={handleFormSubmit} className="space-y-6">
-                <input 
-                  type="text"
-                  name="name"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-transparent border-b border-gray-800 pb-2 focus:border-white outline-none transition-colors"
-                  placeholder={tContact('namePlaceholder')}
-                />
-                <input 
-                  type="email"
-                  name="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-transparent border-b border-gray-800 pb-2 focus:border-white outline-none transition-colors"
-                  placeholder={tContact('emailPlaceholder')}
-                />
-                <textarea 
-                  name="message"
-                  rows={4}
-                  required
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="w-full bg-transparent border-b border-gray-800 pb-2 focus:border-white outline-none transition-colors resize-none"
-                  placeholder={tContact('messagePlaceholder')}
-                />
-                <button 
-                  type="submit"
-                  className="px-6 py-3 border border-white hover:bg-white hover:text-black transition-colors uppercase text-sm tracking-wider"
-                >
-                  {tContact('sendButton')}
-                </button>
-              </form>
+            <div className={`grid md:grid-cols-2 gap-16 transition-all duration-1000 transform ${
+              visibleSections.has('contact') ? 'translate-y-0' : 'translate-y-12'
+            }`}>
+              {/* Direct Contact */}
+              <div className="transition-all duration-700" style={{ transitionDelay: '200ms' }}>
+                <h3 className="text-xl mb-8 uppercase tracking-wide">{tContact('directContactTitle')}</h3>
+                <div className="space-y-4">
+                  <a 
+                    href="https://wa.me/34637523323"
+                    className="block text-gray-400 hover:text-white transition-colors"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+                  >
+                    → WhatsApp
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/bogdan-antonov-b48901206"
+                    className="block text-gray-400 hover:text-white transition-colors"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+                  >
+                    → LinkedIn
+                  </a>
+                  <Link
+                    href="/booking"
+                    className="block mt-8 px-6 py-3 border border-white hover:bg-white hover:text-black transition-all text-sm tracking-wider text-center"
+                  >
+                    {tContact('bookConsultation')}
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Form */}
+              <div className="transition-all duration-700" style={{ transitionDelay: '400ms' }}>
+                <h3 className="text-xl mb-8 uppercase tracking-wide">{tContact('sendMessageTitle')}</h3>
+                <form onSubmit={handleFormSubmit} className="space-y-6">
+                  <input 
+                    type="text"
+                    name="name"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full bg-transparent border-b border-gray-800 pb-2 focus:border-white outline-none transition-colors"
+                    placeholder={tContact('namePlaceholder')}
+                  />
+                  <input 
+                    type="email"
+                    name="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full bg-transparent border-b border-gray-800 pb-2 focus:border-white outline-none transition-colors"
+                    placeholder={tContact('emailPlaceholder')}
+                  />
+                  <textarea 
+                    name="message"
+                    rows={4}
+                    required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="w-full bg-transparent border-b border-gray-800 pb-2 focus:border-white outline-none transition-colors resize-none"
+                    placeholder={tContact('messagePlaceholder')}
+                  />
+                  <button 
+                    type="submit"
+                    className="px-6 py-3 border border-white hover:bg-white hover:text-black transition-colors uppercase text-sm tracking-wider"
+                  >
+                    {tContact('sendButton')}
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       {/* Footer - Minimal */}
       <footer className="py-8 px-8 md:px-12 border-t border-gray-900">
-        <div className="max-w-6xl mx-auto flex justify-between items-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} BRM AI</p>
-          <p className="text-xs">{tFooter('hashtags')}</p>
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+            <Link
+              href="/booking"
+              className="px-6 py-3 border border-white hover:bg-white hover:text-black transition-all text-sm tracking-wider text-center"
+            >
+              {tContact('bookConsultation')}
+            </Link>
+            <div className="flex gap-6 text-sm">
+              <Link href="#services" className="text-gray-400 hover:text-white transition-colors">{t('viewServices')}</Link>
+              <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">{tNav('blog')}</Link>
+              <Link href="#contact" className="text-gray-400 hover:text-white transition-colors">{t('contactTitle')}</Link>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 border-t border-gray-900 pt-6">
+            <p>© {new Date().getFullYear()} BRM AI</p>
+            <p className="text-xs mt-2 md:mt-0">{tFooter('hashtags')}</p>
+          </div>
         </div>
       </footer>
     </div>

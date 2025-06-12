@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google"; // Commented out
+import { GeistSans, GeistMono } from 'geist/font';
 import "./globals.css"; // Убедись, что globals.css находится в src/app/
-
-// const geistSans = Geist({ // Commented out
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({ // Commented out
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "BRM AI Business Automation", // Общий заголовок для сайта
@@ -26,9 +16,7 @@ export default function RootLayout({
     // Здесь можно указать язык по умолчанию для страниц, не покрытых [locale]
     // Например, если поисковый робот зайдет на / до редиректа
     <html lang="en"> 
-      <body
-        className={`antialiased`} // Simplified className
-      >
+      <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

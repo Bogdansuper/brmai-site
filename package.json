@@ -13,7 +13,8 @@
   "dependencies": {
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.17.10",
-    "framer-motion": "^12.14.0",
+    "framer-motion": "^12.17.0",
+    "geist": "^1.4.2",
     "lucide-react": "^0.510.0",
     "next": "^15.3.3",
     "next-intl": "^4.1.0",

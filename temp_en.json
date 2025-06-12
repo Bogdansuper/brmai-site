@@ -1,0 +1,54 @@
+{
+  "websiteCreation": {
+    "metaTitle": "Creating Selling Websites | BRM AI Services",
+    "metaDescription": "Professional website creation services designed to convert visitors into customers. Optimized for SEO and performance.",
+    "serviceType": "Website Creation",
+    "title": "Website Creation",
+    "subtitle": "We create not just beautiful websites, but effective tools for your business that attract customers and increase sales.",
+    "videoTitle": "See Our Work",
+    "videoComingSoon": "Video coming soon. Stay tuned for a portfolio showcase!",
+    "whatWeOffer": {
+      "title": "Our Development Approach",
+      "items": [
+        {
+          "title": "Design",
+          "description": "Modern, responsive design focused on the user and your business goals."
+        },
+        {
+          "title": "Development",
+          "description": "Clean, optimized code and modern technologies for a fast and stable website."
+        },
+        {
+          "title": "Launch & Support",
+          "description": "Assistance with project launch, staff training, and ongoing technical support."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Why Choose Us for Website Creation",
+      "items": [
+        {
+          "title": "Conversion-Oriented",
+          "description": "Every element of the site is designed to turn a visitor into a customer."
+        },
+        {
+          "title": "SEO-Ready",
+          "description": "We build sites with a solid foundation for successful search engine optimization."
+        },
+        {
+          "title": "Mobile First",
+          "description": "Flawless display and functionality on all devices, from smartphones to desktops."
+        },
+        {
+          "title": "Easy Management",
+          "description": "We integrate a user-friendly CMS for easy content updates."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Create Your Website?",
+      "subtitle": "Contact us for a free consultation, and we will help bring your idea to life.",
+      "button": "Discuss Your Project"
+    }
+  }
+} 

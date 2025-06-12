@@ -17,9 +17,11 @@
   "AboutUs": {
     "title": "ABOUT BRM AI",
     "paragraph1": "BRM AI is a leading provider of business process automation solutions powered by artificial intelligence. Founded in Barcelona, we specialize in helping businesses transform their operations through intelligent automation, reducing costs while increasing efficiency and scalability.",
+    "paragraph1_extra": "Our team specializes in AI business automation solutions that transform traditional workflows into intelligent, self-managing systems.",
     "paragraph2": "Our team combines deep expertise in AI, software development, and business process optimization to deliver tailored solutions that drive real results. We understand that every business is unique, which is why we take a personalized approach to each client engagement.",
     "missionTitle": "OUR MISSION",
-    "missionText": "To democratize access to AI-powered business automation, enabling companies of all sizes to compete more effectively in the digital economy. We believe that intelligent automation should be accessible, affordable, and aligned with your business goals.",
+    "missionText": "To democratize access to AI-powered business automation, enabling companies of all sizes to compete more effectively in the digital economy.",
+    "missionText_extra": "We believe that staying informed about automation trends is crucial for business success.",
     "approachTitle": "OUR APPROACH",
     "approach1": "Data-driven decision making",
     "approach2": "Continuous improvement methodology",
@@ -46,7 +48,11 @@
     "question4": "How long does it take to implement business automation?",
     "answer4": "Implementation time varies depending on the complexity of your processes and the scope of automation. Simple automations can be deployed in weeks, while comprehensive business process automation projects may take several months. We provide detailed timelines during the consultation phase.",
     "question5": "What is the ROI of business process automation?",
-    "answer5": "Most businesses see ROI within 6-12 months. Benefits include reduced labor costs (30-70%), fewer errors (up to 90% reduction), faster processing times (50-80% improvement), and improved customer satisfaction. The exact ROI depends on your specific processes and implementation scope."
+    "answer5": "Most businesses see ROI within 6-12 months. Benefits include reduced labor costs (30-70%), fewer errors (up to 90% reduction), faster processing times (50-80% improvement), and improved customer satisfaction. The exact ROI depends on your specific processes and implementation scope.",
+    "learnMoreAI": "Learn more about our AI automation services",
+    "readGuides": "Read implementation guides in our automation blog",
+    "exploreServices": "Explore our complete service portfolio",
+    "contactExperts": "Contact our experts for a free consultation"
   },
   "Contact": {
     "directContactTitle": "Direct Contact",
@@ -54,14 +60,30 @@
     "namePlaceholder": "NAME",
     "emailPlaceholder": "EMAIL",
     "messagePlaceholder": "MESSAGE",
-    "sendButton": "Send →"
+    "sendButton": "Send →",
+    "bookConsultation": "Book Free Consultation →"
   },
   "Navigation": {
     "aboutUs": "ABOUT US",
     "faq": "FAQ",
     "blog": "BLOG",
     "login": "LOGIN",
-    "signUp": "SIGN UP"
+    "signUp": "SIGN UP",
+    "services": "SERVICES"
+  },
+  "Booking": {
+    "title": "BOOK YOUR FREE CONSULTATION",
+    "subtitle": "Schedule a 30-minute call with our experts to discuss how AI business automation can transform your operations.",
+    "whatToExpectTitle": "WHAT TO EXPECT",
+    "expectation1": "30-minute focused consultation",
+    "expectation2": "Analysis of your current business processes",
+    "expectation3": "Personalized automation recommendations",
+    "expectation4": "Clear next steps and pricing options",
+    "preparationTitle": "HOW TO PREPARE",
+    "preparation1": "List your main business challenges",
+    "preparation2": "Identify repetitive tasks you'd like to automate",
+    "preparation3": "Have questions ready about AI implementation",
+    "backToHome": "BACK TO HOME"
   },
   "Services": {
     "websiteCreation_title": "Creating a Selling Website",
@@ -75,6 +97,7 @@
     "googleBusiness_title": "Google Business Profile",
     "googleBusiness_desc": "We'll make your business visible on Google Maps.",
     "aiAutomation_title": "AI Automation",
+    "aiAutomation_desc": "Smart AI agents and voice managers to automate communication.",
     "aiAutomation_subService1": "Smart AI Agents: 24/7 communication with clients in messengers and on the website.",
     "aiAutomation_subService2": "Voice AI Sales Manager: Consults clients by voice directly from your website, using your database!",
     "leadAutomation_title": "Lead and Request Automation",
@@ -256,5 +279,175 @@
     "ctaDesc": "Our experts are ready to help you implement cutting-edge automation solutions that will transform your business operations and drive growth.",
     "getFreeConsultation": "Get Free Consultation",
     "viewServices": "View Our Services"
+  },
+  "SEOService": {
+    "title": "SEO Optimization",
+    "description": "Get your website to the top of Google's search results. Increase your online visibility and attract more potential customers with our proven SEO strategy."
+  },
+  "Testimonials": {
+    "title": "WHAT OUR CLIENTS SAY",
+    "testimonial1": "BRM AI transformed our customer service with their AI chatbot, reducing response times by 90% and increasing customer satisfaction."
+  },
+  "ServicePages": {
+    "aiBusinessAutomation": {
+      "metaTitle": "AI Business Process Automation Services | BRM AI",
+      "metaDescription": "Professional AI-powered business process automation services to transform operations and increase efficiency.",
+      "serviceType": "AI Business Process Automation",
+      "title": "AI Business Automation",
+      "subtitle": "We implement intelligent AI-based solutions to automate your business processes, reduce costs, and increase profits.",
+      "videoTitle": "See It in Action",
+      "videoComingSoon": "Video coming soon. Stay tuned for a live demonstration!",
+      "whatWeOffer": {
+        "title": "What We Offer",
+        "items": [
+          {
+            "title": "Smart AI Agents",
+            "description": "24/7 communication with clients in messengers and on the website without human intervention."
+          },
+          {
+            "title": "Voice AI Manager",
+            "description": "Consults clients by voice directly from your website, using your knowledge base."
+          },
+          {
+            "title": "Process Optimization",
+            "description": "Analysis and automation of routine tasks, freeing up resources for strategic goals."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Key Benefits",
+        "items": [
+          {
+            "title": "Cost Reduction",
+            "description": "Significantly lower operational costs by automating manual and repetitive tasks."
+          },
+          {
+            "title": "Increased Efficiency",
+            "description": "Accelerate processes and improve throughput with 24/7 automated operations."
+          },
+          {
+            "title": "Error Reduction",
+            "description": "Minimize human errors in data entry and processing, ensuring higher accuracy."
+          },
+          {
+            "title": "Scalability",
+            "description": "Easily scale operations to handle growing volumes without a linear increase in costs."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready for Transformation?",
+        "subtitle": "Schedule a free demonstration to see how AI can automate your business today.",
+        "button": "Book a Free Consultation"
+      }
+    },
+    "websiteCreation": {
+      "metaTitle": "Creating Selling Websites | BRM AI Services",
+      "metaDescription": "Professional website creation services designed to convert visitors into customers. Optimized for SEO and performance.",
+      "serviceType": "Website Creation",
+      "title": "Website Creation",
+      "subtitle": "We create not just beautiful websites, but effective tools for your business that attract customers and increase sales.",
+      "videoTitle": "See Our Work",
+      "videoComingSoon": "Video coming soon. Stay tuned for a portfolio showcase!",
+      "whatWeOffer": {
+        "title": "Our Development Approach",
+        "items": [
+          {
+            "title": "Design",
+            "description": "Modern, responsive design focused on the user and your business goals."
+          },
+          {
+            "title": "Development",
+            "description": "Clean, optimized code and modern technologies for a fast and stable website."
+          },
+          {
+            "title": "Launch & Support",
+            "description": "Assistance with project launch, staff training, and ongoing technical support."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Us for Website Creation",
+        "items": [
+          {
+            "title": "Conversion-Oriented",
+            "description": "Every element of the site is designed to turn a visitor into a customer."
+          },
+          {
+            "title": "SEO-Ready",
+            "description": "We build sites with a solid foundation for successful search engine optimization."
+          },
+          {
+            "title": "Mobile First",
+            "description": "Flawless display and functionality on all devices, from smartphones to desktops."
+          },
+          {
+            "title": "Easy Management",
+            "description": "We integrate a user-friendly CMS for easy content updates."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Create Your Website?",
+        "subtitle": "Contact us for a free consultation, and we will help bring your idea to life.",
+        "button": "Discuss Your Project"
+      }
+    }
+  },
+  "WebsiteCreation": {
+    "seoTitle": "Website Creation Services | Professional Web Development | BRM AI",
+    "seoDescription": "Get a high-performance, visually stunning website tailored to your business goals. Our web development services focus on user experience, SEO, and conversion.",
+    "heroTitle": "WEBSITE CREATION",
+    "heroSubtitle": "We build professional, high-performance websites that not only look great but also drive business growth. From concept to launch, we deliver a product that engages your audience and converts visitors into customers.",
+    "startProject": "START YOUR PROJECT →",
+    "whatIsTitle": "WHAT IS OUR APPROACH TO WEBSITE CREATION?",
+    "whatIsDesc1": "A successful website is more than just an attractive design. It's a powerful business tool that combines strategy, user experience (UX), and technology. Our approach focuses on understanding your business objectives and your target audience to create a website that delivers measurable results.",
+    "whatIsDesc2": "We use modern technologies and a proven development process to ensure your website is fast, secure, and scalable. Every project goes through stages of planning, design, development, testing, and launch, with your feedback at every step.",
+    "strategicPlanningTitle": "STRATEGIC PLANNING",
+    "strategicPlanningDesc": "We start by defining project goals, target audience, and a clear sitemap to ensure the project is aligned with your business objectives.",
+    "uiUxDesignTitle": "UI/UX DESIGN",
+    "uiUxDesignDesc": "Our designers create intuitive and engaging interfaces that provide an exceptional user experience and reflect your brand's identity.",
+    "responsiveDevelopmentTitle": "RESPONSIVE DEVELOPMENT",
+    "responsiveDevelopmentDesc": "We build websites that look and function perfectly on all devices, from desktops to smartphones, ensuring a seamless experience for every user.",
+    "keyFeaturesTitle": "KEY FEATURES OF OUR WEBSITES",
+    "customDesignTitle": "CUSTOM DESIGN",
+    "customDesignDesc": "Unique, tailor-made designs that capture your brand's essence and set you apart from the competition.",
+    "seoOptimizedTitle": "SEO-OPTIMIZED",
+    "seoOptimizedDesc": "Built from the ground up with SEO best practices to ensure high visibility in search engine results.",
+    "fastPerformanceTitle": "FAST PERFORMANCE",
+    "fastPerformanceDesc": "Optimized for speed to reduce bounce rates and improve user engagement and conversion rates.",
+    "contentManagementTitle": "CONTENT MANAGEMENT SYSTEM (CMS)",
+    "contentManagementDesc": "An easy-to-use CMS that allows you to manage and update your website's content without any technical knowledge.",
+    "secureScalableTitle": "SECURE & SCALABLE",
+    "secureScalableDesc": "Robust security measures and a scalable architecture that grows with your business.",
+    "analyticsIntegrationTitle": "ANALYTICS INTEGRATION",
+    "analyticsIntegrationDesc": "Integration with analytics tools to track performance, understand user behavior, and make data-driven decisions.",
+    "ourProcessTitle": "OUR WEBSITE CREATION PROCESS",
+    "ourProcessDesc": "Our streamlined process ensures transparency, efficiency, and a final product that exceeds your expectations. We work collaboratively with you at every stage.",
+    "discoveryTitle": "DISCOVERY & STRATEGY",
+    "discoveryList": [
+      "Initial consultation and requirement analysis",
+      "Market and competitor research",
+      "Defining project scope and goals",
+      "Creating a detailed project plan"
+    ],
+    "designTitle": "DESIGN & PROTOTYPING",
+    "designList": [
+      "Wireframing and user flow mapping",
+      "Creating high-fidelity mockups and prototypes",
+      "Iterative design revisions based on your feedback",
+      "Finalizing the visual design and style guide"
+    ],
+    "developmentLaunchTitle": "DEVELOPMENT & LAUNCH",
+    "developmentLaunchList": [
+      "Front-end and back-end development",
+      "CMS integration and setup",
+      "Rigorous testing and quality assurance",
+      "Deployment and final launch"
+    ]
+  },
+  "DigitalMarketing": {
+    "title": "Digital Marketing",
+    "subtitle": "Driving Growth Through Integrated Digital Strategies"
   }
 }
