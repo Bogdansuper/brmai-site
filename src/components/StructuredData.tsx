@@ -21,21 +21,24 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "BRM AI",
-  "url": "https://brm-ai.com",
-  "logo": "https://brm-ai.com/icon.png",
+  "url": "https://mybrmai.com",
+  "logo": "https://mybrmai.com/icon.png",
   "description": "AI-powered business automation solutions provider",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US"
+    "addressLocality": "Barcelona",
+    "addressRegion": "Catalonia",
+    "addressCountry": "ES"
   },
   "sameAs": [
-    // Add social media URLs when available
+    "https://www.linkedin.com/in/bogdan-antonov-b48901206"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-XXX-XXX-XXXX", // Add real phone
+    "telephone": "+34-637-523-323",
     "contactType": "sales",
-    "availableLanguage": ["en", "es", "ru", "uk", "ca"]
+    "availableLanguage": ["en", "es", "ru", "uk", "ca"],
+    "email": "brmai@mybrmai.com"
   }
 };
 
@@ -43,12 +46,16 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "BRM AI",
-  "image": "https://brm-ai.com/icon.png",
-  "url": "https://brm-ai.com",
+  "image": "https://mybrmai.com/icon.png",
+  "url": "https://mybrmai.com",
+  "telephone": "+34-637-523-323",
+  "email": "brmai@mybrmai.com",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US"
+    "addressLocality": "Barcelona",
+    "addressRegion": "Catalonia",
+    "addressCountry": "ES"
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
