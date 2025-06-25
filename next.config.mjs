@@ -76,7 +76,7 @@ const nextConfig = {
           },
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, stale-while-revalidate',
+            value: 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate',
           },
         ],
       },
@@ -89,7 +89,7 @@ const nextConfig = {
           },
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, stale-while-revalidate',
+            value: 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate',
           },
         ],
       },
@@ -102,7 +102,17 @@ const nextConfig = {
           },
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, stale-while-revalidate',
+            value: 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate',
+          },
+        ],
+      },
+      // Static assets caching
+      {
+        source: '/:path*.(jpg|jpeg|png|gif|ico|css|js|woff|woff2|ttf|otf|svg|webp)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, s-maxage=31536000, stale-while-revalidate',
           },
         ],
       },

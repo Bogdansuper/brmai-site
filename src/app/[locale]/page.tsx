@@ -6,6 +6,10 @@ import type { Metadata, ResolvingMetadata } from 'next';
 import BRMHomePageServerWrapper from '@/components/BRMHomePageServerWrapper'; // Import the wrapper
 import Script from 'next/script';
 
+// Force static generation for better performance
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour
+
 interface PageParams {
   locale: string;
 }

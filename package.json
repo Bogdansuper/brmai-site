@@ -8,11 +8,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "node scripts/generate-sitemap.cjs"
+    "postbuild": "node scripts/generate-sitemap.cjs",
+    "lighthouse": "lhci autorun",
+    "lighthouse:local": "npm run build && npm run start & sleep 5 && lhci autorun --collect.startServerCommand='' && kill $(lsof -t -i:3000)",
+    "test:performance": "npm run build && npm run lighthouse:local"
   },
   "dependencies": {
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.17.10",
+    "@vercel/analytics": "^1.5.0",
     "framer-motion": "^12.17.0",
     "geist": "^1.4.2",
     "lucide-react": "^0.510.0",
@@ -24,6 +28,7 @@
     "three": "^0.160.0"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.15.0",
     "@tailwindcss/postcss": "^4",
     "@types/next": "^9.0.0",
     "@types/node": "^22.15.29",

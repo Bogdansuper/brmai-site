@@ -2,7 +2,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 interface Feature {
   name: string;
@@ -32,7 +32,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
   ctaButton,
   imageUrl,
 }) => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -42,13 +42,13 @@ const ServicePage: React.FC<ServicePageProps> = ({
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 100,
         damping: 10,
       },
