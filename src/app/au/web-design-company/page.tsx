@@ -78,7 +78,7 @@ export default function WebDesignCompanyAuPage() {
             <h2 className="text-3xl font-semibold mb-4">Ready for a Website That Stands Out?</h2>
             <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">Let's build a powerful online presence for your Australian business. Contact us for a free consultation.</p>
             <Link
-                href="mailto:brmai@mybrmai.com"
+                href="mailto:bjwbbr@icloud.com"
                 className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm"
               >
                 Get Started

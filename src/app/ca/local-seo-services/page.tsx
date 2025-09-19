@@ -79,7 +79,7 @@ export default function LocalSeoServicesCaPage() {
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Get a free local SEO audit and see how we can boost your visibility in your Canadian service area.
             </p>
-            <Link href="mailto:brmai@mybrmai.com" className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm">
+            <Link href="mailto:bjwbbr@icloud.com" className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm">
               Get Your Free Audit
             </Link>
           </div>

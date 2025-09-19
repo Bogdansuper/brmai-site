@@ -78,7 +78,7 @@ export default function AiAutomationSolutionsCaPage() {
             <h2 className="text-3xl font-semibold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">Contact us today to discover how AI-powered automation can revolutionize your Canadian operations.</p>
             <Link
-                href="mailto:brmai@mybrmai.com"
+                href="mailto:bjwbbr@icloud.com"
                 className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm"
               >
                 Schedule a Free Consultation

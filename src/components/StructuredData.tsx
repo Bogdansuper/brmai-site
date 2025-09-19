@@ -38,7 +38,7 @@ export const organizationSchema = {
     "telephone": "+34-637-523-323",
     "contactType": "sales",
     "availableLanguage": ["en", "es", "ru", "uk", "ca"],
-    "email": "brmai@mybrmai.com"
+    "email": "bjwbbr@icloud.com"
   }
 };
 
@@ -49,7 +49,7 @@ export const localBusinessSchema = {
   "image": "https://mybrmai.com/icon.png",
   "url": "https://mybrmai.com",
   "telephone": "+34-637-523-323",
-  "email": "brmai@mybrmai.com",
+  "email": "bjwbbr@icloud.com",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",

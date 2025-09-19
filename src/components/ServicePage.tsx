@@ -135,7 +135,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
               {ctaSubtitle}
             </p>
             <Link
-              href="mailto:brmai@mybrmai.com"
+              href="mailto:bjwbbr@icloud.com"
               className="px-10 py-4 border border-gray-600 hover:bg-white hover:text-black transition-colors duration-300 text-base"
             >
               {ctaButton}

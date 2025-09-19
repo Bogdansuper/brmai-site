@@ -63,7 +63,7 @@ export default function BRMHomePageClient() {
   const serviceItemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  const recipientEmail = 'brmai@mybrmai.com';
+  const recipientEmail = 'bjwbbr@icloud.com';
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

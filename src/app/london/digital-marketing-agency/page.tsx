@@ -79,7 +79,7 @@ export default function DigitalMarketingAgencyLondonPage() {
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Get a free consultation and let's discuss how we can elevate your digital presence in London.
             </p>
-            <Link href="mailto:brmai@mybrmai.com" className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm">
+            <Link href="mailto:bjwbbr@icloud.com" className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm">
               Request a Consultation
             </Link>
           </div>
